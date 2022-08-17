@@ -1,0 +1,928 @@
+<html lang="en-US" class="pro theme-azure-light"><head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="username" content="admin">
+<link rel="home" id="ApplicationPath" href="/demo/">
+<link rel="icon" type="image/x-icon" href="/demo/favicon.ico">
+    <link href="/demo/DynJS.axd/CssBundle.Base.css?v=YerCPgtDonF1zmkiLhNYkg" rel="stylesheet" type="text/css">
+
+    <link href="/demo/DynJS.axd/CssBundle.Site.css?v=Z_puvZFNfDx-YP37iPTI4w" rel="stylesheet" type="text/css">
+
+<script type="application/json" id="ScriptCulture">{"DateOrder":"mdy","DateFormat":"MM/dd/yyyy","DateSeparator":"/","DateTimeFormat":"MM/dd/yyyy HH:mm:ss","DecimalSeparator":".","GroupSeparator":","}</script>
+    <script src="/demo/DynJS.axd/Bundle.Base.js?v=aJqaqTWmBiYLXkfJhHTOHg" type="text/javascript"></script>
+
+    <script src="/demo/DynJS.axd/Bundle.Site.js?v=-y3XESAc7SDSb_WrQa3RjA" type="text/javascript"></script>
+
+    <script src="/demo/DynJS.axd/LocalText.Site.en-US.Public.js?v=Ds8i3bZdKmz8j-MEWrPNig" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    Q.ScriptData.set('Lookup.Administration.Language', new Q.Lookup({"idField":"LanguageId","textField":"LanguageName"}, 
+[{"Id":6,"LanguageId":"zh-CN","LanguageName":"Chinese (Simplified)"},{"Id":1,"LanguageId":"en","LanguageName":"English"},{"Id":10,"LanguageId":"fa","LanguageName":"Farsi"},{"Id":5,"LanguageId":"de","LanguageName":"German"},{"Id":7,"LanguageId":"it","LanguageName":"Italian"},{"Id":8,"LanguageId":"pt","LanguageName":"Portuguese"},{"Id":9,"LanguageId":"pt-BR","LanguageName":"Portuguese (Brazil)"},{"Id":2,"LanguageId":"ru","LanguageName":"Russian"},{"Id":3,"LanguageId":"es","LanguageName":"Spanish"},{"Id":4,"LanguageId":"tr","LanguageName":"Turkish"},{"Id":11,"LanguageId":"vi-VN","LanguageName":"Vietnamese (Vietnam)"}]
+));
+    Q.ScriptData.setRegisteredScripts({"Columns.WorkLog.EmployeePricing":"637963437609115893","Form.AdvancedSamples.OrderWizard":"637963437609115914","Form.Default.Customer":"637963437609115924","RemoteData.Administration.ImplicitPermissions":"kvgyHcmun_-jjiDp6Vchjg","LocalText.Site.en-US.Public":"Ds8i3bZdKmz8j-MEWrPNig","Lookup.Distinct.Serenity.Pro.DataAuditLog.DataAuditLog.FieldName":"G7f1-LvzBziDmIeqOPhYyw","ColumnsBundle":"4RK7V1M2nqMj7Pm3yYQLDQ","Columns.Administration.User":"637963437609116037","Columns.Administration.Role":"637963437609116049","Columns.Northwind.Shipper":"637963437609116061","Form.Serenity.Pro.Meeting.Forms.MeetingAgendaTypeForm":"637963437609116071","Columns.Serenity.Pro.Meeting.Columns.MeetingAttendeeColumns":"637963437609116081","Lookup.Distinct.WorkLog.WorkLog.Year":"zuCNWM3fwFUwMeL73rEPcQ","Lookup.Serenity.Pro.Meeting.MeetingAgendaType":"YEhKfzgxyqgG8cpbCaMaaw","Columns.WorkLog.Currency":"637963437609116197","Form.Serenity.Pro.EmailClient.EmailCompose":"637963437609116207","Form.Serenity.Pro.Meeting.Forms.MeetingLocationForm":"637963437609116217","Columns.Serenity.Pro.Meeting.Columns.MeetingLocationColumns":"637963437609116225","Lookup.Northwind.CustomerCity":"H00QDrcxCRRGHzEE6x_eJQ","Template.Administration.SergenPanel":"637963437609116285","Lookup.WorkLog.Invoice":"m7hBYuUUI-VyKAPyzMRiXg","CssBundle.Base":"YerCPgtDonF1zmkiLhNYkg","Columns.WorkLog.Invoice":"637963437609116348","Bundle.Pages/Dashboard":"_758RbKJHlGt47drHLdjIw","Form.Serenity.Pro.Organization.Forms.ContactForm":"637963437609116369","Lookup.Distinct.WorkLog.WorkLog.Month":"b9un6uacf006rnRU6VtCag","Columns.Northwind.Order":"637963437609116400","Bundle.CKEditor":"4-nHHfSyatvEAFxndNCoyQ","Columns.Northwind.Category":"637963437609116420","Form.Serenity.Pro.Meeting.Forms.MeetingTypeForm":"637963437609116427","Columns.BasicSamples.InlineImageInGrid":"637963437609116438","RemoteData.UserData":"637963437609116454","Columns.Serenity.Pro.Organization.Columns.BusinessUnitColumns":"637963437609116462","Form.Northwind.Product":"637963437609116471","Form.Northwind.Supplier":"637963437609116480","Columns.Serenity.Pro.Meeting.Columns.MeetingAgendaColumns":"637963437609116487","Columns.Northwind.Product":"637963437609116496","Lookup.Serenity.Pro.Organization.Contact":"xWf1JP5UjSWNZLQVnojfsg","Form.Serenity.Pro.Meeting.Forms.MeetingDecisionRelevantForm":"637963437609116564","Form.Serenity.Pro.Meeting.Forms.MeetingAgendaRelevantForm":"637963437609116571","Columns.Serenity.Pro.Meeting.Columns.MeetingAgendaRelevantColumns":"637963437609116579","Columns.Northwind.OrderDetail":"637963437609116586","Lookup.Serenity.Pro.Meeting.MeetingLocation":"mso0Ik4jJvxtv21e3bMp4Q","Lookup.Northwind.CustomerCountry":"fzyYe_rinntCcIYK5czKwg","Columns.Serenity.Pro.Meeting.Columns.MeetingDecisionRelevantColumns":"637963437609116671","Lookup.Administration.Language":"1NBab_dUqgi31AY3w2h6Ow","Columns.AdvancedSamples.CustomerGrossSales":"637963437609116695","Form.Administration.Language":"637963437609116702","Columns.Administration.Language":"637963437609116709","Form.BasicSamples.HarcodedValues":"637963437609116717","Columns.AdvancedSamples.DragDropSample":"637963437609116724","Form.AdvancedSamples.GoogleMapsForm":"637963437609116733","Columns.WorkLog.WorkLog":"637963437609116740","Columns.Serenity.Pro.DataAuditLog.DataAuditLogColumns":"637963437609116747","LocalText.Site.zh-CN.Public":"OaNIep_dzW1n_g6dwKEAIQ","Bundle.NorthwindLookups":"U7bZCVAEoYRJXR4UdbzvCw","Lookup.Serenity.Pro.Meeting.MeetingType":"eoIJ3heR7p-VnfJLlmgyoA","Form.WorkLog.EmployeePricing":"637963437609116843","Form.WorkLog.Project":"637963437609116853","Lookup.Administration.User":"Cle1u9Quo4c_vvbuSko7Xg","Columns.Northwind.Supplier":"637963437609116904","Form.WorkLog.Currency":"637963437609116910","Lookup.Northwind.SupplierCountry":"KHmzP_ig9puyFAjOpEuyaw","Form.Serenity.Pro.Meeting.Forms.MeetingAgendaForm":"637963437609116962","Lookup.Distinct.Serenity.Pro.DataAuditLog.DataAuditLog.Tablename":"7Lm9m7Kz2h84YKBIAvLyMw","Form.Northwind.Customer":"637963437609116990","Form.Membership.ChangePassword":"637963437609116998","CssBundle.Pages/Dashboard":"ZGwohUsx3rbODfWvMqEpNw","Lookup.Northwind.Region":"iLtnOIlpBy8MUjuj2zR9Dg","Form.WorkLog.WorkLog":"637963437609117060","Form.Northwind.Order":"637963437609117072","Form.BasicSamples.StaticTextBlock":"637963437609117079","Columns.Serenity.Pro.Meeting.Columns.MeetingTypeColumns":"637963437609117084","Form.AdvancedSamples.EnumFlagsForm":"637963437609117093","LocalText.Site.fa-IR.Public":"TI3-xvdjV5TStvJku-Flqg","Columns.Northwind.Territory":"637963437609117115","Columns.Serenity.Pro.Organization.Columns.ContactColumns":"637963437609117121","LocalText.Site.tr-TR.Public":"7qOkatMn7pYNATS-IiQSYA","Form.Administration.Role":"637963437609117142","Lookup.Northwind.Category":"637963437609117153","Columns.Serenity.Pro.EmailQueue.EmailQueueColumns":"637963437609117159","Columns.Serenity.Pro.Meeting.Columns.MeetingDecisionColumns":"637963437609117165","Form.BasicSamples.ChangingLookupText":"637963437609117172","Bundle.Base":"aJqaqTWmBiYLXkfJhHTOHg","Form.Membership.SignUp":"637963437609117185","Form.AdvancedSamples.InlineButtons":"637963437609117191","Form.AdvancedSamples.PickerOrder":"637963437609117199","RemoteData.Administration.PermissionKeys":"xLxvNDSPzHmQ0Rva1RxCcA","Lookup.Northwind.Employee":"8H1Y2Ngv5BTmQ93CFbbZAQ","Lookup.WorkLog.Employee":"lRD0EwB3sohI1Ph3w2p_TQ","Form.Northwind.Territory":"637963437609117342","Form.Serenity.Pro.EmailQueue.EmailQueueForm":"637963437609117349","Columns.WorkLog.Employee":"637963437609117356","FormBundle":"hAg3jN-a_P6sa-uE4tS-Ng","Form.Administration.User":"637963437609117370","Form.Membership.Login":"637963437609117378","Form.BasicSamples.PopulateLinkedData":"637963437609117392","Form.AdvancedSamples.MultiDatesPicker":"637963437609117400","Columns.Northwind.Customer":"637963437609117406","Form.Serenity.Pro.Organization.Forms.BusinessUnitForm":"637963437609117413","Lookup.Northwind.Customer":"bNveuCTbu5QGZ6flIvz9nQ","CssBundle.Base.rtl":"vfrkrdbSCSYw2NCPzX2gTw","Lookup.WorkLog.Tasks":"637963437609117455","Bundle.Site":"-y3XESAc7SDSb_WrQa3RjA","Form.BasicSamples.FilteredLookupInDetail":"637963437609117465","Form.Northwind.Shipper":"637963437609117470","Lookup.WorkLog.Customer":"637963437609117478","Form.Serenity.Pro.DataAuditLog.DataAuditLogForm":"637963437609117484","Lookup.Northwind.Shipper":"YiNdQd8_0PL4hf-7NRfgUA","Form.Serenity.Pro.Meeting.Forms.MeetingAttendeeForm":"637963437609117527","Form.AdvancedSamples.DragDropSample":"637963437609117534","Lookup.Serenity.Pro.Organization.BusinessUnit":"s0_7ocFWWOVnifLsybJW4w","Lookup.Northwind.OrderShipCountry":"637963437609117581","Lookup.WorkLog.Currency":"bBItUMJQCLiosBtoDml94Q","Lookup.Northwind.Supplier":"JohzrWfNo0QsmwGfw7TKcw","CssBundle.Site":"Z_puvZFNfDx-YP37iPTI4w","Lookup.WorkLog.Project":"637963437609117652","Form.Northwind.Category":"637963437609117659","TemplateBundle":"45N3X7-RpQV1Kcg8XjHLSA","Form.Membership.ResetPassword":"637963437609117673","Form.WorkLog.Invoice":"637963437609117679","Columns.WorkLog.Project":"637963437609117688","Lookup.Northwind.Product":"637963437609117701","Form.Serenity.Pro.Meeting.MeetingForm":"637963437609117707","Lookup.Administration.Role":"IWORzImkecs3wpqGGhEgWQ","Form.WorkLog.Employee":"637963437609117739","Columns.Northwind.Region":"637963437609117745","Columns.Default.Customer":"637963437609117751","Form.Serenity.Pro.Meeting.Forms.MeetingDecisionForm":"637963437609117765","Columns.Serenity.Pro.Meeting.Columns.MeetingAgendaTypeColumns":"637963437609117773","Form.Northwind.OrderDetail":"637963437609117780","Lookup.Northwind.Territory":"0GMMSXIISRHpu-MTEvLPiQ","Form.BasicSamples.LookupFilterByMultiple":"637963437609117819","Form.Membership.ForgotPassword":"637963437609117825","Columns.Northwind.SalesByCategory":"637963437609117831","Form.AdvancedSamples.ProductExcelImport":"637963437609117837","Columns.Serenity.Pro.Meeting.MeetingColumns":"637963437609117844","Form.Northwind.Region":"637963437609117850","Lookup.Northwind.OrderShipCity":"637963437609117862"});
+</script>
+    
+<script>var CKEDITOR_BASEPATH = '/demo/Serenity.Assets/Scripts/ckeditor/';</script>
+    <script src="/demo/DynJS.axd/Bundle.CKEditor.js?v=4-nHHfSyatvEAFxndNCoyQ" type="text/javascript"></script><style>.cke{visibility:hidden;}</style>
+
+
+    <title>Meetings - StartSharp</title>
+<style type="text/css" rel="stylesheet" data-uid="slickgrid_775311">.slickgrid_775311 .slick-group-header-column { left: 1000px; } .slickgrid_775311 .slick-header-column { left: 1000px; } .slickgrid_775311 .slick-top-panel { height:25px; } .slickgrid_775311 .slick-grouping-panel { height:34px; } .slickgrid_775311 .slick-headerrow-columns { height:34px; } .slickgrid_775311 .slick-cell { height:36px; } .slickgrid_775311 .slick-row { height:36px; } .slickgrid_775311 .slick-footerrow-columns { height:25px; } .slickgrid_775311 .l0 { } .slickgrid_775311 .r0 { } .slickgrid_775311 .l1 { } .slickgrid_775311 .r1 { } .slickgrid_775311 .l2 { } .slickgrid_775311 .r2 { } .slickgrid_775311 .l3 { } .slickgrid_775311 .r3 { } .slickgrid_775311 .l4 { } .slickgrid_775311 .r4 { } .slickgrid_775311 .l5 { } .slickgrid_775311 .r5 { } .slickgrid_775311 .l6 { } .slickgrid_775311 .r6 { } .slickgrid_775311 .l7 { } .slickgrid_775311 .r7 { } .slickgrid_775311 .l8 { } .slickgrid_775311 .r8 { } .slickgrid_775311 .l9 { } .slickgrid_775311 .r9 { }</style><style type="text/css" rel="stylesheet" data-uid="slickgrid_655810">.slickgrid_655810 .slick-group-header-column { left: 1000px; } .slickgrid_655810 .slick-header-column { left: 1000px; } .slickgrid_655810 .slick-top-panel { height:25px; } .slickgrid_655810 .slick-grouping-panel { height:34px; } .slickgrid_655810 .slick-headerrow-columns { height:34px; } .slickgrid_655810 .slick-cell { height:36px; } .slickgrid_655810 .slick-row { height:36px; } .slickgrid_655810 .slick-footerrow-columns { height:25px; } .slickgrid_655810 .l0 { } .slickgrid_655810 .r0 { } .slickgrid_655810 .l1 { } .slickgrid_655810 .r1 { } .slickgrid_655810 .l2 { } .slickgrid_655810 .r2 { } .slickgrid_655810 .l3 { } .slickgrid_655810 .r3 { }</style><style type="text/css" rel="stylesheet" data-uid="slickgrid_418763">.slickgrid_418763 .slick-group-header-column { left: 1000px; } .slickgrid_418763 .slick-header-column { left: 1000px; } .slickgrid_418763 .slick-top-panel { height:25px; } .slickgrid_418763 .slick-grouping-panel { height:34px; } .slickgrid_418763 .slick-headerrow-columns { height:34px; } .slickgrid_418763 .slick-cell { height:36px; } .slickgrid_418763 .slick-row { height:36px; } .slickgrid_418763 .slick-footerrow-columns { height:25px; } .slickgrid_418763 .l0 { } .slickgrid_418763 .r0 { } .slickgrid_418763 .l1 { } .slickgrid_418763 .r1 { } .slickgrid_418763 .l2 { } .slickgrid_418763 .r2 { } .slickgrid_418763 .l3 { } .slickgrid_418763 .r3 { } .slickgrid_418763 .l4 { } .slickgrid_418763 .r4 { }</style><style type="text/css" rel="stylesheet" data-uid="slickgrid_534559">.slickgrid_534559 .slick-group-header-column { left: 1000px; } .slickgrid_534559 .slick-header-column { left: 1000px; } .slickgrid_534559 .slick-top-panel { height:25px; } .slickgrid_534559 .slick-grouping-panel { height:34px; } .slickgrid_534559 .slick-headerrow-columns { height:34px; } .slickgrid_534559 .slick-cell { height:36px; } .slickgrid_534559 .slick-row { height:36px; } .slickgrid_534559 .slick-footerrow-columns { height:25px; } .slickgrid_534559 .l0 { } .slickgrid_534559 .r0 { } .slickgrid_534559 .l1 { } .slickgrid_534559 .r1 { } .slickgrid_534559 .l2 { } .slickgrid_534559 .r2 { } .slickgrid_534559 .l3 { } .slickgrid_534559 .r3 { } .slickgrid_534559 .l4 { } .slickgrid_534559 .r4 { }</style></head>
+<body id="s-Page" class="full-height-page">
+<div id="PageBackground" style="display: none"></div>
+    
+<aside class="s-sidebar" id="s-sidebar">
+    <div class="s-sidebar-band">
+        <ul class="s-sidebar-band-groups">
+            <li class="active">
+                <a class="s-sidebar-band-link" href="#s_sidebar_group1" title="StartSharp">
+                    <i class="s-sidebar-band-icon fa fa-home"></i>
+                </a>
+            </li>
+            <li class="">
+                <a class="s-sidebar-band-link" href="#s_sidebar_group2" title="Administration">
+                    <i class="s-sidebar-band-icon fa fa-tools"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="s-sidebar-band-middle">
+            <div class="s-sidebar-band-branding">
+                <img class="s-sidebar-band-logo" src="/demo/Content/site/images/serenity-logo-w-128.png">
+                    <span class="s-sidebar-band-title">Start</span><span class="s-sidebar-band-title2">Sharp</span>
+            </div>
+        </div>
+        <ul class="s-sidebar-band-actions">
+        <li>
+            <div class="dropdown dropend">
+                <a href="javascript:;" class="s-sidebar-band-link s-language-selection-link" data-bs-toggle="dropdown" title="switch language">
+                    <i class="s-sidebar-band-icon fa fa-language"></i>
+                </a>
+                <ul class="dropdown-menu s-language-selection-menu">
+                <li><a class="dropdown-item" data-language="zh-CN" href="javascript:;">Chinese (Simplified)</a></li><li><a class="dropdown-item" data-language="en" href="javascript:;">English</a></li><li><a class="dropdown-item" data-language="fa" href="javascript:;">Farsi</a></li><li><a class="dropdown-item" data-language="de" href="javascript:;">German</a></li><li><a class="dropdown-item" data-language="it" href="javascript:;">Italian</a></li><li><a class="dropdown-item" data-language="pt" href="javascript:;">Portuguese</a></li><li><a class="dropdown-item" data-language="pt-BR" href="javascript:;">Portuguese (Brazil)</a></li><li><a class="dropdown-item" data-language="ru" href="javascript:;">Russian</a></li><li><a class="dropdown-item" data-language="es" href="javascript:;">Spanish</a></li><li><a class="dropdown-item" data-language="tr" href="javascript:;">Turkish</a></li><li><a class="dropdown-item" data-language="vi-VN" href="javascript:;">Vietnamese (Vietnam)</a></li></ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown dropend">
+                <a href="javascript:;" class="s-sidebar-band-link s-theme-selection-link" data-bs-toggle="dropdown" title="switch theme">
+                    <i class="s-sidebar-band-icon fa fa-fill-drip"></i>
+                </a>
+                <ul class="dropdown-menu s-theme-selection-menu">
+                    <li><a class="dropdown-item" data-theme="azure-light" href="javascript:;">Azure (Light)</a></li>
+                    <li><a class="dropdown-item" data-theme="cosmos-dark" href="javascript:;">Cosmos (Dark)</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown dropend">
+                <a href="javascript:;" class="s-sidebar-band-link s-user-profile-link" data-bs-toggle="dropdown" title="admin">
+                    <i class="s-sidebar-band-icon fa fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-md s-user-profile-menu">
+                    <div class="s-user-card p-1 mb-2 text-center border-bottom">
+                        <h2 class="s-user-avatar fs-1 mb-0">
+                            <i class="fa fa-user"></i>
+                        </h2>
+                        <p class="s-user-info fs-6 mb-1">
+                            admin
+                        </p>
+                    </div>
+                    <a class="dropdown-item" href="/demo/Account/ChangePassword">
+                        <em class="icon fa fa-key"></em><span> Change Password</span>
+                    </a>
+                    <a class="dropdown-item" href="/demo/Account/Signout">
+                        <em class="icon fa fa-sign-out-alt"></em><span> Logout</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+            <li class="s-sidebar-pane-toggle">
+                <a href="javascript:;" class="s-sidebar-band-link s-sidebar-pane-toggle-link" title="toggle sidebar">
+                    <i class="s-sidebar-band-icon fa fa-angle-double-left"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="s-sidebar-pane">
+        <div id="s-sidebar-search" class="s-sidebar-search m-3">
+            <i class="fa fa-search fa-flip-horizontal s-sidebar-search-icon"></i>
+            <input type="text" class="w-100 s-sidebar-search-input" placeholder="search...">
+        </div>
+        <div class="s-sidebar-groups">
+                <div class="s-sidebar-group active" id="s_sidebar_group1">
+                    <h5 class="s-sidebar-group-title">StartSharp</h5>
+                        <ul class="s-sidebar-menu" id="s_sidebar_menu1">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/">
+                    <i class="s-sidebar-icon fa fa-tachometer"></i>
+                    <span class="s-sidebar-link-text">Dashboard</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item s-sidebar-section has-children">
+                <h6 class="s-sidebar-section-title">Demo Modules</h6>
+                <ul id="nav_menu1_2" class="s-sidebar-section-menu">
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_1" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa fa-anchor"></i>
+                    <span class="s-sidebar-link-text">Northwind</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_1" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Customer">
+                    <i class="s-sidebar-icon fa fa-credit-card"></i>
+                    <span class="s-sidebar-link-text">Customers</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Order">
+                    <i class="s-sidebar-icon fa fa-shopping-cart"></i>
+                    <span class="s-sidebar-link-text">Orders</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product">
+                    <i class="s-sidebar-icon fa fa-cube"></i>
+                    <span class="s-sidebar-link-text">Products</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Supplier">
+                    <i class="s-sidebar-icon fa fa-truck"></i>
+                    <span class="s-sidebar-link-text">Suppliers</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Shipper">
+                    <i class="s-sidebar-icon fa fa-ship"></i>
+                    <span class="s-sidebar-link-text">Shippers</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Category">
+                    <i class="s-sidebar-icon fa fa-folder-o"></i>
+                    <span class="s-sidebar-link-text">Categories</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Region">
+                    <i class="s-sidebar-icon fa fa-map-o"></i>
+                    <span class="s-sidebar-link-text">Regions</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Territory">
+                    <i class="s-sidebar-icon fa fa-puzzle-piece"></i>
+                    <span class="s-sidebar-link-text">Territories</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Reports">
+                    <i class="s-sidebar-icon fa fa-files-o"></i>
+                    <span class="s-sidebar-link-text">Reports</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_2" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa fa-magic"></i>
+                    <span class="s-sidebar-link-text">Basic Samples</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_2" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2">
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_2_1" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Dialogs</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_2_1" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_2">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/ChartInDialog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Chart in a Dialog</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/CloneableEntityDialog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Cloneable Entity Dialog</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/DefaultValuesInNewDialog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Default Values in New Dialog</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/DialogBoxes">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Dialog Boxes</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/EntityDialogAsPanel/11077">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Entity Dialog as Panel</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/GetInsertedRecordId">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Get Inserted Record ID</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/OtherFormInTab">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Other Form In Tab</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/OtherFormInTabOneBar">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Other Form, One Toolbar</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/PopulateLinkedData">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Populate Linked Data</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/ReadOnlyDialog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Read-Only Dialog</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/SerialAutoNumber">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Serial Auto Numbering</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_2_2" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Editors</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_2_2" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_2">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/ChangingLookupText">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Changing Lookup Text</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/FilteredLookupInDetailDialog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Filtered Lookup in Detail.</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/LookupFilterByMultipleValues">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Lookup Filter by Multi Val.</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/SelectWithHardcodedValues">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Select with Hardcod.Vals.</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/StaticTextBlock">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Static Text Block</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_2_3" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Grids</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_2_3" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_2">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/CustomLinksInGrid">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Custom Links In Grid</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/EnablingRowSelection">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Enabling Row Selection</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/GroupingAndSummariesInGrid">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Grouping and Sum. In Grid</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/GridFilteredByCriteria">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Grid Filtered by Criteria</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/InitialValuesForQuickFilters">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Initial Value for Quick Flt.</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/InlineActionButtons">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Inline Action Buttons</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/InlineImageInGrid">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Inline Image In Grid</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/RemovingAddButton">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Removing Add Button</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/ViewWithoutID">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">View Without ID</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/BasicSamples/WrappedHeaders">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Wrapped Headers</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_2_4" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Dynamic Navigation</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_2_4" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_2">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=1">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Beverages</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=2">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Condiments</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=3">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Confections</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=4">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Dairy Products</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=5">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Grains/Cereals</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=6">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Meat/Poultry</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=7">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Produce</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Northwind/Product?cat=8">
+                    <i class="s-sidebar-icon fa icon-folder-alt"></i>
+                    <span class="s-sidebar-link-text">Seafood</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_3" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa fa-star premium-feature"></i>
+                    <span class="s-sidebar-link-text">Advanced Samples</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_3" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2">
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_3_1" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Data Tables</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_3_1" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/BasicInit">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Basic Initialization</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/ServerSide">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Server Side Source</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_3_2" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Editors</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_3_2" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/InputWithInlineButtons">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Input with Inline Buttons</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/MultiDatesPicker">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Multi Dates Picker</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/ProductPicker">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Product Picker</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/EnumFlagsEditor">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Enum Flags Editor</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/GoogleMapsEditor">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Google Maps Editor</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_3_3" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Forms</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_3_3" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/BootstrapFormList">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Bootstrap Form</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/EntityGridDialog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Entity Grid Dialog</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/OrderWizard">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Order Wizard</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_3_4" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Grids</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_3_4" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/AutoColumnWidth">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Auto Column Width</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/CardView">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Card View</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/CustomizableSummaries">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Customizable Summaries</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/CancellableBulkAction">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Cancellable Bulk Action</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/ConditionalFormatting">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Conditional Formatting</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/DragDropGrouping">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Drag &amp; Drop Grouping</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/DragDropInTreeGrid">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Drag &amp; Drop in Tree Grid</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/ExcelStyleFilters">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Excel Style Filtering</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/ProductExcelImport">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Product Excel Import</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/QuickFilterCustomization">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Quick Filter Customization</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/SplitMasterDetail">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Split Master Detail Grids</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/StoredProcedureGrid">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Stored Procedure Grid</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/TreeGrid">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Tree Grid</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_2_3_5" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Misc</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_2_3_5" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_2_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/DataAuditLog">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Data Audit Log</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/DataExplorer">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Data Explorer</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/EmailClient/Mailbox">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">E-mail Client (IMAP)</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/AdvancedSamples/IdleTimeout">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Idle (Session) Timeout</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+                    </ul>
+        </li>
+                </ul>
+        </li>
+        <li class="s-sidebar-item s-sidebar-section active has-children">
+                <h6 class="s-sidebar-section-title">Pro Features</h6>
+                <ul id="nav_menu1_3" class="s-sidebar-section-menu">
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_3_1" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa fa-sitemap premium-feature"></i>
+                    <span class="s-sidebar-link-text">Organization</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_3_1" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Organization/BusinessUnit">
+                    <i class="s-sidebar-icon fa fa-sitemap"></i>
+                    <span class="s-sidebar-link-text">Business Units</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Organization/Contact">
+                    <i class="s-sidebar-icon fa fa-address-book"></i>
+                    <span class="s-sidebar-link-text">Contacts</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item active has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_3_2" data-bs-toggle="collapse" aria-expanded="true">
+                    <i class="s-sidebar-icon fa fa-comments premium-feature"></i>
+                    <span class="s-sidebar-link-text">Meeting</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_3_2" class="s-sidebar-menu collapse show" data-bs-parent="#nav_menu1_3">
+        <li class="s-sidebar-item active">
+                <a class="s-sidebar-link" href="/demo/Meeting/Meeting">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Meetings</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Meeting/MeetingAgendaType">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Meeting Agenda Types</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Meeting/MeetingLocation">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Meeting Locations</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Meeting/MeetingType">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Meeting Types</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_3_3" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa fa-hourglass-end premium-feature"></i>
+                    <span class="s-sidebar-link-text">Work Log</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_3_3" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/WorkLog">
+                    <i class="s-sidebar-icon fa fa-clock-o"></i>
+                    <span class="s-sidebar-link-text">Work Logs</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/Invoice">
+                    <i class="s-sidebar-icon fa fa-file-text"></i>
+                    <span class="s-sidebar-link-text">Invoices</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item has-children">
+                <a class="s-sidebar-link" href="#nav_menu1_3_3_3" data-bs-toggle="collapse">
+                    <i class="s-sidebar-icon fa s-sidebar-noicon"></i>
+                    <span class="s-sidebar-link-text">Setup</span>
+<em class="s-sidebar-menu-toggle fa fa-angle-right"></em>                </a>
+                    <ul id="nav_menu1_3_3_3" class="s-sidebar-menu collapse" data-bs-parent="#nav_menu1_3_3">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/Employee">
+                    <i class="s-sidebar-icon fa fa-users"></i>
+                    <span class="s-sidebar-link-text">Employees</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/Customer">
+                    <i class="s-sidebar-icon fa fa-user"></i>
+                    <span class="s-sidebar-link-text">Customers</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/Project">
+                    <i class="s-sidebar-icon fa fa-book"></i>
+                    <span class="s-sidebar-link-text">Projects</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/EmployeePricing">
+                    <i class="s-sidebar-icon fa fa-envelope"></i>
+                    <span class="s-sidebar-link-text">Pricing</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/WorkLog/Currency">
+                    <i class="s-sidebar-icon fa fa-usd"></i>
+                    <span class="s-sidebar-link-text">Currencies</span>
+                </a>
+        </li>
+                    </ul>
+        </li>
+                    </ul>
+        </li>
+                </ul>
+        </li>
+                        </ul>
+                </div>
+                <div class="s-sidebar-group" id="s_sidebar_group2">
+                    <h5 class="s-sidebar-group-title">Administration</h5>
+                        <ul class="s-sidebar-menu" id="s_sidebar_menu2">
+        <li class="s-sidebar-item s-sidebar-section has-children">
+                <h6 class="s-sidebar-section-title">General</h6>
+                <ul id="nav_menu2_1" class="s-sidebar-section-menu">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/DataAuditLog">
+                    <i class="s-sidebar-icon fa fa-history premium-feature"></i>
+                    <span class="s-sidebar-link-text">Data Audit Log</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/DataExplorer">
+                    <i class="s-sidebar-icon fa fa-database premium-feature"></i>
+                    <span class="s-sidebar-link-text">Data Explorer</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/EmailQueue">
+                    <i class="s-sidebar-icon fa fa-envelope-o premium-feature"></i>
+                    <span class="s-sidebar-link-text">Email Queue</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Administration/ExceptionLog/" target="_blank">
+                    <i class="s-sidebar-icon fa fa-ban"></i>
+                    <span class="s-sidebar-link-text">Exception Log</span>
+                </a>
+        </li>
+                </ul>
+        </li>
+        <li class="s-sidebar-item s-sidebar-section has-children">
+                <h6 class="s-sidebar-section-title">Localization</h6>
+                <ul id="nav_menu2_2" class="s-sidebar-section-menu">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Administration/Language">
+                    <i class="s-sidebar-icon fa fa-comments"></i>
+                    <span class="s-sidebar-link-text">Languages</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Administration/Translation">
+                    <i class="s-sidebar-icon fa fa-comment-o"></i>
+                    <span class="s-sidebar-link-text">Translations</span>
+                </a>
+        </li>
+                </ul>
+        </li>
+        <li class="s-sidebar-item s-sidebar-section has-children">
+                <h6 class="s-sidebar-section-title">Security</h6>
+                <ul id="nav_menu2_3" class="s-sidebar-section-menu">
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Administration/Role">
+                    <i class="s-sidebar-icon fa fa-lock"></i>
+                    <span class="s-sidebar-link-text">Roles</span>
+                </a>
+        </li>
+        <li class="s-sidebar-item">
+                <a class="s-sidebar-link" href="/demo/Administration/User">
+                    <i class="s-sidebar-icon fa fa-users"></i>
+                    <span class="s-sidebar-link-text">User Management</span>
+                </a>
+        </li>
+                </ul>
+        </li>
+                        </ul>
+                </div>
+        </div>
+    </div>
+</aside>
+
+<header class="navbar sticky-top s-mobile-header">
+    <button class="s-sidebar-toggler" type="button" id="s-sidebar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+    </button>
+    <div class="s-mobile-header-branding">
+        <img class="s-mobile-header-logo" src="/demo/Content/site/images/serenity-logo-w-128.png">
+    </div>
+    <ul class="s-mobile-header-actions">
+        <li>
+            <div class="dropdown">
+                <a href="javascript:;" class="s-mobile-header-link s-language-selection-link" data-bs-toggle="dropdown" title="switch language">
+                    <i class="s-mobile-header-icon fa fa-language"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end s-language-selection-menu">
+                <li><a class="dropdown-item" data-language="zh-CN" href="javascript:;">Chinese (Simplified)</a></li><li><a class="dropdown-item" data-language="en" href="javascript:;">English</a></li><li><a class="dropdown-item" data-language="fa" href="javascript:;">Farsi</a></li><li><a class="dropdown-item" data-language="de" href="javascript:;">German</a></li><li><a class="dropdown-item" data-language="it" href="javascript:;">Italian</a></li><li><a class="dropdown-item" data-language="pt" href="javascript:;">Portuguese</a></li><li><a class="dropdown-item" data-language="pt-BR" href="javascript:;">Portuguese (Brazil)</a></li><li><a class="dropdown-item" data-language="ru" href="javascript:;">Russian</a></li><li><a class="dropdown-item" data-language="es" href="javascript:;">Spanish</a></li><li><a class="dropdown-item" data-language="tr" href="javascript:;">Turkish</a></li><li><a class="dropdown-item" data-language="vi-VN" href="javascript:;">Vietnamese (Vietnam)</a></li></ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a href="javascript:;" class="s-mobile-header-link s-theme-selection-link" data-bs-toggle="dropdown" title="switch theme">
+                    <i class="s-mobile-header-icon fa fa-fill-drip"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end s-theme-selection-menu">
+                    <li><a class="dropdown-item" data-theme="azure-light" href="javascript:;">Azure (Light)</a></li>
+                    <li><a class="dropdown-item" data-theme="cosmos-dark" href="javascript:;">Cosmos (Dark)</a></li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <div class="dropdown">
+                <a href="javascript:;" class="s-mobile-header-link s-user-profile-link" data-bs-toggle="dropdown" title="admin">
+                    <i class="s-mobile-header-icon fa fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-md dropdown-menu-end s-user-profile-menu">
+                    <div class="s-user-card p-1 mb-2 text-center border-bottom">
+                        <h2 class="s-user-avatar fs-1 mb-0">
+                            <i class="fa fa-user"></i>
+                        </h2>
+                        <p class="s-user-info fs-6 mb-1">
+                            admin
+                        </p>
+                    </div>
+                    <a class="dropdown-item" href="/demo/Account/ChangePassword">
+                        <em class="icon fa fa-key"></em><span> Change Password</span>
+                    </a>
+                    <a class="dropdown-item" href="/demo/Account/Signout">
+                        <em class="icon fa fa-sign-out-alt"></em><span> Logout</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+</header>
+    <main class="s-main">
+        <section class="content">
+
+                <link href="/demo/Serenity.Pro.Organization/index.css?v=JNcVPWJeA06GNmGo5C8iDQ" rel="stylesheet" type="text/css" class="panel-hidden panel-hidden-Serenity_Pro_Meeting_MeetingDialog10">
+
+    <script src="/demo/Serenity.Pro.Organization/index.js?v=8n965twPWcXqa0qcbFm-cg" type="text/javascript" class="panel-hidden panel-hidden-Serenity_Pro_Meeting_MeetingDialog10"></script>
+
+    <link href="/demo/Serenity.Pro.Meeting/index.css?v=Tl0jRN31GdWcux_qhz_FRA" rel="stylesheet" type="text/css" class="panel-hidden panel-hidden-Serenity_Pro_Meeting_MeetingDialog10">
+
+    <script src="/demo/Serenity.Pro.Meeting/index.js?v=eM7P4nNkjif68zZUDOPAiQ" type="text/javascript" class="panel-hidden panel-hidden-Serenity_Pro_Meeting_MeetingDialog10"></script>
+
+
+<div id="GridDiv" class="s-Serenity-Pro-Meeting-MeetingGrid s-Pro-Meeting-MeetingGrid s-MeetingGrid s-DataGrid require-layout route-handler responsive-height panel-hidden panel-hidden-Serenity_Pro_Meeting_MeetingDialog10" style="height: 1px;"><div class="grid-title"><div class="title-text">Meetings</div></div><div class="grid-toolbar s-Serenity-Toolbar s-Toolbar clearfix"><div class="s-QuickSearchBar"><span class="quick-search-icon"><i></i></span><input type="text" class="s-Serenity-QuickSearchInput s-QuickSearchInput" title="enter the text to search for..." placeholder="search..."></div><div class="tool-buttons"><div class="buttons-outer"><div class="buttons-inner"><div class="tool-button add-button icon-tool-button"><div class="button-outer"><span class="button-inner"><i class="fa fa-plus-circle text-green"></i> New Meeting</span></div></div><div class="tool-button refresh-button icon-tool-button" title="Refresh"><div class="button-outer"><span class="button-inner"><i class="fa fa-refresh text-blue"></i> </span></div></div><div class="tool-button column-picker-button icon-tool-button" title="Column Picker"><div class="button-outer"><span class="button-inner"><i class="fa fa-th-list text-blue"></i> </span></div></div></div></div></div><div class="clear"></div><div class="quick-filters-bar s-Serenity-QuickFilterBar s-QuickFilterBar clear"><div class="quick-filter-item"><span class="quick-filter-label">Meeting Type</span><div class="select2-container s-Serenity-LookupEditor s-LookupEditor" id="s2id_Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_MeetingTypeId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-1"> </span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen1" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-1" id="s2id_autogen1"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen1_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-1" id="s2id_autogen1_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-1">   </ul></div></div><input type="text" id="Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_MeetingTypeId" placeholder=" " class="s-Serenity-LookupEditor s-LookupEditor select2-offscreen" tabindex="-1" title=""></div><div class="quick-filter-item"><span class="quick-filter-label">Location</span><div class="select2-container s-Serenity-LookupEditor s-LookupEditor" id="s2id_Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_LocationId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-2"> </span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen2" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="s2id_autogen2"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen2_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-2" id="s2id_autogen2_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-2">   </ul></div></div><input type="text" id="Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_LocationId" placeholder=" " class="s-Serenity-LookupEditor s-LookupEditor select2-offscreen" tabindex="-1" title=""></div><div class="quick-filter-item"><span class="quick-filter-label">Unit Name</span><div class="select2-container s-Serenity-Pro-Organization-BusinessUnitEditor s-Pro-Organization-BusinessUnitEditor s-BusinessUnitEditor" id="s2id_Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_UnitId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-3"> </span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen3" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-3" id="s2id_autogen3"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen3_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-3" id="s2id_autogen3_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-3">   </ul></div></div><input type="text" id="Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_UnitId" placeholder=" " class="s-Serenity-Pro-Organization-BusinessUnitEditor s-Pro-Organization-BusinessUnitEditor s-BusinessUnitEditor select2-offscreen" tabindex="-1" title=""></div><div class="quick-filter-item"><span class="quick-filter-label">Organized By</span><div class="select2-container s-Serenity-LookupEditor s-LookupEditor" id="s2id_Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_OrganizerContactId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-4"> </span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen4" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-4" id="s2id_autogen4"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen4_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-4" id="s2id_autogen4_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-4">   </ul></div></div><input type="text" id="Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_OrganizerContactId" placeholder=" " class="s-Serenity-LookupEditor s-LookupEditor select2-offscreen" tabindex="-1" title=""></div><div class="quick-filter-item"><span class="quick-filter-label">Reporter</span><div class="select2-container s-Serenity-LookupEditor s-LookupEditor" id="s2id_Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_ReporterContactId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-5"> </span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen5" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-5" id="s2id_autogen5"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen5_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-5" id="s2id_autogen5_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-5">   </ul></div></div><input type="text" id="Serenity_Pro_Meeting_MeetingGrid0_QuickFilter_ReporterContactId" placeholder=" " class="s-Serenity-LookupEditor s-LookupEditor select2-offscreen" tabindex="-1" title=""></div></div></div><div class="grid-container slickgrid_775311 ui-widget" style="overflow: hidden; outline: 0px; position: relative; height: 341px;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-pane slick-pane-header slick-pane-left" tabindex="0" style="width: 100%;"><div class="ui-state-default slick-header slick-header-left"><div class="slick-header-columns slick-header-columns-left ui-sortable" style="left: -1000px; width: 2593.15px;" unselectable="on"><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311MeetingId" title="" style="width: 80px;"><span class="slick-column-name">ID</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311MeetingName" title="" style="width: 279.231px;"><span class="slick-column-name">Meeting Name</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311MeetingNumber" title="" style="width: 144.615px;"><span class="slick-column-name">Meeting Number</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311MeetingTypeName" title="" style="width: 139.231px;"><span class="slick-column-name">Meeting Type</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311StartDate" title="" style="width: 144.615px;"><span class="slick-column-name">Start Date</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311EndDate" title="" style="width: 144.615px;"><span class="slick-column-name">End Date</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311LocationName" title="" style="width: 139.231px;"><span class="slick-column-name">Location</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311UnitName" title="" style="width: 171.538px;"><span class="slick-column-name">Unit Name</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311OrganizerContactFullName" title="" style="width: 171.538px;"><span class="slick-column-name">Organized By</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_775311ReporterContactFullName" title="" style="width: 171.538px;"><span class="slick-column-name">Reporter</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div></div></div></div><div class="slick-pane slick-pane-header slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-header slick-header-right"><div class="slick-header-columns slick-header-columns-right ui-sortable" style="left: -1000px; width: 0px;" unselectable="on"></div></div></div><div class="slick-pane slick-pane-top slick-pane-left" tabindex="0" style="top: 34px; height: 307.203px; width: 100%;"><div class="ui-state-default slick-headerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1586.15px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-left" style="width: 1586.15px;"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto; height: 307.203px; width: 100%;"><div class="grid-canvas grid-canvas-top grid-canvas-left" tabindex="0" hidefocus="" style="height: 300px; width: 1586.15px;"><div class="ui-widget-content slick-row even" style="top:0px"><div class="slick-cell l0 r0 align-right"><a href="#Pro-Meeting-Meeting/1" data-item-type="Pro.Meeting.Meeting" data-item-id="1" class="s-EditLink s-Pro-Meeting-MeetingLink">1</a></div><div class="slick-cell l1 r1"><a href="#Pro-Meeting-Meeting/1" data-item-type="Pro.Meeting.Meeting" data-item-id="1" class="s-EditLink s-Pro-Meeting-MeetingLink">test</a></div><div class="slick-cell l2 r2" title=""></div><div class="slick-cell l3 r3">General</div><div class="slick-cell l4 r4">08/17/2022 06:35</div><div class="slick-cell l5 r5">08/17/2022 07:35</div><div class="slick-cell l6 r6"></div><div class="slick-cell l7 r7"></div><div class="slick-cell l8 r8"> </div><div class="slick-cell l9 r9"> </div></div></div></div><div class="ui-state-default slick-footerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1586.15px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-left" style="width: 1586.15px;"><div class="ui-state-default slick-footerrow-column l0 r0 align-right"></div><div class="ui-state-default slick-footerrow-column l1 r1"></div><div class="ui-state-default slick-footerrow-column l2 r2"></div><div class="ui-state-default slick-footerrow-column l3 r3"></div><div class="ui-state-default slick-footerrow-column l4 r4"></div><div class="ui-state-default slick-footerrow-column l5 r5"></div><div class="ui-state-default slick-footerrow-column l6 r6"></div><div class="ui-state-default slick-footerrow-column l7 r7"></div><div class="ui-state-default slick-footerrow-column l8 r8"></div><div class="ui-state-default slick-footerrow-column l9 r9"></div></div></div></div><div class="slick-pane slick-pane-top slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-headerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1586.15px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-right"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto; height: 307.203px;"><div class="grid-canvas grid-canvas-top grid-canvas-right" tabindex="0" hidefocus="" style="height: 300px;"></div></div><div class="ui-state-default slick-footerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1586.15px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-right"></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-left" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-left" tabindex="0" hidefocus=""></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-right" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-right" tabindex="0" hidefocus=""></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div><div class="s-Serenity-SlickPager s-SlickPager slick-pg"><div class="slick-pg-in"><div class="slick-pg-grp"><select class="slick-pg-size" name="rp"><option value="20">20&nbsp;&nbsp;</option><option value="100" selected="selected">100&nbsp;&nbsp;</option><option value="500">500&nbsp;&nbsp;</option><option value="2500">2500&nbsp;&nbsp;</option></select></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-first slick-pg-btn"><span class="slick-pg-btn-span"></span></div><div class="slick-pg-prev slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><span class="slick-pg-control">&nbsp;Page&nbsp;<input class="slick-pg-current" type="text" size="4" value="1"> / <span class="slick-pg-total">1</span></span></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-next slick-pg-btn"><span class="slick-pg-btn-span"></span></div><div class="slick-pg-last slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-reload slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><span class="slick-pg-stat">Showing 1 to 1 of 1 total records</span></div></div></div></div>
+
+<script type="text/javascript" class="panel-hidden panel-hidden-Serenity_Pro_Meeting_MeetingDialog10">
+    jQuery(function () {
+        new Serenity.Pro.Meeting.MeetingGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>
+        <div class="s-TemplatedDialog s-Serenity-Pro-Meeting-MeetingDialog s-Pro-Meeting-MeetingDialog s-MeetingDialog flex-layout s-Panel" id="Serenity_Pro_Meeting_MeetingDialog10"><div class="panel-titlebar"><button class="panel-titlebar-close">&nbsp;</button><div class="panel-titlebar-text">New Meeting</div></div><div id="Serenity_Pro_Meeting_MeetingDialog10_Tabs" class="s-DialogContent ui-tabs ui-corner-all ui-widget ui-widget-content">
+    <ul role="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+        <li role="tab" tabindex="0" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-tabs-active ui-state-active" aria-controls="Serenity_Pro_Meeting_MeetingDialog10_TabInfo" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true"><a href="#Serenity_Pro_Meeting_MeetingDialog10_TabInfo" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-1"><span>Meeting</span></a></li>
+        <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-state-disabled" aria-controls="Serenity_Pro_Meeting_MeetingDialog10_TabAgenda" aria-labelledby="ui-id-2" aria-selected="false" aria-expanded="false" aria-disabled="true"><a href="#Serenity_Pro_Meeting_MeetingDialog10_TabAgenda" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-2"><span>Agenda</span></a></li>
+        <li role="tab" tabindex="-1" class="ui-tabs-tab ui-corner-top ui-state-default ui-tab ui-state-disabled" aria-controls="Serenity_Pro_Meeting_MeetingDialog10_TabDecision" aria-labelledby="ui-id-3" aria-selected="false" aria-expanded="false" aria-disabled="true"><a href="#Serenity_Pro_Meeting_MeetingDialog10_TabDecision" role="presentation" tabindex="-1" class="ui-tabs-anchor" id="ui-id-3"><span>Decisions</span></a></li>
+    </ul>
+    <div id="Serenity_Pro_Meeting_MeetingDialog10_TabInfo" class="tab-pane s-TabInfo ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false">
+        <div id="Serenity_Pro_Meeting_MeetingDialog10_Toolbar" class="s-DialogToolbar s-Serenity-Toolbar s-Toolbar clearfix"><div class="tool-buttons"><div class="buttons-outer"><div class="buttons-inner"><div class="tool-button save-and-close-button icon-tool-button"><div class="button-outer"><span class="button-inner"><i class="fa fa-check-circle text-purple"></i> Save</span></div></div><div class="tool-button apply-changes-button icon-tool-button" title="Apply Changes"><div class="button-outer"><span class="button-inner"><i class="fa fa-clipboard-check text-purple"></i> </span></div></div><div class="tool-button delete-button icon-tool-button" style="display: none;"><div class="button-outer"><span class="button-inner"><i class="fa fa-trash-o text-red"></i> Delete</span></div></div><div class="tool-button undo-delete-button" style="display: none;"><div class="button-outer"><span class="button-inner">Undelete</span></div></div><div class="tool-button localization-button" style="display: none;"><div class="button-outer"><span class="button-inner">Localization</span></div></div><div class="tool-button clone-button icon-tool-button" style="display: none;"><div class="button-outer"><span class="button-inner"><i class="fa fa-clone"></i> Clone</span></div></div></div></div></div></div>
+        <div class="s-Form">
+            <form id="Serenity_Pro_Meeting_MeetingDialog10_Form" action="" novalidate="novalidate">
+                <div class="fieldset">
+                    <div id="Serenity_Pro_Meeting_MeetingDialog10_PropertyGrid" class="s-Serenity-PropertyGrid s-PropertyGrid"><div class="categories"><div class="category"><div class="field MeetingName"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_MeetingName" title="Meeting Name"><sup title="this field is required">*</sup>Meeting Name</label><input type="text" class="editor s-Serenity-StringEditor s-StringEditor required" id="Serenity_Pro_Meeting_MeetingDialog10_MeetingName" name="MeetingName" maxlength="100"><div class="vx"></div><div class="clear"></div></div><div class="field MeetingTypeId col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId" title="Meeting Type"><sup title="this field is required">*</sup>Meeting Type</label><div class="select2-container select2-allowclear editor s-Serenity-LookupEditor s-LookupEditor has-inplace-button required" id="s2id_Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId"><a href="javascript:void(0)" class="select2-choice" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-6">General</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen6" class="select2-offscreen">*Meeting Type</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-6" id="s2id_autogen6"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen6_search" class="select2-offscreen">*Meeting Type</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-6" id="s2id_autogen6_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-6">   </ul></div></div><input type="text" class="editor s-Serenity-LookupEditor s-LookupEditor select2-offscreen has-inplace-button required" id="Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId" name="MeetingTypeId" placeholder="--select--" tabindex="-1" title="*Meeting Type"><a class="inplace-button inplace-create edit" title="Edit" disabled="disabled"><b></b></a><div class="vx"></div><div class="clear"></div></div><div class="field MeetingNumber col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_MeetingNumber" title="Meeting Number">Meeting Number</label><input type="text" class="editor s-Serenity-StringEditor s-StringEditor" id="Serenity_Pro_Meeting_MeetingDialog10_MeetingNumber" name="MeetingNumber" maxlength="20"><div class="vx"></div><div class="clear"></div></div><div class="field StartDate col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_StartDate" title="Start Date"><sup title="this field is required">*</sup>Start Date</label><input type="text" class="editor s-Serenity-DateTimeEditor s-DateTimeEditor dateQ hasDatepicker customValidate required" id="Serenity_Pro_Meeting_MeetingDialog10_StartDate" name="StartDate"><button type="button" class="ui-datepicker-trigger"><i class="fa fa-calendar"></i></button><select class="editor s-DateTimeEditor time"><option value="00:00">00:00</option><option value="00:05">00:05</option><option value="00:10">00:10</option><option value="00:15">00:15</option><option value="00:20">00:20</option><option value="00:25">00:25</option><option value="00:30">00:30</option><option value="00:35">00:35</option><option value="00:40">00:40</option><option value="00:45">00:45</option><option value="00:50">00:50</option><option value="00:55">00:55</option><option value="01:00">01:00</option><option value="01:05">01:05</option><option value="01:10">01:10</option><option value="01:15">01:15</option><option value="01:20">01:20</option><option value="01:25">01:25</option><option value="01:30">01:30</option><option value="01:35">01:35</option><option value="01:40">01:40</option><option value="01:45">01:45</option><option value="01:50">01:50</option><option value="01:55">01:55</option><option value="02:00">02:00</option><option value="02:05">02:05</option><option value="02:10">02:10</option><option value="02:15">02:15</option><option value="02:20">02:20</option><option value="02:25">02:25</option><option value="02:30">02:30</option><option value="02:35">02:35</option><option value="02:40">02:40</option><option value="02:45">02:45</option><option value="02:50">02:50</option><option value="02:55">02:55</option><option value="03:00">03:00</option><option value="03:05">03:05</option><option value="03:10">03:10</option><option value="03:15">03:15</option><option value="03:20">03:20</option><option value="03:25">03:25</option><option value="03:30">03:30</option><option value="03:35">03:35</option><option value="03:40">03:40</option><option value="03:45">03:45</option><option value="03:50">03:50</option><option value="03:55">03:55</option><option value="04:00">04:00</option><option value="04:05">04:05</option><option value="04:10">04:10</option><option value="04:15">04:15</option><option value="04:20">04:20</option><option value="04:25">04:25</option><option value="04:30">04:30</option><option value="04:35">04:35</option><option value="04:40">04:40</option><option value="04:45">04:45</option><option value="04:50">04:50</option><option value="04:55">04:55</option><option value="05:00">05:00</option><option value="05:05">05:05</option><option value="05:10">05:10</option><option value="05:15">05:15</option><option value="05:20">05:20</option><option value="05:25">05:25</option><option value="05:30">05:30</option><option value="05:35">05:35</option><option value="05:40">05:40</option><option value="05:45">05:45</option><option value="05:50">05:50</option><option value="05:55">05:55</option><option value="06:00">06:00</option><option value="06:05">06:05</option><option value="06:10">06:10</option><option value="06:15">06:15</option><option value="06:20">06:20</option><option value="06:25">06:25</option><option value="06:30">06:30</option><option value="06:35">06:35</option><option value="06:40">06:40</option><option value="06:45">06:45</option><option value="06:50">06:50</option><option value="06:55">06:55</option><option value="07:00">07:00</option><option value="07:05">07:05</option><option value="07:10">07:10</option><option value="07:15">07:15</option><option value="07:20">07:20</option><option value="07:25">07:25</option><option value="07:30">07:30</option><option value="07:35">07:35</option><option value="07:40">07:40</option><option value="07:45">07:45</option><option value="07:50">07:50</option><option value="07:55">07:55</option><option value="08:00">08:00</option><option value="08:05">08:05</option><option value="08:10">08:10</option><option value="08:15">08:15</option><option value="08:20">08:20</option><option value="08:25">08:25</option><option value="08:30">08:30</option><option value="08:35">08:35</option><option value="08:40">08:40</option><option value="08:45">08:45</option><option value="08:50">08:50</option><option value="08:55">08:55</option><option value="09:00">09:00</option><option value="09:05">09:05</option><option value="09:10">09:10</option><option value="09:15">09:15</option><option value="09:20">09:20</option><option value="09:25">09:25</option><option value="09:30">09:30</option><option value="09:35">09:35</option><option value="09:40">09:40</option><option value="09:45">09:45</option><option value="09:50">09:50</option><option value="09:55">09:55</option><option value="10:00">10:00</option><option value="10:05">10:05</option><option value="10:10">10:10</option><option value="10:15">10:15</option><option value="10:20">10:20</option><option value="10:25">10:25</option><option value="10:30">10:30</option><option value="10:35">10:35</option><option value="10:40">10:40</option><option value="10:45">10:45</option><option value="10:50">10:50</option><option value="10:55">10:55</option><option value="11:00">11:00</option><option value="11:05">11:05</option><option value="11:10">11:10</option><option value="11:15">11:15</option><option value="11:20">11:20</option><option value="11:25">11:25</option><option value="11:30">11:30</option><option value="11:35">11:35</option><option value="11:40">11:40</option><option value="11:45">11:45</option><option value="11:50">11:50</option><option value="11:55">11:55</option><option value="12:00">12:00</option><option value="12:05">12:05</option><option value="12:10">12:10</option><option value="12:15">12:15</option><option value="12:20">12:20</option><option value="12:25">12:25</option><option value="12:30">12:30</option><option value="12:35">12:35</option><option value="12:40">12:40</option><option value="12:45">12:45</option><option value="12:50">12:50</option><option value="12:55">12:55</option><option value="13:00">13:00</option><option value="13:05">13:05</option><option value="13:10">13:10</option><option value="13:15">13:15</option><option value="13:20">13:20</option><option value="13:25">13:25</option><option value="13:30">13:30</option><option value="13:35">13:35</option><option value="13:40">13:40</option><option value="13:45">13:45</option><option value="13:50">13:50</option><option value="13:55">13:55</option><option value="14:00">14:00</option><option value="14:05">14:05</option><option value="14:10">14:10</option><option value="14:15">14:15</option><option value="14:20">14:20</option><option value="14:25">14:25</option><option value="14:30">14:30</option><option value="14:35">14:35</option><option value="14:40">14:40</option><option value="14:45">14:45</option><option value="14:50">14:50</option><option value="14:55">14:55</option><option value="15:00">15:00</option><option value="15:05">15:05</option><option value="15:10">15:10</option><option value="15:15">15:15</option><option value="15:20">15:20</option><option value="15:25">15:25</option><option value="15:30">15:30</option><option value="15:35">15:35</option><option value="15:40">15:40</option><option value="15:45">15:45</option><option value="15:50">15:50</option><option value="15:55">15:55</option><option value="16:00">16:00</option><option value="16:05">16:05</option><option value="16:10">16:10</option><option value="16:15">16:15</option><option value="16:20">16:20</option><option value="16:25">16:25</option><option value="16:30">16:30</option><option value="16:35">16:35</option><option value="16:40">16:40</option><option value="16:45">16:45</option><option value="16:50">16:50</option><option value="16:55">16:55</option><option value="17:00">17:00</option><option value="17:05">17:05</option><option value="17:10">17:10</option><option value="17:15">17:15</option><option value="17:20">17:20</option><option value="17:25">17:25</option><option value="17:30">17:30</option><option value="17:35">17:35</option><option value="17:40">17:40</option><option value="17:45">17:45</option><option value="17:50">17:50</option><option value="17:55">17:55</option><option value="18:00">18:00</option><option value="18:05">18:05</option><option value="18:10">18:10</option><option value="18:15">18:15</option><option value="18:20">18:20</option><option value="18:25">18:25</option><option value="18:30">18:30</option><option value="18:35">18:35</option><option value="18:40">18:40</option><option value="18:45">18:45</option><option value="18:50">18:50</option><option value="18:55">18:55</option><option value="19:00">19:00</option><option value="19:05">19:05</option><option value="19:10">19:10</option><option value="19:15">19:15</option><option value="19:20">19:20</option><option value="19:25">19:25</option><option value="19:30">19:30</option><option value="19:35">19:35</option><option value="19:40">19:40</option><option value="19:45">19:45</option><option value="19:50">19:50</option><option value="19:55">19:55</option><option value="20:00">20:00</option><option value="20:05">20:05</option><option value="20:10">20:10</option><option value="20:15">20:15</option><option value="20:20">20:20</option><option value="20:25">20:25</option><option value="20:30">20:30</option><option value="20:35">20:35</option><option value="20:40">20:40</option><option value="20:45">20:45</option><option value="20:50">20:50</option><option value="20:55">20:55</option><option value="21:00">21:00</option><option value="21:05">21:05</option><option value="21:10">21:10</option><option value="21:15">21:15</option><option value="21:20">21:20</option><option value="21:25">21:25</option><option value="21:30">21:30</option><option value="21:35">21:35</option><option value="21:40">21:40</option><option value="21:45">21:45</option><option value="21:50">21:50</option><option value="21:55">21:55</option><option value="22:00">22:00</option><option value="22:05">22:05</option><option value="22:10">22:10</option><option value="22:15">22:15</option><option value="22:20">22:20</option><option value="22:25">22:25</option><option value="22:30">22:30</option><option value="22:35">22:35</option><option value="22:40">22:40</option><option value="22:45">22:45</option><option value="22:50">22:50</option><option value="22:55">22:55</option><option value="23:00">23:00</option><option value="23:05">23:05</option><option value="23:10">23:10</option><option value="23:15">23:15</option><option value="23:20">23:20</option><option value="23:25">23:25</option><option value="23:30">23:30</option><option value="23:35">23:35</option><option value="23:40">23:40</option><option value="23:45">23:45</option><option value="23:50">23:50</option><option value="23:55">23:55</option></select><i class="inplace-button inplace-now" title="set to now"><b></b></i><div class="vx"></div><div class="clear"></div></div><div class="field EndDate col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_EndDate" title="End Date"><sup title="this field is required">*</sup>End Date</label><input type="text" class="editor s-Serenity-DateTimeEditor s-DateTimeEditor dateQ hasDatepicker customValidate required" id="Serenity_Pro_Meeting_MeetingDialog10_EndDate" name="EndDate"><button type="button" class="ui-datepicker-trigger"><i class="fa fa-calendar"></i></button><select class="editor s-DateTimeEditor time"><option value="00:00">00:00</option><option value="00:05">00:05</option><option value="00:10">00:10</option><option value="00:15">00:15</option><option value="00:20">00:20</option><option value="00:25">00:25</option><option value="00:30">00:30</option><option value="00:35">00:35</option><option value="00:40">00:40</option><option value="00:45">00:45</option><option value="00:50">00:50</option><option value="00:55">00:55</option><option value="01:00">01:00</option><option value="01:05">01:05</option><option value="01:10">01:10</option><option value="01:15">01:15</option><option value="01:20">01:20</option><option value="01:25">01:25</option><option value="01:30">01:30</option><option value="01:35">01:35</option><option value="01:40">01:40</option><option value="01:45">01:45</option><option value="01:50">01:50</option><option value="01:55">01:55</option><option value="02:00">02:00</option><option value="02:05">02:05</option><option value="02:10">02:10</option><option value="02:15">02:15</option><option value="02:20">02:20</option><option value="02:25">02:25</option><option value="02:30">02:30</option><option value="02:35">02:35</option><option value="02:40">02:40</option><option value="02:45">02:45</option><option value="02:50">02:50</option><option value="02:55">02:55</option><option value="03:00">03:00</option><option value="03:05">03:05</option><option value="03:10">03:10</option><option value="03:15">03:15</option><option value="03:20">03:20</option><option value="03:25">03:25</option><option value="03:30">03:30</option><option value="03:35">03:35</option><option value="03:40">03:40</option><option value="03:45">03:45</option><option value="03:50">03:50</option><option value="03:55">03:55</option><option value="04:00">04:00</option><option value="04:05">04:05</option><option value="04:10">04:10</option><option value="04:15">04:15</option><option value="04:20">04:20</option><option value="04:25">04:25</option><option value="04:30">04:30</option><option value="04:35">04:35</option><option value="04:40">04:40</option><option value="04:45">04:45</option><option value="04:50">04:50</option><option value="04:55">04:55</option><option value="05:00">05:00</option><option value="05:05">05:05</option><option value="05:10">05:10</option><option value="05:15">05:15</option><option value="05:20">05:20</option><option value="05:25">05:25</option><option value="05:30">05:30</option><option value="05:35">05:35</option><option value="05:40">05:40</option><option value="05:45">05:45</option><option value="05:50">05:50</option><option value="05:55">05:55</option><option value="06:00">06:00</option><option value="06:05">06:05</option><option value="06:10">06:10</option><option value="06:15">06:15</option><option value="06:20">06:20</option><option value="06:25">06:25</option><option value="06:30">06:30</option><option value="06:35">06:35</option><option value="06:40">06:40</option><option value="06:45">06:45</option><option value="06:50">06:50</option><option value="06:55">06:55</option><option value="07:00">07:00</option><option value="07:05">07:05</option><option value="07:10">07:10</option><option value="07:15">07:15</option><option value="07:20">07:20</option><option value="07:25">07:25</option><option value="07:30">07:30</option><option value="07:35">07:35</option><option value="07:40">07:40</option><option value="07:45">07:45</option><option value="07:50">07:50</option><option value="07:55">07:55</option><option value="08:00">08:00</option><option value="08:05">08:05</option><option value="08:10">08:10</option><option value="08:15">08:15</option><option value="08:20">08:20</option><option value="08:25">08:25</option><option value="08:30">08:30</option><option value="08:35">08:35</option><option value="08:40">08:40</option><option value="08:45">08:45</option><option value="08:50">08:50</option><option value="08:55">08:55</option><option value="09:00">09:00</option><option value="09:05">09:05</option><option value="09:10">09:10</option><option value="09:15">09:15</option><option value="09:20">09:20</option><option value="09:25">09:25</option><option value="09:30">09:30</option><option value="09:35">09:35</option><option value="09:40">09:40</option><option value="09:45">09:45</option><option value="09:50">09:50</option><option value="09:55">09:55</option><option value="10:00">10:00</option><option value="10:05">10:05</option><option value="10:10">10:10</option><option value="10:15">10:15</option><option value="10:20">10:20</option><option value="10:25">10:25</option><option value="10:30">10:30</option><option value="10:35">10:35</option><option value="10:40">10:40</option><option value="10:45">10:45</option><option value="10:50">10:50</option><option value="10:55">10:55</option><option value="11:00">11:00</option><option value="11:05">11:05</option><option value="11:10">11:10</option><option value="11:15">11:15</option><option value="11:20">11:20</option><option value="11:25">11:25</option><option value="11:30">11:30</option><option value="11:35">11:35</option><option value="11:40">11:40</option><option value="11:45">11:45</option><option value="11:50">11:50</option><option value="11:55">11:55</option><option value="12:00">12:00</option><option value="12:05">12:05</option><option value="12:10">12:10</option><option value="12:15">12:15</option><option value="12:20">12:20</option><option value="12:25">12:25</option><option value="12:30">12:30</option><option value="12:35">12:35</option><option value="12:40">12:40</option><option value="12:45">12:45</option><option value="12:50">12:50</option><option value="12:55">12:55</option><option value="13:00">13:00</option><option value="13:05">13:05</option><option value="13:10">13:10</option><option value="13:15">13:15</option><option value="13:20">13:20</option><option value="13:25">13:25</option><option value="13:30">13:30</option><option value="13:35">13:35</option><option value="13:40">13:40</option><option value="13:45">13:45</option><option value="13:50">13:50</option><option value="13:55">13:55</option><option value="14:00">14:00</option><option value="14:05">14:05</option><option value="14:10">14:10</option><option value="14:15">14:15</option><option value="14:20">14:20</option><option value="14:25">14:25</option><option value="14:30">14:30</option><option value="14:35">14:35</option><option value="14:40">14:40</option><option value="14:45">14:45</option><option value="14:50">14:50</option><option value="14:55">14:55</option><option value="15:00">15:00</option><option value="15:05">15:05</option><option value="15:10">15:10</option><option value="15:15">15:15</option><option value="15:20">15:20</option><option value="15:25">15:25</option><option value="15:30">15:30</option><option value="15:35">15:35</option><option value="15:40">15:40</option><option value="15:45">15:45</option><option value="15:50">15:50</option><option value="15:55">15:55</option><option value="16:00">16:00</option><option value="16:05">16:05</option><option value="16:10">16:10</option><option value="16:15">16:15</option><option value="16:20">16:20</option><option value="16:25">16:25</option><option value="16:30">16:30</option><option value="16:35">16:35</option><option value="16:40">16:40</option><option value="16:45">16:45</option><option value="16:50">16:50</option><option value="16:55">16:55</option><option value="17:00">17:00</option><option value="17:05">17:05</option><option value="17:10">17:10</option><option value="17:15">17:15</option><option value="17:20">17:20</option><option value="17:25">17:25</option><option value="17:30">17:30</option><option value="17:35">17:35</option><option value="17:40">17:40</option><option value="17:45">17:45</option><option value="17:50">17:50</option><option value="17:55">17:55</option><option value="18:00">18:00</option><option value="18:05">18:05</option><option value="18:10">18:10</option><option value="18:15">18:15</option><option value="18:20">18:20</option><option value="18:25">18:25</option><option value="18:30">18:30</option><option value="18:35">18:35</option><option value="18:40">18:40</option><option value="18:45">18:45</option><option value="18:50">18:50</option><option value="18:55">18:55</option><option value="19:00">19:00</option><option value="19:05">19:05</option><option value="19:10">19:10</option><option value="19:15">19:15</option><option value="19:20">19:20</option><option value="19:25">19:25</option><option value="19:30">19:30</option><option value="19:35">19:35</option><option value="19:40">19:40</option><option value="19:45">19:45</option><option value="19:50">19:50</option><option value="19:55">19:55</option><option value="20:00">20:00</option><option value="20:05">20:05</option><option value="20:10">20:10</option><option value="20:15">20:15</option><option value="20:20">20:20</option><option value="20:25">20:25</option><option value="20:30">20:30</option><option value="20:35">20:35</option><option value="20:40">20:40</option><option value="20:45">20:45</option><option value="20:50">20:50</option><option value="20:55">20:55</option><option value="21:00">21:00</option><option value="21:05">21:05</option><option value="21:10">21:10</option><option value="21:15">21:15</option><option value="21:20">21:20</option><option value="21:25">21:25</option><option value="21:30">21:30</option><option value="21:35">21:35</option><option value="21:40">21:40</option><option value="21:45">21:45</option><option value="21:50">21:50</option><option value="21:55">21:55</option><option value="22:00">22:00</option><option value="22:05">22:05</option><option value="22:10">22:10</option><option value="22:15">22:15</option><option value="22:20">22:20</option><option value="22:25">22:25</option><option value="22:30">22:30</option><option value="22:35">22:35</option><option value="22:40">22:40</option><option value="22:45">22:45</option><option value="22:50">22:50</option><option value="22:55">22:55</option><option value="23:00">23:00</option><option value="23:05">23:05</option><option value="23:10">23:10</option><option value="23:15">23:15</option><option value="23:20">23:20</option><option value="23:25">23:25</option><option value="23:30">23:30</option><option value="23:35">23:35</option><option value="23:40">23:40</option><option value="23:45">23:45</option><option value="23:50">23:50</option><option value="23:55">23:55</option></select><i class="inplace-button inplace-now" title="set to now"><b></b></i><div class="vx"></div><div class="clear"></div></div><div class="field LocationId col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_LocationId" title="Location">Location</label><div class="select2-container editor s-Serenity-LookupEditor s-LookupEditor has-inplace-button" id="s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-7">--select--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen7" class="select2-offscreen">Location</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-7" id="s2id_autogen7"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen7_search" class="select2-offscreen">Location</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-7" id="s2id_autogen7_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-7">   </ul></div></div><input type="text" class="editor s-Serenity-LookupEditor s-LookupEditor select2-offscreen has-inplace-button" id="Serenity_Pro_Meeting_MeetingDialog10_LocationId" name="LocationId" placeholder="--select--" tabindex="-1" title="Location"><a class="inplace-button inplace-create" title="Define New" disabled="disabled"><b></b></a><div class="vx"></div><div class="clear"></div></div><div class="field UnitId col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_UnitId" title="Unit">Unit</label><div class="select2-container editor s-Serenity-Pro-Organization-BusinessUnitEditor s-Pro-Organization-BusinessUnitEditor s-BusinessUnitEditor has-inplace-button" id="s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-8">--select--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen8" class="select2-offscreen">Unit</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-8" id="s2id_autogen8"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen8_search" class="select2-offscreen">Unit</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-8" id="s2id_autogen8_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-8">   </ul></div></div><input type="text" class="editor s-Serenity-Pro-Organization-BusinessUnitEditor s-Pro-Organization-BusinessUnitEditor s-BusinessUnitEditor select2-offscreen has-inplace-button" id="Serenity_Pro_Meeting_MeetingDialog10_UnitId" name="UnitId" placeholder="--select--" tabindex="-1" title="Unit"><a class="inplace-button inplace-create" title="Define New" disabled="disabled"><b></b></a><div class="vx"></div><div class="clear"></div></div><div class="field OrganizerContactId col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId" title="Organized By">Organized By</label><div class="select2-container editor s-Serenity-LookupEditor s-LookupEditor has-inplace-button" id="s2id_Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-9">--select--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen9" class="select2-offscreen">Organized By</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-9" id="s2id_autogen9"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen9_search" class="select2-offscreen">Organized By</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-9" id="s2id_autogen9_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-9">   </ul></div></div><input type="text" class="editor s-Serenity-LookupEditor s-LookupEditor select2-offscreen has-inplace-button" id="Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId" name="OrganizerContactId" placeholder="--select--" tabindex="-1" title="Organized By"><a class="inplace-button inplace-create" title="Define New" disabled="disabled"><b></b></a><div class="vx"></div><div class="clear"></div></div><div class="field ReporterContactId col-sm-6"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId" title="Reporter">Reporter</label><div class="select2-container editor s-Serenity-LookupEditor s-LookupEditor has-inplace-button" id="s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-10">--select--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen10" class="select2-offscreen">Reporter</label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-10" id="s2id_autogen10"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen10_search" class="select2-offscreen">Reporter</label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-10" id="s2id_autogen10_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-10">   </ul></div></div><input type="text" class="editor s-Serenity-LookupEditor s-LookupEditor select2-offscreen has-inplace-button" id="Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId" name="ReporterContactId" placeholder="--select--" tabindex="-1" title="Reporter"><a class="inplace-button inplace-create" title="Define New" disabled="disabled"><b></b></a><div class="vx"></div><div class="clear"></div></div><div class="field AttendeeList"><label class="caption" for="Serenity_Pro_Meeting_MeetingDialog10_AttendeeList" title="Attendee List">Attendee List</label><div class="editor s-Serenity-Pro-Meeting-MeetingAttendeeEditor s-Pro-Meeting-MeetingAttendeeEditor s-MeetingAttendeeEditor s-DataGrid require-layout route-handler" id="Serenity_Pro_Meeting_MeetingDialog10_AttendeeList"><div class="grid-toolbar s-Serenity-Toolbar s-Toolbar clearfix"><div class="tool-buttons"><div class="buttons-outer"><div class="buttons-inner"></div></div></div><div class="select2-container s-Serenity-LookupEditor s-LookupEditor has-inplace-button" id="s2id_autogen11" style="float: left;"><a href="javascript:void(0)" class="select2-choice select2-default" tabindex="-1">   <span class="select2-chosen" id="select2-chosen-12">--select contact to add--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow" role="presentation"><b role="presentation"></b></span></a><label for="s2id_autogen12" class="select2-offscreen"></label><input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-12" id="s2id_autogen12"><div class="select2-drop select2-display-none select2-with-searchbox">   <div class="select2-search">       <label for="s2id_autogen12_search" class="select2-offscreen"></label>       <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input" role="combobox" aria-expanded="true" aria-autocomplete="list" aria-owns="select2-results-12" id="s2id_autogen12_search" placeholder="">   </div>   <ul class="select2-results" role="listbox" id="select2-results-12">   </ul></div></div><input type="text" placeholder="--select contact to add--" class="s-Serenity-LookupEditor s-LookupEditor select2-offscreen has-inplace-button" style="float: left;" tabindex="-1" title=""><a class="inplace-button inplace-create" title="Define New"><b></b></a></div><div class="grid-container slickgrid_655810 ui-widget" style="overflow: hidden; outline: 0px; position: relative; height: 150px;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-pane slick-pane-header slick-pane-left" tabindex="0" style="width: 100%;"><div class="ui-state-default slick-header slick-header-left"><div class="slick-header-columns slick-header-columns-left ui-sortable" style="left: -1000px; width: 1762.08px;" unselectable="on"><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_655810Remove Attendee" title="" style="width: 35.8462px;"><span class="slick-column-name"></span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column ui-sortable-handle" id="slickgrid_655810ContactFullName" title="" style="width: 311.538px;"><span class="slick-column-name">Attendee Name</span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column ui-sortable-handle" id="slickgrid_655810AttendeeType" title="" style="width: 203.846px;"><span class="slick-column-name">Attendee Type</span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column ui-sortable-handle" id="slickgrid_655810AttendanceStatus" title="" style="width: 203.846px;"><span class="slick-column-name">Attendance Status</span><div class="slick-resizable-handle"></div></div></div></div></div><div class="slick-pane slick-pane-header slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-header slick-header-right"><div class="slick-header-columns slick-header-columns-right ui-sortable" style="left: -1000px; width: 0px;" unselectable="on"></div></div></div><div class="slick-pane slick-pane-top slick-pane-left" tabindex="0" style="top: 34px; height: 116px; width: 100%;"><div class="ui-state-default slick-headerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 755.077px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-left" style="width: 755.077px;"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto; height: 116px; width: 100%;"><div class="grid-canvas grid-canvas-top grid-canvas-left" tabindex="0" hidefocus="" style="width: 755.077px; height: 109px;"></div></div><div class="ui-state-default slick-footerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 755.077px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-left" style="width: 755.077px;"><div class="ui-state-default slick-footerrow-column l0 r0"></div><div class="ui-state-default slick-footerrow-column l1 r1"></div><div class="ui-state-default slick-footerrow-column l2 r2"></div><div class="ui-state-default slick-footerrow-column l3 r3"></div></div></div></div><div class="slick-pane slick-pane-top slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-headerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 755.077px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-right"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto; height: 116px;"><div class="grid-canvas grid-canvas-top grid-canvas-right" tabindex="0" hidefocus="" style="height: 109px;"></div></div><div class="ui-state-default slick-footerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 755.077px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-right"></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-left" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-left" tabindex="0" hidefocus=""></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-right" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-right" tabindex="0" hidefocus=""></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div></div><div class="vx"></div><div class="clear"></div></div></div></div></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="Serenity_Pro_Meeting_MeetingDialog10_TabAgenda" class="tab-pane s-TabAgenda ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby="ui-id-2" role="tabpanel" aria-hidden="true" style="display: none;"><div id="Serenity_Pro_Meeting_MeetingDialog10_AgendaGrid" class="s-Serenity-Pro-Meeting-MeetingAgendaGrid s-Pro-Meeting-MeetingAgendaGrid s-MeetingAgendaGrid s-DataGrid require-layout route-handler"><div class="grid-toolbar s-Serenity-Toolbar s-Toolbar clearfix"><div class="s-QuickSearchBar"><span class="quick-search-icon"><i></i></span><input type="text" class="s-Serenity-QuickSearchInput s-QuickSearchInput" title="enter the text to search for..." placeholder="search..."></div><div class="tool-buttons"><div class="buttons-outer"><div class="buttons-inner"><div class="tool-button add-button icon-tool-button"><div class="button-outer"><span class="button-inner"><i class="fa fa-plus-circle text-green"></i> New Agenda Item</span></div></div><div class="tool-button refresh-button icon-tool-button" title="Refresh"><div class="button-outer"><span class="button-inner"><i class="fa fa-refresh text-blue"></i> </span></div></div><div class="tool-button column-picker-button icon-tool-button" title="Column Picker"><div class="button-outer"><span class="button-inner"><i class="fa fa-th-list text-blue"></i> </span></div></div></div></div></div></div><div class="grid-container slickgrid_418763 ui-widget" style="overflow: hidden; outline: 0px; position: relative;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-pane slick-pane-header slick-pane-left" tabindex="0" style="width: 100%;"><div class="ui-state-default slick-header slick-header-left"><div class="slick-header-columns slick-header-columns-left ui-sortable" style="left: -1000px; width: 2053.15px;" unselectable="on"><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_418763AgendaNumber" title="" style="width: 80px;"><span class="slick-column-name">S.No</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_418763Title" title="" style="width: 279.231px;"><span class="slick-column-name">Title</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_418763Description" title="" style="width: 386.923px;"><span class="slick-column-name">Description</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_418763AgendaTypeName" title="" style="width: 150px;"><span class="slick-column-name">Agenda Type</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_418763RequestedByContactFullName" title="" style="width: 150px;"><span class="slick-column-name">Requested By</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div></div></div></div><div class="slick-pane slick-pane-header slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-header slick-header-right"><div class="slick-header-columns slick-header-columns-right ui-sortable" style="left: -1000px; width: 0px;" unselectable="on"></div></div></div><div class="slick-pane slick-pane-top slick-pane-left" tabindex="0" style="top: 0px; height: 0px; width: 100%;"><div class="ui-state-default slick-headerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1046.15px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-left" style="width: 1046.15px;"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto; height: 0px; width: 100%;"><div class="grid-canvas grid-canvas-top grid-canvas-left" tabindex="0" hidefocus="" style="width: 1046.15px;"></div></div><div class="ui-state-default slick-footerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1046.15px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-left" style="width: 1046.15px;"><div class="ui-state-default slick-footerrow-column l0 r0 align-right"></div><div class="ui-state-default slick-footerrow-column l1 r1"></div><div class="ui-state-default slick-footerrow-column l2 r2"></div><div class="ui-state-default slick-footerrow-column l3 r3"></div><div class="ui-state-default slick-footerrow-column l4 r4"></div></div></div></div><div class="slick-pane slick-pane-top slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-headerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1046.15px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-right"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto; height: 0px;"><div class="grid-canvas grid-canvas-top grid-canvas-right" tabindex="0" hidefocus=""></div></div><div class="ui-state-default slick-footerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1046.15px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-right"></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-left" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-left" tabindex="0" hidefocus=""></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-right" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-right" tabindex="0" hidefocus=""></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div><div class="s-Serenity-SlickPager s-SlickPager slick-pg"><div class="slick-pg-in"><div class="slick-pg-grp"><select class="slick-pg-size" name="rp"><option value="20">20&nbsp;&nbsp;</option><option value="100" selected="selected">100&nbsp;&nbsp;</option><option value="500">500&nbsp;&nbsp;</option><option value="2500">2500&nbsp;&nbsp;</option></select></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-first slick-pg-btn"><span class="slick-pg-btn-span"></span></div><div class="slick-pg-prev slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><span class="slick-pg-control">&nbsp;Page&nbsp;<input class="slick-pg-current" type="text" size="4" value="1"> / <span class="slick-pg-total"> 1 </span></span></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-next slick-pg-btn"><span class="slick-pg-btn-span"></span></div><div class="slick-pg-last slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-reload slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><span class="slick-pg-stat"></span></div></div></div></div></div>
+    <div id="Serenity_Pro_Meeting_MeetingDialog10_TabDecision" class="tab-pane s-TabDecision ui-tabs-panel ui-corner-bottom ui-widget-content" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true" style="display: none;"><div id="Serenity_Pro_Meeting_MeetingDialog10_DecisionGrid" class="s-Serenity-Pro-Meeting-MeetingDecisionGrid s-Pro-Meeting-MeetingDecisionGrid s-MeetingDecisionGrid s-DataGrid require-layout route-handler"><div class="grid-toolbar s-Serenity-Toolbar s-Toolbar clearfix"><div class="s-QuickSearchBar"><span class="quick-search-icon"><i></i></span><input type="text" class="s-Serenity-QuickSearchInput s-QuickSearchInput" title="enter the text to search for..." placeholder="search..."></div><div class="tool-buttons"><div class="buttons-outer"><div class="buttons-inner"><div class="tool-button add-button icon-tool-button"><div class="button-outer"><span class="button-inner"><i class="fa fa-plus-circle text-green"></i> New Decision</span></div></div><div class="tool-button refresh-button icon-tool-button" title="Refresh"><div class="button-outer"><span class="button-inner"><i class="fa fa-refresh text-blue"></i> </span></div></div><div class="tool-button column-picker-button icon-tool-button" title="Column Picker"><div class="button-outer"><span class="button-inner"><i class="fa fa-th-list text-blue"></i> </span></div></div></div></div></div></div><div class="grid-container slickgrid_534559 ui-widget" style="overflow: hidden; outline: 0px; position: relative;"><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div><div class="slick-pane slick-pane-header slick-pane-left" tabindex="0" style="width: 100%;"><div class="ui-state-default slick-header slick-header-left"><div class="slick-header-columns slick-header-columns-left ui-sortable" style="left: -1000px; width: 2047.77px;" unselectable="on"><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_534559DecisionNumber" title="" style="width: 80px;"><span class="slick-column-name">S.No</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_534559Description" title="" style="width: 440.769px;"><span class="slick-column-name">Description</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_534559ResponsibleContactFullName" title="" style="width: 279.231px;"><span class="slick-column-name">Assigned To</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_534559DueDate" title="" style="width: 101.538px;"><span class="slick-column-name">Due Date</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div><div class="ui-state-default slick-header-column slick-header-sortable ui-sortable-handle" id="slickgrid_534559ResolutionStatus" title="" style="width: 139.231px;"><span class="slick-column-name">Resolution Status</span><span class="slick-sort-indicator"></span><div class="slick-resizable-handle"></div></div></div></div></div><div class="slick-pane slick-pane-header slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-header slick-header-right"><div class="slick-header-columns slick-header-columns-right ui-sortable" style="left: -1000px; width: 0px;" unselectable="on"></div></div></div><div class="slick-pane slick-pane-top slick-pane-left" tabindex="0" style="top: 0px; height: 0px; width: 100%;"><div class="ui-state-default slick-headerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1040.77px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-left" style="width: 1040.77px;"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto; height: 0px; width: 100%;"><div class="grid-canvas grid-canvas-top grid-canvas-left" tabindex="0" hidefocus="" style="width: 1040.77px;"></div></div><div class="ui-state-default slick-footerrow" style="display: none; width: 100%;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1040.77px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-left" style="width: 1040.77px;"><div class="ui-state-default slick-footerrow-column l0 r0 align-right"></div><div class="ui-state-default slick-footerrow-column l1 r1"></div><div class="ui-state-default slick-footerrow-column l2 r2"></div><div class="ui-state-default slick-footerrow-column l3 r3"></div><div class="ui-state-default slick-footerrow-column l4 r4"></div></div></div></div><div class="slick-pane slick-pane-top slick-pane-right" tabindex="0" style="display: none;"><div class="ui-state-default slick-headerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1040.77px;"></div><div class="slick-headerrow-columns slick-headerrow-columns-right"></div></div><div class="ui-state-default slick-top-panel-scroller" style="display: none;"><div class="slick-top-panel" style="width:10000px"></div></div><div class="slick-viewport slick-viewport-top slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto; height: 0px;"><div class="grid-canvas grid-canvas-top grid-canvas-right" tabindex="0" hidefocus=""></div></div><div class="ui-state-default slick-footerrow" style="display: none;"><div style="display: block; height: 1px; position: absolute; top: 0px; left: 0px; width: 1040.77px;"></div><div class="slick-footerrow-columns slick-footerrow-columns-right"></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-left" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-left" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-left" tabindex="0" hidefocus=""></div></div></div><div class="slick-pane slick-pane-bottom slick-pane-right" tabindex="0" style="display: none;"><div class="slick-viewport slick-viewport-bottom slick-viewport-right" tabindex="0" hidefocus="" style="overflow: auto;"><div class="grid-canvas grid-canvas-bottom grid-canvas-right" tabindex="0" hidefocus=""></div></div></div><div tabindex="0" hidefocus="" style="position:fixed;width:0;height:0;top:0;left:0;outline:0;"></div></div><div class="s-Serenity-SlickPager s-SlickPager slick-pg"><div class="slick-pg-in"><div class="slick-pg-grp"><select class="slick-pg-size" name="rp"><option value="20">20&nbsp;&nbsp;</option><option value="100" selected="selected">100&nbsp;&nbsp;</option><option value="500">500&nbsp;&nbsp;</option><option value="2500">2500&nbsp;&nbsp;</option></select></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-first slick-pg-btn"><span class="slick-pg-btn-span"></span></div><div class="slick-pg-prev slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><span class="slick-pg-control">&nbsp;Page&nbsp;<input class="slick-pg-current" type="text" size="4" value="1"> / <span class="slick-pg-total"> 1 </span></span></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-next slick-pg-btn"><span class="slick-pg-btn-span"></span></div><div class="slick-pg-last slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><div class="slick-pg-reload slick-pg-btn"><span class="slick-pg-btn-span"></span></div></div><div class="slick-pg-sep"></div><div class="slick-pg-grp"><span class="slick-pg-stat"></span></div></div></div></div></div>
+</div></div></section>
+    </main>
+
+<div id="cboxOverlay" style="display: none;"></div><div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;"><div id="cboxWrapper"><div><div id="cboxTopLeft" style="float: left;"></div><div id="cboxTopCenter" style="float: left;"></div><div id="cboxTopRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxMiddleLeft" style="float: left;"></div><div id="cboxContent" style="float: left;"><div id="cboxTitle" style="float: left;"></div><div id="cboxCurrent" style="float: left;"></div><button type="button" id="cboxPrevious"></button><button type="button" id="cboxNext"></button><button id="cboxSlideshow"></button><div id="cboxLoadingOverlay" style="float: left;"></div><div id="cboxLoadingGraphic" style="float: left;"></div></div><div id="cboxMiddleRight" style="float: left;"></div></div><div style="clear: left;"><div id="cboxBottomLeft" style="float: left;"></div><div id="cboxBottomCenter" style="float: left;"></div><div id="cboxBottomRight" style="float: left;"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div></div><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span><span role="status" aria-live="polite" class="select2-hidden-accessible"></span></body></html>
