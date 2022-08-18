@@ -10,7 +10,6 @@ public class NewBussinessUnitPage {
             .locatedBy("//div[@class='field ParentUnitId']//div");
     public static final Target LST_PARENT_UNIT = Target.the("the parent unit list")
             .locatedBy("//ul[@id='select2-results-1']");
-
     public static final Target BTN_SAVE_UNIT = Target.the("the button to save changes")
             .locatedBy("//div[@class='tool-button save-and-close-button icon-tool-button']");
 

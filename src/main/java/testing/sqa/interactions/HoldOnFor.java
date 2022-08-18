@@ -21,7 +21,6 @@ public class HoldOnFor implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        // WaitUntil.the(BTN_CHECKOUT, isVisible()).forNoMoreThan(3).seconds(),
         DriverRemoteBrowser.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
 

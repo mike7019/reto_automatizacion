@@ -27,7 +27,7 @@ public class CreateANewMeeting implements Task {
 
         try {
 
-            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
+            dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
 
         } catch (Exception e) {
 
@@ -45,7 +45,7 @@ public class CreateANewMeeting implements Task {
                 Clear.field(TXT_START_DATE),
                 Enter.keyValues(dataExcel.get(0).get("Start Date")).into(TXT_START_DATE),
                 ChooseListSelect.index(TXT_START_HOUR, 10),
-                Enter.keyValues(dataExcel.get(0).get("Location")).into(TXT_MEETING_NUMBER),
+                Enter.keyValues(dataExcel.get(0).get("Meeting_Number")).into(TXT_MEETING_NUMBER),
                 JavaScriptClick.on(TXT_END_DATE),
                 Clear.field(TXT_END_DATE),
                 Enter.keyValues(dataExcel.get(0).get("End_Date")).into(TXT_END_DATE),
@@ -55,7 +55,7 @@ public class CreateANewMeeting implements Task {
                 Click.on(TXT_ORGANIZED_BY),
                 ChooseFromList.index(LST_ORGANIZED_BY, 5),
                 Click.on(TXT_UNIT),
-                ChooseFromList.index(LST_UNIT, 9),
+                SelectUnit.on(LST_UNIT, dataExcel.get(0).get("Bussiness_Name")),
                 Click.on(TXT_REPORTER),
                 ChooseFromList.index(LST_REPORTER, 3),
                 Click.on(TXT_ATENDEE_LIST),

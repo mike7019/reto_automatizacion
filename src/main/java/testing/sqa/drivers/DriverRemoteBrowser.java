@@ -11,7 +11,7 @@ public class DriverRemoteBrowser {
 
     public static WebDriver driver;
 
-    public static DriverRemoteBrowser chromeHisBrowserWeb() {
+    public static DriverRemoteBrowser withTheseOptions() {
 
         ChromeOptions options = new ChromeOptions();
 

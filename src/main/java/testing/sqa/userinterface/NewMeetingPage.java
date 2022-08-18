@@ -38,6 +38,8 @@ public class NewMeetingPage {
             .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId']");
     public static final Target LST_UNIT = Target.the("select Unit")
             .locatedBy("//ul[@id='select2-results-8']");
+    public static final Target OPT_TEXT = Target.the("unit text locator")
+            .locatedBy("//div[@class='select2-result-label']/span");
     public static final Target TXT_REPORTER = Target.the("reporter list")
             .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId']");
     public static final Target LST_REPORTER = Target.the("select reporter list")

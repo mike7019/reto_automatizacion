@@ -3,7 +3,7 @@ package testing.sqa.questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static testing.sqa.userinterface.LoginPage.*;
+import static testing.sqa.userinterface.LoginPage.LBL_VALIDATION;
 
 public class ValidateTheMessage implements Question<String> {
 

@@ -18,7 +18,7 @@ public class ExplicitWait implements Interaction {
 
         try {
             Thread.sleep(secs * 1000);
-        } catch (InterruptedException e) {
+        } catch (InterruptedException ignored) {
 
         }
 

@@ -70,6 +70,8 @@ the code was developed using screenplay pattern as below:
 
 #### CreateANewBussinessUnit
 
+These task creates a Bussiness Unit and asigns a Parent unit to it and uses the interaction class `ChooseFromList.java` with two parameters `(Target locator, int index)`
+
 ```java
 public class CreateANewBussinessUnit implements Task {
 
@@ -79,11 +81,13 @@ public class CreateANewBussinessUnit implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        try {
-            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
-        } catch (Exception ignored){}
+            try {
+                dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        actor.attemptsTo(
+            actor.attemptsTo(
                 WaitUntil.the(BTN_ORGANIZATION, isVisible()).forNoMoreThan(10).seconds(),
                 JavaScriptClick.on(BTN_ORGANIZATION),
                 JavaScriptClick.on(BTN_BUSSINESS_UNIT),
@@ -91,20 +95,16 @@ public class CreateANewBussinessUnit implements Task {
                 JavaScriptClick.on(BTN_NEW_BUSSINESS_UNIT),
                 Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
                 Click.on(TXT_PARENT_UNIT),
-                ChooseFromList.index(LST_PARENT_UNIT,3),
-                ExplicitWait.here(3),
+                ChooseFromList.index(LST_PARENT_UNIT,0),
                 JavaScriptClick.on(BTN_SAVE_UNIT)
         );
 
     }
-
-    public static CreateANewBussinessUnit onTheSite() {
-        return Instrumented.instanceOf(CreateANewBussinessUnit.class).withProperties();
-    }
-}
 ```
 
 #### CreateANewMeeting
+
+These class creates a new meeting after creating the Bussiness Unit, uses an excel class data driven with two parameters `(path, sheet)`, to get the text from that excel file it uses the instruction `dataExcel.get(index).get("column_Name")` as String, there is the interaction `SelectUnit(Target element, String Bussiness_Name)` to arrange the field with the meeting created
 
 ```java
 public class CreateANewMeeting implements Task {
@@ -116,7 +116,7 @@ public class CreateANewMeeting implements Task {
 
         try {
 
-            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
+            dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
 
         } catch (Exception e) {
 
@@ -129,35 +129,31 @@ public class CreateANewMeeting implements Task {
                 JavaScriptClick.on(BTN_NEW_MEETING),
                 Enter.theValue(dataExcel.get(0).get("Meeting_Name")).into(TXT_MEETING_NAME),
                 Click.on(TXT_MEETING_TYPE),
-                ChooseFromList.index(LST_MEETING_TYPE,2),
+                ChooseFromList.index(LST_MEETING_TYPE, 2),
                 Click.on(TXT_START_DATE),
                 Clear.field(TXT_START_DATE),
                 Enter.keyValues(dataExcel.get(0).get("Start Date")).into(TXT_START_DATE),
-                JavaScriptClick.on(TXT_START_HOUR),
-                Enter.keyValues(dataExcel.get(0).get("Location")).into(TXT_MEETING_NUMBER),
+                ChooseListSelect.index(TXT_START_HOUR, 10),
+                Enter.keyValues(dataExcel.get(0).get("Meeting_Number")).into(TXT_MEETING_NUMBER),
                 JavaScriptClick.on(TXT_END_DATE),
                 Clear.field(TXT_END_DATE),
                 Enter.keyValues(dataExcel.get(0).get("End_Date")).into(TXT_END_DATE),
+                ChooseListSelect.index(TXT_END_HOUR, 12),
                 Click.on(TXT_LOCATION),
-                ChooseFromList.index(LST_LOCATION_OPTIONS,3),
+                ChooseFromList.index(LST_LOCATION_OPTIONS, 3),
                 Click.on(TXT_ORGANIZED_BY),
-                ChooseFromList.index(LST_ORGANIZED_BY,5),
+                ChooseFromList.index(LST_ORGANIZED_BY, 5),
                 Click.on(TXT_UNIT),
-                ChooseFromList.index(LST_UNIT,9),
+                SelectUnit.on(LST_UNIT, dataExcel.get(0).get("Bussiness_Name")),
                 Click.on(TXT_REPORTER),
-                ChooseFromList.index(LST_REPORTER,3),
+                ChooseFromList.index(LST_REPORTER, 3),
                 Click.on(TXT_ATENDEE_LIST),
-                ChooseFromList.index(LST_ATENDEE_LIST,3),
+                ChooseFromList.index(LST_ATENDEE_LIST, 3),
                 Click.on(BTN_SAVE),
                 ExplicitWait.here(5),
                 Ensure.that(LBL_USER_VALIDATION).isDisplayed()
         );
     }
-
-    public static CreateANewMeeting onTheSite() {
-        return Instrumented.instanceOf(CreateANewMeeting.class).withProperties();
-    }
-}
 ```
 
 #### DoTheLogin

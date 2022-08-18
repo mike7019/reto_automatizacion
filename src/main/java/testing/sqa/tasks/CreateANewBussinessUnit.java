@@ -8,10 +8,9 @@ import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import testing.sqa.interactions.ChooseFromList;
-import testing.sqa.interactions.ExplicitWait;
-
 import testing.sqa.utils.ExcelDataTable;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
@@ -29,11 +28,13 @@ public class CreateANewBussinessUnit implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        try {
-            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
-        } catch (Exception ignored){}
+            try {
+                dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
-        actor.attemptsTo(
+            actor.attemptsTo(
                 WaitUntil.the(BTN_ORGANIZATION, isVisible()).forNoMoreThan(10).seconds(),
                 JavaScriptClick.on(BTN_ORGANIZATION),
                 JavaScriptClick.on(BTN_BUSSINESS_UNIT),
@@ -41,8 +42,7 @@ public class CreateANewBussinessUnit implements Task {
                 JavaScriptClick.on(BTN_NEW_BUSSINESS_UNIT),
                 Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
                 Click.on(TXT_PARENT_UNIT),
-                ChooseFromList.index(LST_PARENT_UNIT,3),
-                ExplicitWait.here(3),
+                ChooseFromList.index(LST_PARENT_UNIT,0),
                 JavaScriptClick.on(BTN_SAVE_UNIT)
         );
 

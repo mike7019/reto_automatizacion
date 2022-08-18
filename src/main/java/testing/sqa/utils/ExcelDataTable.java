@@ -32,15 +32,15 @@ public class ExcelDataTable {
         return pointer;
     }
 
-    public static ArrayList<Map<String, String>> leerDatosDeHojaDeExcel(String rutaDeExcel, String hojaDeExcel) throws IOException {
-        ArrayList<Map<String, String>> arrayListDatoPlanTrabajo = new ArrayList<Map<String, String>>();
-        Map<String, String> informacionProyecto = new HashMap<String, String>();
-        File file = new File(rutaDeExcel);
+    public static ArrayList<Map<String, String>> ReadData(String excelPath, String excelSheet) throws IOException {
+        ArrayList<Map<String, String>> arrayListWorkPlanData = new ArrayList<Map<String, String>>();
+        Map<String, String> projectInformation = new HashMap<String, String>();
+        File file = new File(excelPath);
         FileInputStream inputStream = new FileInputStream(file);
         XSSFWorkbook newWorkbook = new XSSFWorkbook(inputStream);
-        XSSFSheet newSheet = newWorkbook.getSheet(hojaDeExcel);
+        XSSFSheet newSheet = newWorkbook.getSheet(excelSheet);
         Iterator<Row> rowIterator = newSheet.iterator();
-        Row titulos = rowIterator.next();
+        Row tiles = rowIterator.next();
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             Iterator<Cell> cellIterator = row.cellIterator();
@@ -49,20 +49,20 @@ public class ExcelDataTable {
                 cell.getColumnIndex();
                 switch (cell.getCellTypeEnum()) {
                     case STRING:
-                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), cell.getStringCellValue());
+                        projectInformation.put(tiles.getCell(cell.getColumnIndex()).toString(), cell.getStringCellValue());
                         break;
                     case NUMERIC:
-                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), String.valueOf((long) cell.getNumericCellValue()));
+                        projectInformation.put(tiles.getCell(cell.getColumnIndex()).toString(), String.valueOf((long) cell.getNumericCellValue()));
                         break;
                     case BLANK:
-                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), "");
+                        projectInformation.put(tiles.getCell(cell.getColumnIndex()).toString(), "");
                         break;
                     default:
                 }
             }
-            arrayListDatoPlanTrabajo.add(informacionProyecto);
-            informacionProyecto = new HashMap<String, String>();
+            arrayListWorkPlanData.add(projectInformation);
+            projectInformation = new HashMap<String, String>();
         }
-        return arrayListDatoPlanTrabajo;
+        return arrayListWorkPlanData;
     }
 }

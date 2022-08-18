@@ -25,7 +25,7 @@ public class StartSharpLoginStepDefinitions {
     @Given("^That Mike opens the url to see the login page$")
     public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
 
-        DriverRemoteBrowser.chromeHisBrowserWeb();
+        DriverRemoteBrowser.withTheseOptions();
         OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on("https://serenity.is/demo/")));
 
     }
@@ -40,11 +40,10 @@ public class StartSharpLoginStepDefinitions {
     }
 
     @Then("^Mike will be able to see the (.*)$")
-    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String message) {
+    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String text) {
 
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(message)));
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(text)));
 
     }
-
 
 }
