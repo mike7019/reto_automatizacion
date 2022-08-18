@@ -36,8 +36,6 @@ public class DriverRemoteBrowser {
         return new DriverRemoteBrowser();
     }
 
-
-
     public static WebDriver on(String url) {
         driver.get(url);
         return driver;

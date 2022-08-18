@@ -15,11 +15,11 @@ public class NewMeetingPage {
     public static final Target TXT_START_DATE = Target.the("field for the date")
             .locatedBy("//input[@id='Serenity_Pro_Meeting_MeetingDialog10_StartDate']");
     public static final Target TXT_START_HOUR = Target.the("start hour to choose")
-            .locatedBy("(//i[@class='inplace-button inplace-now'])[1]");
+            .locatedBy("//div[@class='field StartDate col-sm-6']//select");
     public static final Target TXT_END_DATE = Target.the("end date field")
             .locatedBy("//input[@id='Serenity_Pro_Meeting_MeetingDialog10_EndDate']");
     public static final Target TXT_END_HOUR = Target.the("end hour to choose")
-            .locatedBy("(//i[@class='inplace-button inplace-now'])[2]");
+            .locatedBy("//div[@class='field EndDate col-sm-6']//select");
     public static final Target TXT_LOCATION = Target.the("location to select")
             .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId']");
     public static final Target LST_LOCATION_OPTIONS = Target.the("options from the location list")
@@ -42,10 +42,6 @@ public class NewMeetingPage {
             .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId']");
     public static final Target LST_REPORTER = Target.the("select reporter list")
             .locatedBy("//ul[@id='select2-results-10']");
-    public static final Target TXT_ATENDEE_TYPE = Target.the("atendee type list")
-            .locatedBy("//select[@class='valid']");
-    public static final Target TXT_ATTENDANCE_STATUS = Target.the("Attendance status list")
-            .locatedBy("//div[@class='slick-cell l3 r3']/select");
     public static final Target BTN_SAVE = Target.the("button to save the meeting")
             .locatedBy("//div[@class='tool-button save-and-close-button icon-tool-button']");
 }

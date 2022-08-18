@@ -288,7 +288,40 @@ public class ExplicitWait implements Interaction {
 }
 ```
 
-### Uis
+### ChooseListSelect
+
+it uses a WebElement, clicks it and then uses the class Select to choose an option by Index
+
+
+```java
+public class ChooseListSelect implements Interaction {
+
+    private final Target element;
+    private final int index;
+
+
+    public ChooseListSelect(Target element, int index) {
+        this.element = element;
+        this.index = index;
+
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+
+        WebElement hour = element.resolveFor(actor);
+        hour.click();
+        Select listSelect = new Select(hour);
+        listSelect.selectByIndex(index);
+
+    }
+
+    public static ChooseListSelect index(Target element, int index){
+        return Instrumented.instanceOf(ChooseListSelect.class).withProperties(element, index);
+    }
+}
+
+```
 
 #### UserInterfaces
 

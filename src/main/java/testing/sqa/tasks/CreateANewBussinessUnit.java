@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.actions.*;
 
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import testing.sqa.interactions.ChooseParentUnit;
+import testing.sqa.interactions.ChooseFromList;
 import testing.sqa.interactions.ExplicitWait;
 
 import testing.sqa.utils.ExcelDataTable;
@@ -41,10 +41,9 @@ public class CreateANewBussinessUnit implements Task {
                 JavaScriptClick.on(BTN_NEW_BUSSINESS_UNIT),
                 Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
                 Click.on(TXT_PARENT_UNIT),
-                ChooseParentUnit.index(0),
-                ExplicitWait.here(5),
-                JavaScriptClick.on(BTN_SAVE_UNIT),
-                ExplicitWait.here(10)
+                ChooseFromList.index(LST_PARENT_UNIT,3),
+                ExplicitWait.here(3),
+                JavaScriptClick.on(BTN_SAVE_UNIT)
         );
 
     }

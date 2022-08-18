@@ -12,8 +12,8 @@ import testing.sqa.tasks.DoTheLogin;
 
 import java.util.List;
 
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
-import static org.hamcrest.core.IsEqual.equalTo;
+import static net.serenitybdd.screenplay.GivenWhenThen.*;
+import static org.hamcrest.core.IsEqual.*;
 
 public class StartSharpLoginStepDefinitions {
 
@@ -28,7 +28,6 @@ public class StartSharpLoginStepDefinitions {
         DriverRemoteBrowser.chromeHisBrowserWeb();
         OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on("https://serenity.is/demo/")));
 
-
     }
 
     @When("^Mike types the following data$")
@@ -38,15 +37,12 @@ public class StartSharpLoginStepDefinitions {
                 DoTheLogin.onTheSite()
                         .user(loginDataList.get(0).getUser())
                         .password(loginDataList.get(0).getPassword()));
-
-
     }
 
     @Then("^Mike will be able to see the (.*)$")
     public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String message) {
 
         OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(message)));
-
 
     }
 

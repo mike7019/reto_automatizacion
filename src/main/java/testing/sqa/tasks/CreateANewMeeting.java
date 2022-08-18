@@ -6,14 +6,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import testing.sqa.interactions.ChooseOrganizer;
 import testing.sqa.interactions.*;
 import testing.sqa.utils.ExcelDataTable;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 import static testing.sqa.userinterface.DashBoardPage.*;
 import static testing.sqa.userinterface.MeetingsPage.*;
 import static testing.sqa.userinterface.NewMeetingPage.*;
@@ -41,25 +40,26 @@ public class CreateANewMeeting implements Task {
                 JavaScriptClick.on(BTN_NEW_MEETING),
                 Enter.theValue(dataExcel.get(0).get("Meeting_Name")).into(TXT_MEETING_NAME),
                 Click.on(TXT_MEETING_TYPE),
-                ChooseMeetingType.index(2),
+                ChooseFromList.index(LST_MEETING_TYPE, 2),
                 Click.on(TXT_START_DATE),
                 Clear.field(TXT_START_DATE),
                 Enter.keyValues(dataExcel.get(0).get("Start Date")).into(TXT_START_DATE),
-                JavaScriptClick.on(TXT_START_HOUR),
+                ChooseListSelect.index(TXT_START_HOUR, 10),
                 Enter.keyValues(dataExcel.get(0).get("Location")).into(TXT_MEETING_NUMBER),
                 JavaScriptClick.on(TXT_END_DATE),
                 Clear.field(TXT_END_DATE),
-                Enter.keyValues("02/02/2023").into(TXT_END_DATE),
+                Enter.keyValues(dataExcel.get(0).get("End_Date")).into(TXT_END_DATE),
+                ChooseListSelect.index(TXT_END_HOUR, 12),
                 Click.on(TXT_LOCATION),
-                ChooseLocationOptions.index(3),
+                ChooseFromList.index(LST_LOCATION_OPTIONS, 3),
                 Click.on(TXT_ORGANIZED_BY),
-                ChooseOrganizer.index(5),
+                ChooseFromList.index(LST_ORGANIZED_BY, 5),
                 Click.on(TXT_UNIT),
-                ChooseUnit.index(9),
+                ChooseFromList.index(LST_UNIT, 9),
                 Click.on(TXT_REPORTER),
-                ChooseReporter.index(3),
+                ChooseFromList.index(LST_REPORTER, 3),
                 Click.on(TXT_ATENDEE_LIST),
-                ChooseAtendee.index(4),
+                ChooseFromList.index(LST_ATENDEE_LIST, 3),
                 Click.on(BTN_SAVE),
                 ExplicitWait.here(5),
                 Ensure.that(LBL_USER_VALIDATION).isDisplayed()
