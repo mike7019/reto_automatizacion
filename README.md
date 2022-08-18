@@ -3,7 +3,7 @@
 Executes automation on the site
  [StartSharp](https://serenity.is/demo/)
  following the login procces, creating a new bussiness unit followed by the appointment schedule creation.
-[Gradle](https://gradle.org/), [Java](https://www.java.com/es/), [SerenityBDD](https://serenity-bdd.github.io/theserenitybook/latest/index.html), [Cucumber](https://cucumber.io/) y Screenplay.
+[Gradle](https://gradle.org/), [Java](https://www.java.com/es/), [SerenityBDD](https://serenity-bdd.github.io/theserenitybook/latest/index.html), [Cucumber](https://cucumber.io/) and Screenplay.
 
 ## Code Structure
 
@@ -65,89 +65,6 @@ the code was developed using screenplay pattern as below:
 </tr>
 </table>
 
-#### Step Definitions
-
-##### startSharpLogin
-
-Before everything starts, its needed to create an instance of the actor using the OnStage class using the @Before annotation
-
-```java
-@Before
-    public void setStage() {
-        OnStage.setTheStage(new OnlineCast());
-    }
-```
-
-starts with the login on the website and validates the login was successfully done, the driver setups the options needed to run the browser properly with the line followed by the url that is passed raw to the ability.
-
-```java
-@Given("^That Mike opens the url to see the login page$")
-    public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
-
-        DriverRemoteBrowser.chromeHisBrowserWeb();
-        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on("https://serenity.is/demo/")));
-
-    }
-```
-
-holding the flow; When executes the task to give the data through the feature file using a Datatable controlled by a model class
-
-```java
-@When("^Mike types the following data$")
-    public void MikeTypesTheFollowingData(List<LoginData> loginDataList) {
-
-        OnStage.theActorInTheSpotlight().attemptsTo(
-                DoTheLogin.onTheSite()
-                        .user(loginDataList.get(0).getUser())
-                        .password(loginDataList.get(0).getPassword()));
-    }
-```
-
-holding the flow; Then validates the login taking the message DashBoard displayed on the screen
-
-```java
-@Then("^Mike will be able to see the (.*)$")
-    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String message) {
-
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(message)));
-
-    }
-```
-
-#### startSharpBussiness
-
-
-
-Before everything starts, its needed to create an instance of the actor using the OnStage class using the @Before annotation
-
-```java
-@Before
-    public void setStage() {
-        OnStage.setTheStage(new OnlineCast());
-    }
-
-```
-
-Starts creating a new bussiness unit followed by the new meeting creation
-```java
-    @When("^Mike creates a new unit bussiness and setups a meeting$")
-    public void mikeCreatesANewUnitBussinessAndSetupsAMeeting() {
-
-        OnStage.theActorInTheSpotlight().attemptsTo(CreateANewBussinessUnit.onTheSite());
-        OnStage.theActorInTheSpotlight().attemptsTo(CreateANewMeeting.onTheSite());
-    }
-```
-
-Then uses a Question class to validate using a boolean answer
-
-```java
-    @Then("^Mike will be able see the meeting was succesfully scheduled$")
-    public void mikeWillBeAbleSeeTheMeetingWasSuccesfullyScheduled() {
-
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMeetingName.value()));
-
-    }
-```
 
 #### Tasks
 
@@ -753,6 +670,90 @@ follows the steps and executes the proper methods  on the `startsharpstepdefinit
         features = "src/test/resources/features/startSharpLogin.feature",
         glue = "testing.startSharp.startsharpstepdefinitions",
         snippets = SnippetType.CAMELCASE)
+```
+
+#### Step Definitions
+
+##### startSharpLogin
+
+Before everything starts, its needed to create an instance of the actor using the OnStage class using the @Before annotation
+
+```java
+@Before
+    public void setStage() {
+        OnStage.setTheStage(new OnlineCast());
+    }
+```
+
+starts with the login on the website and validates the login was successfully done, the driver setups the options needed to run the browser properly with the line followed by the url that is passed raw to the ability.
+
+```java
+@Given("^That Mike opens the url to see the login page$")
+    public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
+
+        DriverRemoteBrowser.chromeHisBrowserWeb();
+        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on("https://serenity.is/demo/")));
+
+    }
+```
+
+holding the flow; When executes the task to give the data through the feature file using a Datatable controlled by a model class
+
+```java
+@When("^Mike types the following data$")
+    public void MikeTypesTheFollowingData(List<LoginData> loginDataList) {
+
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                DoTheLogin.onTheSite()
+                        .user(loginDataList.get(0).getUser())
+                        .password(loginDataList.get(0).getPassword()));
+    }
+```
+
+holding the flow; Then validates the login taking the message DashBoard displayed on the screen
+
+```java
+@Then("^Mike will be able to see the (.*)$")
+    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String message) {
+
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(message)));
+
+    }
+```
+
+#### startSharpBussiness
+
+
+
+Before everything starts, its needed to create an instance of the actor using the OnStage class using the @Before annotation
+
+```java
+@Before
+    public void setStage() {
+        OnStage.setTheStage(new OnlineCast());
+    }
+
+```
+
+Starts creating a new bussiness unit followed by the new meeting creation
+```java
+    @When("^Mike creates a new unit bussiness and setups a meeting$")
+    public void mikeCreatesANewUnitBussinessAndSetupsAMeeting() {
+
+        OnStage.theActorInTheSpotlight().attemptsTo(CreateANewBussinessUnit.onTheSite());
+        OnStage.theActorInTheSpotlight().attemptsTo(CreateANewMeeting.onTheSite());
+    }
+```
+
+Then uses a Question class to validate using a boolean answer
+
+```java
+    @Then("^Mike will be able see the meeting was succesfully scheduled$")
+    public void mikeWillBeAbleSeeTheMeetingWasSuccesfullyScheduled() {
+
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMeetingName.value()));
+
+    }
 ```
 
 ### Features
