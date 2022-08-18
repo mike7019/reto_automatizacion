@@ -1,181 +1,819 @@
-# 📲 Apple Developer Roadmap
-## Ruta de aprendizaje desde cero para convertirte en Apple Developer en 2022 (iOS, iPadOS, macOS, watchOS, tvOS)
-> ℹ️ He creado este repositorio para actualizarlo continuamente con recursos de aprendizaje de dentro y fuera de la comunidad.
->  
-> ⚠️ **IMPORTANTE:** No dudes en sugerir [cambios](https://github.com/mouredev/Apple-Developer-Roadmap/discussions), hacer [pull request](https://github.com/mouredev/Apple-Developer-Roadmap/pulls) o crear una nueva [issue](https://github.com/mouredev/Apple-Developer-Roadmap/issues) para compartir tus recursos y así añadirlos al repo con intención de crear una gran guía de estudio.
+# StartSharpModule
 
-## Introducción
+Executes automation on the site
+ [StartSharp](https://serenity.is/demo/)
+ following the login procces, creating a new bussiness unit followed by the appointment schedule creation.
+[Gradle](https://gradle.org/), [Java](https://www.java.com/es/), [SerenityBDD](https://serenity-bdd.github.io/theserenitybook/latest/index.html), [Cucumber](https://cucumber.io/) y Screenplay.
 
-<a href="https://youtu.be/-w3R4DEwd2g"><img src="http://i3.ytimg.com/vi/-w3R4DEwd2g/maxresdefault.jpg" style="height: 50%; width:50%;"/></a>
+## Code Structure
 
-**▶️ Antes de empezar te servirá de ayuda ver una introducción detallada donde explico el roadmap y el funcionamiento del repositorio en mi tutorial de [YouTube](https://youtu.be/-w3R4DEwd2g).**
+the code was developed using screenplay pattern as below:
+<table>
+<tr>
+  <th>Tasks</th>
+  <td>
+    <h6>Contains all the task to execute on the automation</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Interactions</th>
+  <td>
+    <h6>Contains all the interactions to execute on the automation</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Models</th>
+  <td>
+    <h6>Contains all the models to build the execution data</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Uis</th>
+  <td>
+    <h6>contains all the abstraction classes with the selectors for each site</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Drivers</th>
+  <td>
+    <h6>contains all the drivers for each browser</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Runners</th>
+  <td>
+    <h6>Contains all the runers to run the automation</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Steps Definitions</th>
+  <td>
+    <h6>Contains all the step definitions for each test</h6>
+  </td>
+</tr>
+  <tr>
+  <th>Features</th>
+  <td>
+    <h6>Contains all the scenarios under the Gherkin language</h6>
+  </td>
+</tr>
+<tr>
+  <th>Questions</th>
+  <td>
+    <h6>Contains all the validations needed to ensure the tests</h6>
+  </td>
+</tr>
+</table>
 
-## Proceso de aprendizaje
-Debes entender que aprender programación es una carrera de fondo. Tendrás mejores y peores momentos, pero, ¿sabes qué? **¡Le pasa a todo el mundo!**. Al final del trayecto te espera un sector lleno de grandes oportunidades. Te recomiendo que te unas a nuestro servidor de Discord, donde compartimos recursos y nos ayudamos.
+#### Step Definitions
 
-[![Discord](https://img.shields.io/badge/Discord-Únete_a_nuestra_comunindad-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=101010)](https://mouredev.com/discord)
+##### startSharpLogin
 
-Para mejorar nuestras habilidades publico retos de programación semanales y mensuales en estos dos repositorios. También desarrollamos nuestra aplicación real [Twitimer](https://twitimer.com/), disponible en la App Store y con todo su código público.
+Before everything starts, its needed to create an instance of the actor using the OnStage class using the @Before annotation
 
-[![Reto mensual](https://img.shields.io/github/stars/mouredev/Monthly-App-Challenge-2022?label=Reto%20mensual&style=social)](https://github.com/mouredev/Monthly-App-Challenge-2022)
-[![Reto semanal](https://img.shields.io/github/stars/mouredev/Weekly-Challenge-2022-Swift?label=Reto%20semanal%20Swift/iOS&style=social)](https://github.com/mouredev/Weekly-Challenge-2022-Swift)
-[![Twitimer](https://img.shields.io/github/stars/mouredev/Twitimer-iOS?label=Twitimer%20iOS&style=social)](https://github.com/mouredev/Twitimer-iOS)
+```java
+@Before
+    public void setStage() {
+        OnStage.setTheStage(new OnlineCast());
+    }
+```
 
-🤖 Este roadmap también lo tienes disponible para desarrollo de aplicaciones en entornos Android.
+starts with the login on the website and validates the login was successfully done, the driver setups the options needed to run the browser properly with the line followed by the url that is passed raw to the ability.
 
-[![Android Developer Roadmap](https://img.shields.io/github/stars/mouredev/Android-Developer-Roadmap?label=Roadmap%20Android%20Developer&style=social)](https://github.com/mouredev/Android-Developer-Roadmap)
+```java
+@Given("^That Mike opens the url to see the login page$")
+    public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
 
-## Fuentes de información
-Recuerda la importancia de desarrollar habilidades para resolver problemas y encontrar información relevante. Puede sonal mal, pero [Google](https://www.google.com/) es una de nuestras principales herramientas de trabajo, y debemos saber usarlo. Otros lugares que debes conocer son:
+        DriverRemoteBrowser.chromeHisBrowserWeb();
+        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on("https://serenity.is/demo/")));
 
-* [Apple Developer](https://developer.apple.com/): Sitio web oficial para desarrolladores Apple
-* [GitHub](https://github.com/): Repositorio de código público más grande del mundo
-* [Stack Overflow](https://stackoverflow.com/): Resolución de problemas
-* [Medium](https://medium.com/) y [Dev.to](https://dev.to/): Artículos de interés
+    }
+```
 
-## Ruta de aprendizaje
-El roadmap estará compuesto por algunos recursos oficiales, otros creados por mí, y por los sugeridos desde la propia comunidad como comento al principio de este documento. *Por supuesto, esta mi ruta personal para aprender desarrollo de aplicaciones desde cero y dedicarte profesionalmente a ello (en ningún momento quiero que pienses que es la mejor o la única, simplemente es la que yo creo que te puede ayudar).*
+holding the flow; When executes the task to give the data through the feature file using a Datatable controlled by a model class
 
-🎓 **En mi [curso de Swift/iOS de 30 horas en Udemy](https://www.udemy.com/course/swift_ios/?referralCode=04756B8423CBE177B930) podrás encontrar una gran parte de los temas tratados en este roadmap.**
+```java
+@When("^Mike types the following data$")
+    public void MikeTypesTheFollowingData(List<LoginData> loginDataList) {
 
-> 📈 **A continuación tendrás el roadmap formado por un listado de conocimientos a adquirir (así como distintos sitios web donde comenzar su aprendizaje). Este listado se irá actualizando y completando, incluso creando nuevos documentos para agrupar enlaces de interés.**
+        OnStage.theActorInTheSpotlight().attemptsTo(
+                DoTheLogin.onTheSite()
+                        .user(loginDataList.get(0).getUser())
+                        .password(loginDataList.get(0).getPassword()));
+    }
+```
 
-### 1️⃣ Lenguaje de programación: Swift
-Debes aprender sus fundamentos, tipos de datos primivos y estructuras, flujo lógico y paradigma de programación orientada a objetos.
+holding the flow; Then validates the login taking the message DashBoard displayed on the screen
 
-* [Swift en Apple Developer](https://developer.apple.com/swift/)
-* [Swift.org sitio web oficial](https://www.swift.org/)
-* [TUTORIAL Swift desde cero](https://youtu.be/P6ko_I5GHbs)
-* [TUTORIAL Swift (en Udemy)](https://www.udemy.com/course/swift_ios/?referralCode=04756B8423CBE177B930)
+```java
+@Then("^Mike will be able to see the (.*)$")
+    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String message) {
 
-### 2️⃣ Editores de código: Xcode, Swift Playgrounds, Online Swift Playground
-Puedes usar estos tres editores de código para aprender Swift, eso sí, para crear aplicaciones no podrás hacerlo con el editor online.
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(message)));
 
-* [Xcode](https://developer.apple.com/xcode/)
-* [Swift Playgrounds](https://www.apple.com/swift/playgrounds/)
-* [Swift Playground online](http://online.swiftplayground.run/)
-* [TUTORIAL Xcode](https://youtu.be/MyzZnIR5gC4)
-* [TUTORIAL Swift Playgrounds](https://youtu.be/8DCXEyL-GH4)
+    }
+```
 
-También debes comenzar a conocer otros conceptos importantes dentro de la ingeniería de software:
+#### startSharpBussiness
 
-* Expresiones regulares.
-* Recursividad.
-* Notación asintótica.
-* Funciones de orden superior.
-* Porgramación orientada a objetos.
-* Programación orientada a estados.
-* Programación imperativa.
-* Programación declarativa.
-* Programación funcional.
 
-### 3️⃣ Librerías y Frameworks: UIKit y SwiftUI
-Es hora de comenzar a trabajar con las librerías de código que nos proporciona Apple para crear Apps. Nos centraremos en las especializadas en creación de interfaces de usuario (UI): UIKit y SwiftUI (el nuevo framework presentado en 2019 diseñado para poco a poco sustituir a UIKit).
 
-* [SwiftUI](https://developer.apple.com/xcode/swiftui)
-* [UIKit](https://developer.apple.com/documentation/uikit)
-* [TUTORIAL UIKit (en Udemy)](https://www.udemy.com/course/swift_ios/?referralCode=04756B8423CBE177B930)
-* [TUTORIAL SwiftUI](https://youtu.be/hGIzLGgf3Bo)
+Before everything starts, its needed to create an instance of the actor using the OnStage class using the @Before annotation
 
-### 4️⃣ Guías de desarrollo y diseño
-La documentación oficial de Apple es esencial para conocer sus normas, recomendaciones y procesos.
+```java
+@Before
+    public void setStage() {
+        OnStage.setTheStage(new OnlineCast());
+    }
 
-* [Guía de desarrollo oficial](https://developer.apple.com/app-store/guidelines/)
-* [Guía de diseño oficial](https://developer.apple.com/design/human-interface-guidelines/)
+```
 
-No olvides la importancia de los siguiente conceptos:
+Starts creating a new bussiness unit followed by the new meeting creation
+```java
+    @When("^Mike creates a new unit bussiness and setups a meeting$")
+    public void mikeCreatesANewUnitBussinessAndSetupsAMeeting() {
 
-* Comentarios de código.
-* [Markdown](https://www.markdownguide.org/) como lenguaje marcador para generar documentación.
+        OnStage.theActorInTheSpotlight().attemptsTo(CreateANewBussinessUnit.onTheSite());
+        OnStage.theActorInTheSpotlight().attemptsTo(CreateANewMeeting.onTheSite());
+    }
+```
 
-### 5️⃣ Patrones de diseño
-Mecanismos para resolver de forma elegante problemas comunes en programación
+Then uses a Question class to validate using a boolean answer
 
-[Estos son algunos de los principales](https://refactoring.guru/es/design-patterns):
+```java
+    @Then("^Mike will be able see the meeting was succesfully scheduled$")
+    public void mikeWillBeAbleSeeTheMeetingWasSuccesfullyScheduled() {
 
-* Delegate.
-* Singleton.
-* Adapter.
-* Decorator.
-* Facade.
-* State.
-* Strategy.
-* Builder.
-* ...
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMeetingName.value()));
 
-### 6️⃣ Arquitectura de software: MVC y MVVM
-La arquitectura de software de nuestro programa hace referencia a cómo se estructura nuestro programa en capas y cuál es la responsabilidad de cada una de las piezas que conforman nuestra App.
+    }
+```
 
-* MVC (Modelo-Vista-Controlador): Arquitectura básica.
-* MVVM (Modelo-Vista-VistaModelo): Arquitectura más avanzada.
+#### Tasks
 
-Sigue trabajando estos nuevos conceptos:
+#### CreateANewBussinessUnit
 
-* Principios SOLID.
-* Programación en base a código limpio.
+```java
+public class CreateANewBussinessUnit implements Task {
 
-### 7️⃣ Funcionalidades
-Implementaciones de características muy habituales en aplicaciones de todo tipo que debes conocer.
 
-* Almacenamiento de datos:
-	* [UserDefaults](https://youtu.be/JLXx4L3wC_w)
-	* [CoreData](https://developer.apple.com/documentation/coredata)
-	* [Realm](https://github.com/realm/realm-swift)
-	* [SQLite](https://github.com/stephencelis/SQLite.swift)
+    public ArrayList<Map<String, String>> dataExcel;
 
-* Conexión con servidor remoto:
-	* [REST](https://restfulapi.net/)
-	* [HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
-	* [JSON](https://www.json.org/json-en.html)
-	* [Concurrencia y asincronía](https://docs.swift.org/swift-book/LanguageGuide/Concurrency.html)
+    @Override
+    public <T extends Actor> void performAs(T actor) {
 
-* Otras funcionalidades:
-	* Notificaciones PUSH
-	* Registro y Login
-	* [TUTORIAL servicios Firebase](https://youtu.be/1EAA8WgCQas)
+        try {
+            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
+        } catch (Exception ignored){}
 
-Gestores de dependencias para ayudarnos a trabajar con código de terceros:
+        actor.attemptsTo(
+                WaitUntil.the(BTN_ORGANIZATION, isVisible()).forNoMoreThan(10).seconds(),
+                JavaScriptClick.on(BTN_ORGANIZATION),
+                JavaScriptClick.on(BTN_BUSSINESS_UNIT),
+                JavaScriptClick.on(BTN_BUSSINESS),
+                JavaScriptClick.on(BTN_NEW_BUSSINESS_UNIT),
+                Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
+                Click.on(TXT_PARENT_UNIT),
+                ChooseFromList.index(LST_PARENT_UNIT,3),
+                ExplicitWait.here(3),
+                JavaScriptClick.on(BTN_SAVE_UNIT)
+        );
 
-* Swift Package Manager (SPM)
-	* [Swift.org](https://www.swift.org/package-manager/)
-	* [TUTORIAL Xcode](https://youtu.be/93YBmQNp_sQ)
-* Cocoa Pods
-	* [CocoaPods.org](https://cocoapods.org/)
-	* [TUTORIAL Xcode](https://youtu.be/qCn6hGqkWyk)
+    }
 
-### 8️⃣ Esenciales
-Aprender a desarrollar aplicaciones para entornos Apple precisa de otras habilidades esenciales no directamente relacionadas.
+    public static CreateANewBussinessUnit onTheSite() {
+        return Instrumented.instanceOf(CreateANewBussinessUnit.class).withProperties();
+    }
+}
+```
 
-* Aprende Inglés: La mayor parte de la documentación y código se escribe en este idioma.
-	* [Cambly](https://www.cambly.com/invite/YDVHFWXN?st=011422&sc=4) te permite aprender online con profesores nativos de forma online.
-* [Git](https://git-scm.com/): Es básico saber trabajar con el gestor de versiones más utilizado.
-	* Puedes ayudarte usando clientes gráficos como [GitKraken](https://www.gitkraken.com/invite/cZWhJq1v) (en vez de hacer todo por línea de comandos).
+#### CreateANewMeeting
 
-### 9️⃣ Pruebas
-Debes adquirir habilidades de testing y debug para mantener tu código íntegro y libre de errores.
+```java
+public class CreateANewMeeting implements Task {
 
-* [TUTORIAL TestFlight](https://youtu.be/bl6LArb-IQU): La plataforma oficial de test de aplicaciones de Apple.
+    public ArrayList<Map<String, String>> dataExcel;
 
-### 1️⃣0️⃣ Publicación
-Ya sólo falta cómo desplegar aplicaciones en la App Store.
+    @Override
+    public <T extends Actor> void performAs(T actor) {
 
-* [TUTORIAL App Store](https://youtu.be/tg6YcD52jNA)
+        try {
 
-⬇️ **BOLA EXTRA:** [Descarga](https://github.com/mouredev/StarWarsXcodeTheme) el tema y la fuente que uso en Xcode, tanto en modo claro como oscuro.
+            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
 
-> Este es el roadmap básico para convertirse en Apple Developer. No olvides hacer ⭐️ para seguir sus futuras actualizaciones.
-> Ayúdame a mejorar con tu feedback ¡MUCHAS GRACIAS!
+        } catch (Exception e) {
 
-## ![https://mouredev.com](https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_emote.png) Hola, mi nombre es Brais Moure.
-### Freelance full-stack iOS & Android engineer
+        }
+        actor.attemptsTo(
+                WaitUntil.the(BTN_MEETING, isVisible()).forNoMoreThan(10).seconds(),
+                JavaScriptClick.on(BTN_MEETING),
+                JavaScriptClick.on(BTN_MEETINGS),
+                Ensure.that(LBL_TEXT).isDisplayed(),
+                JavaScriptClick.on(BTN_NEW_MEETING),
+                Enter.theValue(dataExcel.get(0).get("Meeting_Name")).into(TXT_MEETING_NAME),
+                Click.on(TXT_MEETING_TYPE),
+                ChooseFromList.index(LST_MEETING_TYPE,2),
+                Click.on(TXT_START_DATE),
+                Clear.field(TXT_START_DATE),
+                Enter.keyValues(dataExcel.get(0).get("Start Date")).into(TXT_START_DATE),
+                JavaScriptClick.on(TXT_START_HOUR),
+                Enter.keyValues(dataExcel.get(0).get("Location")).into(TXT_MEETING_NUMBER),
+                JavaScriptClick.on(TXT_END_DATE),
+                Clear.field(TXT_END_DATE),
+                Enter.keyValues(dataExcel.get(0).get("End_Date")).into(TXT_END_DATE),
+                Click.on(TXT_LOCATION),
+                ChooseFromList.index(LST_LOCATION_OPTIONS,3),
+                Click.on(TXT_ORGANIZED_BY),
+                ChooseFromList.index(LST_ORGANIZED_BY,5),
+                Click.on(TXT_UNIT),
+                ChooseFromList.index(LST_UNIT,9),
+                Click.on(TXT_REPORTER),
+                ChooseFromList.index(LST_REPORTER,3),
+                Click.on(TXT_ATENDEE_LIST),
+                ChooseFromList.index(LST_ATENDEE_LIST,3),
+                Click.on(BTN_SAVE),
+                ExplicitWait.here(5),
+                Ensure.that(LBL_USER_VALIDATION).isDisplayed()
+        );
+    }
 
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCxPD7bsocoAMq8Dj18kmGyQ?style=social)](https://youtube.com/mouredevapps?sub_confirmation=1)
-[![Twitch Status](https://img.shields.io/twitch/status/mouredev?style=social)](https://twitch.com/mouredev)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mouredev?style=social)](https://twitter.com/mouredev)
-![GitHub Followers](https://img.shields.io/github/followers/mouredev?style=social)
+    public static CreateANewMeeting onTheSite() {
+        return Instrumented.instanceOf(CreateANewMeeting.class).withProperties();
+    }
+}
+```
 
-Soy ingeniero de software desde hace más de 11 años. Desde hace 3 años combino mi trabajo desarrollando Apps con creación de contenido formativo sobre programación y tecnología en diferentes redes sociales como **[@mouredev](https://moure.dev)**.
+#### DoTheLogin
 
-### En mi perfil de GitHub tienes más información
+```java
+public class DoTheLogin implements Task {
 
-[![Web](https://img.shields.io/badge/GitHub-MoureDev-14a1f0?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/mouredev)
+    private String user;
+    private String password;
+
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+                WaitUntil.the(TXT_USER, isVisible()).forNoMoreThan(10).seconds(),
+                Enter.theValue(user).into(TXT_USER),
+                Enter.theValue(password).into(TXT_PASSWORD),
+                JavaScriptClick.on(BTN_LOGIN),
+                WaitUntil.the(LBL_VALIDATION, isVisible()).forNoMoreThan(10).seconds()
+        );
+    }
+
+    public static DoTheLogin onTheSite() {
+        return Instrumented.instanceOf(DoTheLogin.class).withProperties();
+    }
+
+    public DoTheLogin user(String user) {
+        this.user = user;
+        return this;
+    }
+
+    public DoTheLogin password(String password) {
+        this.password = password;
+        return this;
+    }
+
+}
+
+```
+
+#### OpenTheWebSite
+
+```java
+public class OpenTheWebSite implements Task {
+
+    private final String url;
+
+    public OpenTheWebSite(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+                Open.url(url)
+        );
+    }
+
+    public static OpenTheWebSite on(String url){
+        return Instrumented.instanceOf(OpenTheWebSite.class).withProperties(url);
+    }
+}
+```
+
+### Interactions
+
+#### ChooseFromList
+
+has two private data to drive the data as parameter, on the @Override annotation right below the element is treated as a WebElement by the actor and then will list all the "li" tags within the ul tag.
+
+once is located and mapped its ready to choose the option giving a click into it.
+
+```java
+public class ChooseFromList implements Interaction {
+
+    private final Target element;
+    private final int index;
+
+
+    public ChooseFromList(Target element, int index) {
+        this.element = element;
+        this.index = index;
+
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+
+        WebElement listLocation = element.resolveFor(actor);
+        List<WebElement> options = listLocation.findElements(By.tagName("li"));
+        options.get(index).click();
+    }
+
+    public static ChooseFromList index(Target element, int index) {
+        return Instrumented.instanceOf(ChooseFromList.class).withProperties(element, index);
+    }
+}
+```
+
+### ExplicitWait
+
+uses a try/catch sorround to manage the Thread.sleep method with an exception
+
+
+```java
+public class ExplicitWait implements Interaction {
+
+    long secs;
+
+    public ExplicitWait(int secs) {
+        this.secs = secs;
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+
+        try {
+            Thread.sleep(secs * 1000);
+        } catch (InterruptedException e) {
+
+        }
+
+    }
+
+    public static ExplicitWait here(int secs) {
+        return Instrumented.instanceOf(ExplicitWait.class).withProperties(secs);
+    }
+}
+```
+
+### Uis
+
+#### UserInterfaces
+
+#### BussinessUnitPage
+
+```java
+
+public class BussinessUnitPage {
+
+
+    public static final Target BTN_BUSSINESS = Target.the("button to create a new bussiness unit")
+            .locatedBy("//div[@class='tool-button add-button icon-tool-button']");
+    public static final Target BTN_NEW_BUSSINESS_UNIT = Target.the("button to create a new bussiness unit")
+            .locatedBy("//div[@class='s-TemplatedDialog ui-dialog-content ui-widget-content']/descendant:: input[1]");
+}
+
+
+```
+
+#### DashBoardPage
+
+```java
+
+public class DashBoardPage {
+
+    public static final Target BTN_MEETING = Target.the("dropdown list meetings")
+            .locatedBy("//i[@class='s-sidebar-icon fa fa-comments premium-feature']");
+    public static final Target BTN_MEETINGS = Target.the("button to see the meetings")
+            .locatedBy("//span[contains(text(),'Meetings')]");
+    public static final Target BTN_ORGANIZATION =  Target.the("dropdown list organization")
+            .locatedBy("//i[@class='s-sidebar-icon fa fa-comments premium-feature']");
+    public static final Target BTN_BUSSINESS_UNIT = Target.the("button to see the bussiness unit")
+            .locatedBy("//i[@class='s-sidebar-icon fa fa-sitemap']");
+
+}
+
+
+```
+
+#### LoginPage
+
+```java
+
+public class LoginPage {
+
+    public static final Target TXT_USER = Target.the("Text field for user")
+            .locatedBy("//input[@name='Username']");
+    public static final Target TXT_PASSWORD = Target.the("Text field for password")
+            .locatedBy("//input[@name='Password']");
+    public static final Target BTN_LOGIN = Target.the("button to log in")
+            .locatedBy("//button[contains(text(),'Sign In')]");
+    public static final Target LBL_VALIDATION = Target.the("text to validate")
+            .locatedBy("//h1[contains(text(),'Dashboard')]");
+
+}
+
+
+```
+
+#### MeetingPage
+
+```java
+
+public class MeetingsPage {
+
+    public static final Target LBL_TEXT = Target.the("text to validate").locatedBy("//div[@class='title-text']");
+
+    public static final Target BTN_NEW_MEETING = Target.the("button new meeting").locatedBy("//div[@class='tool-button add-button icon-tool-button']");
+    public static final Target TXT_MEETING_NAME = Target.the("meeting name to validate").locatedBy("//div[@class='slick-cell l1 r1']/a");
+
+    public static final Target LBL_USER_VALIDATION = Target.the("user validate").locatedBy("//span[@class='slick-column-name']");
+
+
+}
+
+
+```
+
+#### NewBussinessUnitPage
+
+```java
+
+public class NewBussinessUnitPage {
+
+    public static final Target TXT_BUSSINESS_NAME = Target.the("field for the bussiness unit name")
+            .locatedBy("//input[@class='editor s-Serenity-StringEditor s-StringEditor required']");
+    public static final Target TXT_PARENT_UNIT = Target.the("div with the parent unit list")
+            .locatedBy("//div[@class='field ParentUnitId']//div");
+    public static final Target LST_PARENT_UNIT = Target.the("the parent unit list")
+            .locatedBy("//ul[@id='select2-results-1']");
+
+    public static final Target BTN_SAVE_UNIT = Target.the("the button to save changes")
+            .locatedBy("//div[@class='tool-button save-and-close-button icon-tool-button']");
+
+}
+
+
+```
+
+#### NewMeetingPage
+
+```java
+
+public class NewMeetingPage {
+
+    public static final Target TXT_MEETING_NAME = Target.the("field for the meeting name")
+            .locatedBy("//input[@id='Serenity_Pro_Meeting_MeetingDialog10_MeetingName']");
+    public static final Target TXT_MEETING_TYPE = Target.the("dropdown list for the meeting type")
+            .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_MeetingTypeId']");
+    public static final Target LST_MEETING_TYPE = Target.the("options from the meeting type")
+            .locatedBy("//ul[@id='select2-results-6']");
+    public static final Target OPTION_SELECT = Target.the("")
+            .locatedBy("//ul//div[contains(text(),'{0}')]//ancestor::li");
+    public static final Target TXT_START_DATE = Target.the("field for the date")
+            .locatedBy("//input[@id='Serenity_Pro_Meeting_MeetingDialog10_StartDate']");
+    public static final Target TXT_START_HOUR = Target.the("start hour to choose")
+            .locatedBy("(//i[@class='inplace-button inplace-now'])[1]");
+    public static final Target TXT_END_DATE = Target.the("end date field")
+            .locatedBy("//input[@id='Serenity_Pro_Meeting_MeetingDialog10_EndDate']");
+    public static final Target TXT_END_HOUR = Target.the("end hour to choose")
+            .locatedBy("(//i[@class='inplace-button inplace-now'])[2]");
+    public static final Target TXT_LOCATION = Target.the("location to select")
+            .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_LocationId']");
+    public static final Target LST_LOCATION_OPTIONS = Target.the("options from the location list")
+            .locatedBy("//ul[@id='select2-results-7']");
+    public static final Target TXT_ORGANIZED_BY = Target.the("location to select")
+            .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_OrganizerContactId']");
+    public static final Target LST_ORGANIZED_BY = Target.the("select Organized By")
+            .locatedBy("//ul[@id='select2-results-9']");
+    public static final Target TXT_ATENDEE_LIST = Target.the("attendee list to choose")
+            .locatedBy("//div[@id='s2id_autogen11']");
+    public static final Target LST_ATENDEE_LIST = Target.the("attendee list options")
+            .locatedBy("//ul[@id='select2-results-12']");
+    public static final Target TXT_MEETING_NUMBER = Target.the("meeting number label")
+            .locatedBy("//input[@name='MeetingNumber']");
+    public static final Target TXT_UNIT = Target.the("unit input")
+            .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_UnitId']");
+    public static final Target LST_UNIT = Target.the("select Unit")
+            .locatedBy("//ul[@id='select2-results-8']");
+    public static final Target TXT_REPORTER = Target.the("reporter list")
+            .locatedBy("//div[@id='s2id_Serenity_Pro_Meeting_MeetingDialog10_ReporterContactId']");
+    public static final Target LST_REPORTER = Target.the("select reporter list")
+            .locatedBy("//ul[@id='select2-results-10']");
+    public static final Target TXT_ATENDEE_TYPE = Target.the("atendee type list")
+            .locatedBy("//select[@class='valid']");
+    public static final Target TXT_ATTENDANCE_STATUS = Target.the("Attendance status list")
+            .locatedBy("//div[@class='slick-cell l3 r3']/select");
+    public static final Target BTN_SAVE = Target.the("button to save the meeting")
+            .locatedBy("//div[@class='tool-button save-and-close-button icon-tool-button']");
+}
+
+
+```
+
+#### Questions
+
+these class contains all the question that the actor makes to check the state of the website
+
+#### ValidateTheMeetingName
+
+```java
+public class ValidateTheMeetingName implements Question<Boolean> {
+    @Override
+    public Boolean answeredBy(Actor actor) {
+        return MeetingsPage.LBL_USER_VALIDATION.resolveFor(actor).isDisplayed();
+    }
+
+    public static Question<Boolean> value() {
+        return new ValidateTheMeetingName();
+    }
+}
+
+```
+
+#### ValidateTheMessage
+
+```java
+public class ValidateTheMessage implements Question<String> {
+
+
+    @Override
+    public String answeredBy(Actor actor) {
+        return LBL_VALIDATION.resolveFor(actor).getText();
+    }
+
+    public static Question<String> value() {
+        return new ValidateTheMessage();
+    }
+
+}
+
+```
+
+### drivers
+
+#### DriverRemoteBrowser
+
+these class contains all the options and methods to build each browser with the options given and a method to open the url
+
+
+```java
+public class DriverRemoteBrowser {
+
+
+    public static WebDriver driver;
+
+    public static DriverRemoteBrowser chromeHisBrowserWeb() {
+
+        ChromeOptions options = new ChromeOptions();
+
+        options.addArguments("--start-maximized");
+        options.addArguments("--allow-running-insecure-content; --disable-popup-blocking; --disable-dev-shm-usage");
+        options.addArguments("--disable-infobars;--no-sandbox;--test-type; --disable-extensions;--disable-translate");
+        options.addArguments("--ignore-certificate-errors;--incognito;--disable-gpu;--no-sandbox;--disable-download-notification");
+
+
+        driver = new ChromeDriver(options);
+        return new DriverRemoteBrowser();
+    }
+
+
+    public static DriverRemoteBrowser firefoxHisBrowserWeb() {
+        driver = new FirefoxDriver();
+        return new DriverRemoteBrowser();
+    }
+
+    public static DriverRemoteBrowser internetExplorerHisBrowserWeb() {
+        driver = new InternetExplorerDriver();
+        return new DriverRemoteBrowser();
+    }
+
+
+
+    public static WebDriver on(String url) {
+        driver.get(url);
+        return driver;
+    }
+}
+```
+### Questions
+
+#### ValidarExistenciaElemento
+
+Realiza la validacion de que exista uno o varios elementos dentro de la pagina, esta tarea implementa la interfaz Question y sobreescribe su metodo, tambien recibe un parametro de tipo Target y retorna un valor `Boolean`.
+
+```java
+public class ValidarExistenciaElemento implements Question<Boolean>{
+
+	private Target target;
+	
+	public ValidarExistenciaElemento(Target target) {
+		this.target = target;
+	}
+
+	@Override
+	public Boolean answeredBy(Actor actor) {
+		List<WebElementFacade> listaElemenetos = target.resolveAllFor(actor);
+		if(listaElemenetos.size() >= 1) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	public static ValidarExistenciaElemento conTarget(Target target) {
+		return new ValidarExistenciaElemento(target);
+	}
+}
+```
+
+
+### utils
+
+### ExcelDatatable
+
+Works giving only the column and row number
+
+```java
+
+public class ExcelDataTable {
+
+    private XSSFWorkbook book;
+    private FileInputStream file;
+
+    public String ReadDataSheet(String page, String path, int rowValue, int cellValue) throws IOException {
+        String pointer;
+        file = new FileInputStream(new File(path));
+        book = new XSSFWorkbook(file);
+        Sheet sheet = book.getSheet(page);
+        Row row = sheet.getRow(rowValue);
+        Cell cell = row.getCell(cellValue);
+        pointer = cell.getStringCellValue();
+        book.close();
+        file.close();
+        return pointer;
+    }
+
+    public static ArrayList<Map<String, String>> leerDatosDeHojaDeExcel(String rutaDeExcel, String hojaDeExcel) throws IOException {
+        ArrayList<Map<String, String>> arrayListDatoPlanTrabajo = new ArrayList<Map<String, String>>();
+        Map<String, String> informacionProyecto = new HashMap<String, String>();
+        File file = new File(rutaDeExcel);
+        FileInputStream inputStream = new FileInputStream(file);
+        XSSFWorkbook newWorkbook = new XSSFWorkbook(inputStream);
+        XSSFSheet newSheet = newWorkbook.getSheet(hojaDeExcel);
+        Iterator<Row> rowIterator = newSheet.iterator();
+        Row titulos = rowIterator.next();
+        while (rowIterator.hasNext()) {
+            Row row = rowIterator.next();
+            Iterator<Cell> cellIterator = row.cellIterator();
+            while (cellIterator.hasNext()) {
+                Cell cell = cellIterator.next();
+                cell.getColumnIndex();
+                switch (cell.getCellTypeEnum()) {
+                    case STRING:
+                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), cell.getStringCellValue());
+                        break;
+                    case NUMERIC:
+                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), String.valueOf((long) cell.getNumericCellValue()));
+                        break;
+                    case BLANK:
+                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), "");
+                        break;
+                    default:
+                }
+            }
+            arrayListDatoPlanTrabajo.add(informacionProyecto);
+            informacionProyecto = new HashMap<String, String>();
+        }
+        return arrayListDatoPlanTrabajo;
+    }
+}
+
+
+```
+
+### how to use the excel
+
+```java
+
+public ArrayList<Map<String, String>> dataExcel;
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+
+        try {
+            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
+        } catch (Exception ignored){}
+
+        actor.attemptsTo(
+                                Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
+
+        );
+
+    }
+
+```
+
+### Runners
+
+#### StartSharpBussinessRubber
+
+follows the steps and executes the proper methods  on the `startsharpstepdefinitions`, this class runs via `@RunWith` from the class `CucumberWithSerenity.class` and uses `@CucumberOptions` to call the feature, set the glue folder with `Steps Definitions` and the snnipets output with `CamelCase`.
+
+```java
+@RunWith(CucumberWithSerenity.class)
+
+@CucumberOptions(
+        features = "src/test/resources/features/startSharpBussiness.feature",
+        glue = "testing.startSharp.startsharpstepdefinitions",
+        snippets = SnippetType.CAMELCASE)
+```
+
+#### StartSharpDotheLoginRunner
+
+```java
+@RunWith(CucumberWithSerenity.class)
+
+@CucumberOptions(
+        features = "src/test/resources/features/startSharpLogin.feature",
+        glue = "testing.startSharp.startsharpstepdefinitions",
+        snippets = SnippetType.CAMELCASE)
+```
+
+### Features
+
+#### startSharpBussiness.feature
+
+```cucumber
+Feature: testing the serenity demo page
+
+  Background:
+
+    Given That Mike opens the url to see the login page
+
+    When Mike types the following data
+      | user  | password |
+      | admin | serenity |
+
+  Scenario: Mike wants to create an unit bussiness
+
+    When Mike creates a new unit bussiness and setups a meeting
+
+    Then Mike will be able see the meeting was succesfully scheduled
+```
+
+
+#### startSharpLogin.feature
+
+```cucumber
+Feature: testing login on the serenity demo page
+
+  Scenario Outline: Mike wants to login on the website
+
+    Given That Mike opens the url to see the login page
+
+    When Mike types the following data
+      | user   | password   |
+      | <user> | <password> |
+
+    Then Mike will be able to see the <text>
+
+    Examples:
+      | user  | password |  text      |
+      | admin | serenity |  Dashboard |
+```
+
+
+## Execution
+
+in order to execute the project and generates the Aggregate report provided by Serenity BDD, we open the `CMD` on the IDE and type the follow command.
+
+```yml
+    gradle clean test aggregate
+```
+these command executes all the declared scenarios on this project
+
+```cmd
+    3 actionable tasks: 3 executed
+```
+
+At the end we must go and open the file `index.html` that is located on on the following route
+
+```yml
+  <ProjectoName>\target\site\serenity\index.html
+```
