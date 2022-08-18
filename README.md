@@ -1,5 +1,6 @@
 # StartSharpModule
 
+
 Executes automation on the site
  [StartSharp](https://serenity.is/demo/)
  following the login procces, creating a new bussiness unit followed by the appointment schedule creation.
@@ -158,6 +159,8 @@ public class CreateANewMeeting implements Task {
 
 #### DoTheLogin
 
+these class executes the login steps receiving the data directly from the .feature file and managed by the `model.LoginData` creating a datable and passing the data right from the When Snippet,
+
 ```java
 public class DoTheLogin implements Task {
 
@@ -194,31 +197,40 @@ public class DoTheLogin implements Task {
 
 ```
 
-#### OpenTheWebSite
+### Interactions
+
+#### ChooseFromList
+
+has two private data to drive the data as parameter, on the @Override annotation right below the element is treated as a WebElement by the actor and then will list all the "li" tags within the ul tag.
+
+once is located and mapped its ready to choose the option giving a click into it.
 
 ```java
-public class OpenTheWebSite implements Task {
+public class ChooseFromList implements Interaction {
 
-    private final String url;
+    private final Target element;
+    private final int index;
 
-    public OpenTheWebSite(String url) {
-        this.url = url;
+
+    public ChooseFromList(Target element, int index) {
+        this.element = element;
+        this.index = index;
+
     }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Open.url(url)
-        );
+
+        WebElement listLocation = element.resolveFor(actor);
+        List<WebElement> options = listLocation.findElements(By.tagName("li"));
+        options.get(index).click();
     }
 
-    public static OpenTheWebSite on(String url){
-        return Instrumented.instanceOf(OpenTheWebSite.class).withProperties(url);
+    public static ChooseFromList index(Target element, int index) {
+        return Instrumented.instanceOf(ChooseFromList.class).withProperties(element, index);
     }
 }
 ```
-
-### Interactions
 
 #### ChooseFromList
 
@@ -319,9 +331,49 @@ public class ChooseListSelect implements Interaction {
 
 ```
 
+
+### SelectUnit
+
+this class received two parameters: `(Target element, String bussinessName)` it uses the target element to create a `WebElement element` to resolve it for the actor in order to create a `List<WebElement>` with all the childs that the selector has, once its done will use a `for each` loop to review the whole list and once it finds the same text as the condicion expects will give a click within the element found by the `WebElement i` iterator variable.  
+
+
+```java
+public class SelectUnit implements Interaction {
+
+    private final Target element;
+    private final String bussinessName;
+
+
+    public SelectUnit(Target element, String bussinessName) {
+        this.element = element;
+        this.bussinessName = bussinessName;
+    }
+
+    @Override
+    public <T extends Actor> void performAs(T actor) {
+
+        WebElement listLocation = element.resolveFor(actor);
+        List<WebElement> options = listLocation.findElements(By.tagName("li"));
+        for (WebElement i : options) {
+            if (i.getText().contains(bussinessName)){
+                i.click();
+                break;
+            }
+        }
+    }
+
+    public static SelectUnit on(Target element, String bussinessName) {
+        return Instrumented.instanceOf(SelectUnit.class).withProperties(element, bussinessName);
+    }
+}
+
+```
+
 #### UserInterfaces
 
 #### BussinessUnitPage
+
+Here its where we can store all the locators using the class `Target` to stablish the element as a Target, the location method used is custom Xpaths that were made manually during the execution of the manual test. 
 
 ```java
 
@@ -338,6 +390,8 @@ public class BussinessUnitPage {
 ```
 
 #### DashBoardPage
+
+Here its where we can store all the locators using the class `Target` to stablish the element as a Target, the location method used is custom Xpaths that were made manually during the execution of the manual test. 
 
 ```java
 
@@ -359,6 +413,8 @@ public class DashBoardPage {
 
 #### LoginPage
 
+Here its where we can store all the locators using the class `Target` to stablish the element as a Target, the location method used is custom Xpaths that were made manually during the execution of the manual test. 
+
 ```java
 
 public class LoginPage {
@@ -379,6 +435,8 @@ public class LoginPage {
 
 #### MeetingPage
 
+Here its where we can store all the locators using the class `Target` to stablish the element as a Target, the location method used is custom Xpaths that were made manually during the execution of the manual test. 
+
 ```java
 
 public class MeetingsPage {
@@ -397,6 +455,8 @@ public class MeetingsPage {
 ```
 
 #### NewBussinessUnitPage
+
+Here its where we can store all the locators using the class `Target` to stablish the element as a Target, the location method used is custom Xpaths that were made manually during the execution of the manual test. 
 
 ```java
 
@@ -418,6 +478,8 @@ public class NewBussinessUnitPage {
 ```
 
 #### NewMeetingPage
+
+Here its where we can store all the locators using the class `Target` to stablish the element as a Target, the location method used is custom Xpaths that were made manually during the execution of the manual test. 
 
 ```java
 
@@ -474,9 +536,9 @@ public class NewMeetingPage {
 
 #### Questions
 
-these class contains all the question that the actor makes to check the state of the website
-
 #### ValidateTheMeetingName
+
+these class contains a boolean answer defined from the beginning with the implementation of `Question<Boolean>` and returns a boolean answer asking "is the element displayed?"
 
 ```java
 public class ValidateTheMeetingName implements Question<Boolean> {
@@ -493,6 +555,8 @@ public class ValidateTheMeetingName implements Question<Boolean> {
 ```
 
 #### ValidateTheMessage
+
+these class contains a String answer defined from the beginning with the implementation of `Question<String>` and returns a String answer extracting the text from the locator using the method `return locator.resolveFor(actor).getText();`
 
 ```java
 public class ValidateTheMessage implements Question<String> {
@@ -584,15 +648,15 @@ public class ExcelDataTable {
         return pointer;
     }
 
-    public static ArrayList<Map<String, String>> leerDatosDeHojaDeExcel(String rutaDeExcel, String hojaDeExcel) throws IOException {
-        ArrayList<Map<String, String>> arrayListDatoPlanTrabajo = new ArrayList<Map<String, String>>();
-        Map<String, String> informacionProyecto = new HashMap<String, String>();
-        File file = new File(rutaDeExcel);
+    public static ArrayList<Map<String, String>> ReadData(String excelPath, String excelSheet) throws IOException {
+        ArrayList<Map<String, String>> arrayListWorkPlanData = new ArrayList<Map<String, String>>();
+        Map<String, String> projectInformation = new HashMap<String, String>();
+        File file = new File(excelPath);
         FileInputStream inputStream = new FileInputStream(file);
         XSSFWorkbook newWorkbook = new XSSFWorkbook(inputStream);
-        XSSFSheet newSheet = newWorkbook.getSheet(hojaDeExcel);
+        XSSFSheet newSheet = newWorkbook.getSheet(excelSheet);
         Iterator<Row> rowIterator = newSheet.iterator();
-        Row titulos = rowIterator.next();
+        Row tiles = rowIterator.next();
         while (rowIterator.hasNext()) {
             Row row = rowIterator.next();
             Iterator<Cell> cellIterator = row.cellIterator();
@@ -601,28 +665,29 @@ public class ExcelDataTable {
                 cell.getColumnIndex();
                 switch (cell.getCellTypeEnum()) {
                     case STRING:
-                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), cell.getStringCellValue());
+                        projectInformation.put(tiles.getCell(cell.getColumnIndex()).toString(), cell.getStringCellValue());
                         break;
                     case NUMERIC:
-                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), String.valueOf((long) cell.getNumericCellValue()));
+                        projectInformation.put(tiles.getCell(cell.getColumnIndex()).toString(), String.valueOf((long) cell.getNumericCellValue()));
                         break;
                     case BLANK:
-                        informacionProyecto.put(titulos.getCell(cell.getColumnIndex()).toString(), "");
+                        projectInformation.put(tiles.getCell(cell.getColumnIndex()).toString(), "");
                         break;
                     default:
                 }
             }
-            arrayListDatoPlanTrabajo.add(informacionProyecto);
-            informacionProyecto = new HashMap<String, String>();
+            arrayListWorkPlanData.add(projectInformation);
+            projectInformation = new HashMap<String, String>();
         }
-        return arrayListDatoPlanTrabajo;
+        return arrayListWorkPlanData;
     }
 }
-
 
 ```
 
 ### how to use the excel
+
+before the annotation `@override` an arrayList has to be created as follow `public ArrayList<Map<String, String>> dataExcel;` afterwards, the read method has to be surrounded within a try/catch in case the element is not found
 
 ```java
 
@@ -632,12 +697,13 @@ public ArrayList<Map<String, String>> dataExcel;
     public <T extends Actor> void performAs(T actor) {
 
         try {
-            dataExcel = ExcelDataTable.leerDatosDeHojaDeExcel("data.xlsx", "Hoja1");
-        } catch (Exception ignored){}
+            dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
 
         actor.attemptsTo(
-                                Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
-
+                        Enter.theValue(dataExcel.get(0).get("Bussiness_Name")).into(TXT_BUSSINESS_NAME),
         );
 
     }
@@ -816,3 +882,5 @@ At the end we must go and open the file `index.html` that is located on on the f
 ```yml
   <ProjectoName>\target\site\serenity\index.html
 ```
+
+This Readme.md was made it by Michael Garzon Rodriguez
