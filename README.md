@@ -528,37 +528,6 @@ public class DriverRemoteBrowser {
     }
 }
 ```
-### Questions
-
-#### ValidarExistenciaElemento
-
-Realiza la validacion de que exista uno o varios elementos dentro de la pagina, esta tarea implementa la interfaz Question y sobreescribe su metodo, tambien recibe un parametro de tipo Target y retorna un valor `Boolean`.
-
-```java
-public class ValidarExistenciaElemento implements Question<Boolean>{
-
-	private Target target;
-	
-	public ValidarExistenciaElemento(Target target) {
-		this.target = target;
-	}
-
-	@Override
-	public Boolean answeredBy(Actor actor) {
-		List<WebElementFacade> listaElemenetos = target.resolveAllFor(actor);
-		if(listaElemenetos.size() >= 1) {
-			return true;
-		}else {
-			return false;
-		}
-	}
-
-	public static ValidarExistenciaElemento conTarget(Target target) {
-		return new ValidarExistenciaElemento(target);
-	}
-}
-```
-
 
 ### utils
 
