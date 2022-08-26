@@ -1,0 +1,60 @@
+
+//android.widget.Button[@resource-id='net.natura.semprepresente:id/cv_buy_button']
+
+//*[contains(@text,'Oferta de 1er pedido')]
+
+
+//*[contains(@text,'Categorías destacadas')]
+
+
+//android.view.ViewGroup/android.view.View[5][@package='com.alibaba.aliexpresshd']
+
+//androidx.recyclerview.widget.RecyclerView[@package='com.alibaba.aliexpresshd'and @index='0']
+
+//SCROLL/
+
+
+
+driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"" + *scrollable container ID* + "\")).scrollIntoView("+ "new UiSelector().resourceId(\"" + *ID of the element you want to scroll to* + "\"))"));
+
+
+
+driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().resourceId(\"" + *scrollable container ID* + "\")).scrollForward()"));
+
+
+
+
+
+////////SCROL////////
+
+//following::
+
+//android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup
+
+//android.widget.FrameLayout[1]/android.widget.FrameLayout/android.view.ViewGroup                                            
+//android.widget.FrameLayout[@package='com.alibaba.aliexpresshd'and @resource-id='com.alibaba.aliexpresshd:id/dynamic_container']
+
+//android.view.View[@package='com.alibaba.aliexpresshd']
+
+
+
+ancestor	
+ancestor-or-self	
+attribute	
+child	
+descendant	
+descendant-or-self	
+following	
+following-sibling	
+namespace	
+parent	
+preceding	
+preceding-sibling	
+self	
+
+// driver.findElement(MobileBy.AndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true)).scrollToEnd(1)"));
+                // driver.findElement(MobileBy.AndroidUIAutomator( "new UiScrollable(new UiSelector().scrollable(true)).scrollToBeginning(1)"));
+
+
+
+//android.widget.ImageView[@resource-id='com.alibaba.aliexpresshd:id/riv_poplayer_image']//preceding-sibling::android.widget.ImageView[@resource-id='com.alibaba.aliexpresshd:id/iv_close_poplayer_image']
