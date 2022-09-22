@@ -15,9 +15,9 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static testing.sqa.userinterface.BussinessUnitPage.*;
-import static testing.sqa.userinterface.DashBoardPage.*;
-import static testing.sqa.userinterface.NewBussinessUnitPage.*;
+import static testing.sqa.userinterfaces.BussinessUnitPage.*;
+import static testing.sqa.userinterfaces.DashBoardPage.*;
+import static testing.sqa.userinterfaces.NewBussinessUnitPage.*;
 
 
 public class CreateANewBussinessUnit implements Task {

@@ -3,7 +3,7 @@ package testing.sqa.questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
-import testing.sqa.userinterface.AdvantageMainPage;
+import testing.sqa.userinterfaces.AdvantageMainPage;
 
 
 

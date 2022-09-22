@@ -22,6 +22,7 @@ public class HoldOnFor implements Interaction {
     public <T extends Actor> void performAs(T actor) {
 
         DriverRemoteBrowser.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+
     }
 
     public static Performable thisSeconds(int seconds)

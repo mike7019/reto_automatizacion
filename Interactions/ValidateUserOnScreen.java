@@ -3,7 +3,7 @@ package testing.sqa.questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static testing.sqa.userinterface.AdvantageMainPage.*;
+import static testing.sqa.userinterfaces.AdvantageMainPage.*;
 
 public class ValidateUserOnScreen implements Question<String> {
 

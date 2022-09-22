@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 
-import static testing.sqa.userinterface.NewMeetingPage.LST_UNIT;
+import static testing.sqa.userinterfaces.NewMeetingPage.LST_UNIT;
 
 public class ChooseUnit implements Interaction{
 

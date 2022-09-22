@@ -1,9 +1,8 @@
-package testing.sqa.userinterface;
+package testing.sqa.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 
 public class BussinessUnitPage {
-
 
     public static final Target BTN_BUSSINESS = Target.the("button to create a new bussiness unit")
             .locatedBy("//div[@class='tool-button add-button icon-tool-button']");

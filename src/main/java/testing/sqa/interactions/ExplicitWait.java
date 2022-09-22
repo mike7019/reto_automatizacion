@@ -16,11 +16,13 @@ public class ExplicitWait implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
+
         try {
             Thread.sleep(secs * 1000);
-        } catch (InterruptedException ignored) {
-
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
         }
+
 
     }
 

@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 
 import static testing.sqa.drivers.DriverRemoteBrowser.driver;
-import static testing.sqa.userinterface.MovistarPortabilidadPospagoPage.TXT_PLAN_VALIDACION;
+import static testing.sqa.userinterfaces.MovistarPortabilidadPospagoPage.TXT_PLAN_VALIDACION;
 
 public class ScrollTo implements Interaction {
     @Override

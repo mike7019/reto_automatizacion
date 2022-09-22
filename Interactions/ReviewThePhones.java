@@ -11,7 +11,7 @@ import net.serenitybdd.screenplay.actions.Switch;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import org.openqa.selenium.Keys;
-import testing.sqa.userinterface.MovistarEquiposRenovarPage;
+import testing.sqa.userinterfaces.MovistarEquiposRenovarPage;
 import testing.sqa.utils.ExcelDataTable;
 
 import java.io.IOException;
@@ -21,7 +21,7 @@ import java.util.Map;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isCurrentlyVisible;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static testing.sqa.userinterface.MovistarEquiposRenovarPage.*;
+import static testing.sqa.userinterfaces.MovistarEquiposRenovarPage.*;
 
 
 public class ReviewThePhones implements Interaction {

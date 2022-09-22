@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import org.openqa.selenium.Keys;
 
-import static testing.sqa.userinterface.NewMeetingPage.*;
+import static testing.sqa.userinterfaces.NewMeetingPage.*;
 
 public class SelectMeetingType implements Interaction {
 

@@ -16,10 +16,9 @@ public class DriverRemoteBrowser {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--start-maximized");
-        options.addArguments("--allow-running-insecure-content; --disable-popup-blocking; --disable-dev-shm-usage");
-        options.addArguments("--disable-infobars;--no-sandbox;--test-type; --disable-extensions;--disable-translate");
-        options.addArguments("--ignore-certificate-errors;--incognito;--disable-gpu;--no-sandbox;--disable-download-notification");
-
+        options.addArguments("--allow-running-insecure-content --disable-popup-blocking --disable-dev-shm-usage");
+        options.addArguments("--disable-infobars --test-type --disable-extensions --disable-translate");
+        options.addArguments("--ignore-certificate-errors --incognito --disable-gpu --no-sandbox --disable-download-notification");
 
         driver = new ChromeDriver(options);
         return new DriverRemoteBrowser();

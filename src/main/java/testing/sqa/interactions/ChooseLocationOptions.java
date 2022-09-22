@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static testing.sqa.userinterface.NewMeetingPage.LST_LOCATION_OPTIONS;
+import static testing.sqa.userinterfaces.NewMeetingPage.LST_LOCATION_OPTIONS;
 
 public class ChooseLocationOptions implements Interaction {
 

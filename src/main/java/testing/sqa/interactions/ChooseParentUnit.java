@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static testing.sqa.userinterface.NewBussinessUnitPage.*;
+import static testing.sqa.userinterfaces.NewBussinessUnitPage.*;
 
 
 

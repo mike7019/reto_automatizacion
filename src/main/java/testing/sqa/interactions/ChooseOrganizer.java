@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static testing.sqa.userinterface.NewMeetingPage.*;
+import static testing.sqa.userinterfaces.NewMeetingPage.*;
 
 public class ChooseOrganizer implements Interaction {
 

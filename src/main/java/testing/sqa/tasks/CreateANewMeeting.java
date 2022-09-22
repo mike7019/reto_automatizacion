@@ -13,10 +13,10 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
-import static testing.sqa.userinterface.DashBoardPage.*;
-import static testing.sqa.userinterface.MeetingsPage.*;
-import static testing.sqa.userinterface.NewMeetingPage.*;
-import static testing.sqa.userinterface.NewMeetingPage.TXT_MEETING_NAME;
+import static testing.sqa.userinterfaces.DashBoardPage.*;
+import static testing.sqa.userinterfaces.MeetingsPage.*;
+import static testing.sqa.userinterfaces.NewMeetingPage.*;
+import static testing.sqa.userinterfaces.NewMeetingPage.TXT_MEETING_NAME;
 
 public class CreateANewMeeting implements Task {
 

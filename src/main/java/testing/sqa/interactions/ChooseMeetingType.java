@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static testing.sqa.userinterface.NewMeetingPage.LST_MEETING_TYPE;
+import static testing.sqa.userinterfaces.NewMeetingPage.LST_MEETING_TYPE;
 
 public class ChooseMeetingType implements Interaction {
 

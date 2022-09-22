@@ -28,6 +28,7 @@ public class ChooseFromList implements Interaction {
         WebElement listLocation = element.resolveFor(actor);
         List<WebElement> options = listLocation.findElements(By.tagName("li"));
         options.get(index).click();
+
     }
 
     public static ChooseFromList index(Target element, int index) {

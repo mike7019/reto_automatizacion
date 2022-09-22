@@ -6,13 +6,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
-import testing.sqa.userinterface.MiMovistarPage;
-import testing.sqa.userinterface.MovistarEquiposRenovarPage;
-import testing.sqa.userinterface.MovistarMainPage;
+import testing.sqa.userinterfaces.MiMovistarPage;
+import testing.sqa.userinterfaces.MovistarEquiposRenovarPage;
+import testing.sqa.userinterfaces.MovistarMainPage;
 
 import java.util.List;
 
-import static testing.sqa.userinterface.MovistarMainPage.BTN_DROPDOWN;
+import static testing.sqa.userinterfaces.MovistarMainPage.BTN_DROPDOWN;
 
 public class ReviewEachButton implements Interaction {
     @Override

@@ -4,19 +4,27 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
+import net.serenitybdd.screenplay.targets.Target;
 
-import static testing.sqa.userinterface.NewMeetingPage.TXT_START_HOUR;
+import static testing.sqa.userinterfaces.NewMeetingPage.TXT_START_HOUR;
 
 public class StartHourSelection implements Interaction {
+
+    private Target element;
+
+    public StartHourSelection(Target element) {
+        this.element = element;
+    }
+
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        WebElementFacade startHour = TXT_START_HOUR.resolveFor(actor);
+        WebElementFacade startHour = element.resolveFor(actor);
         startHour.selectByIndex(4);
 
     }
 
-    public static StartHourSelection on(){
-        return Instrumented.instanceOf(StartHourSelection.class).withProperties();
+    public static StartHourSelection on(Target element){
+        return Instrumented.instanceOf(StartHourSelection.class).withProperties(element);
     }
 }
