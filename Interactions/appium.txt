@@ -1,0 +1,28 @@
+C:\Program Files (x86)\ClockworkMod\Universal Adb Driver\
+
+adb devices
+
+ZE222ML8QZ      device
+
+127.0.0.1
+
+
+adb shell dumpsys window windows
+
+com.mercadolibre.home.activities.HomeActivity
+
+
+{
+  "deviceName": "moto_g_9__play",
+  "udid": "ZY32CLR3L9",
+  "platformName": "Android",
+  "platformVersion": "11",
+  "noReset": "true",
+  "appPackage": "com.banggood.client",
+  "appActivity": "com.banggood.client.module.home.MainActivity"
+}
+
+
+adb shell "dumpsys window windows | grep -E 'mObscuringWindow'"
+adb shell "dumpsys window windows | grep -E 'mHoldScreenWindow=Window'"
+
