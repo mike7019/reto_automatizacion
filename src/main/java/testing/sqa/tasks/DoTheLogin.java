@@ -28,8 +28,7 @@ public class DoTheLogin implements Task {
                 Enter.theValue(user).into(TXT_USER),
                 Enter.theValue(password).into(TXT_PASSWORD),
                 JavaScriptClick.on(BTN_LOGIN),
-                WaitUntil.the(LBL_VALIDATION, isVisible()).forNoMoreThan(10).seconds(),
-                Click
+                WaitUntil.the(LBL_VALIDATION, isVisible()).forNoMoreThan(10).seconds()
         );
     }
 
