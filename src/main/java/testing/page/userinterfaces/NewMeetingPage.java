@@ -47,5 +47,5 @@ public class NewMeetingPage {
     public static final Target BTN_SAVE = Target.the("button to save the meeting")
             .locatedBy("//div[@class='tool-button save-and-close-button icon-tool-button']");
 
-    public static final Target LOCATOR = Target.the("").locatedBy("");
+
 }
