@@ -1,4 +1,4 @@
-package testing.sqa.userinterfaces;
+package testing.page.userinterfaces;
 
 import net.serenitybdd.screenplay.targets.Target;
 

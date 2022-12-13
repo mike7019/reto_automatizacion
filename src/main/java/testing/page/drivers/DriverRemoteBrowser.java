@@ -1,10 +1,12 @@
-package testing.sqa.drivers;
+package testing.page.drivers;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+
 
 public class DriverRemoteBrowser {
 
@@ -12,7 +14,7 @@ public class DriverRemoteBrowser {
     public static WebDriver driver;
 
     public static DriverRemoteBrowser withTheseOptions() {
-
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--start-maximized");

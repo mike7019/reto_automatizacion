@@ -1,4 +1,4 @@
-package testing.sqa.models;
+package testing.page.models;
 
 public class LoginData {
 

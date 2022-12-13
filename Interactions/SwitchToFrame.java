@@ -1,4 +1,4 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

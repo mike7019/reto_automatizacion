@@ -1,8 +1,8 @@
-package testing.sqa.questions;
+package testing.page.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import testing.sqa.userinterfaces.MeetingsPage;
+import testing.page.userinterfaces.MeetingsPage;
 
 public class ValidateTheMeetingName implements Question<Boolean> {
     @Override

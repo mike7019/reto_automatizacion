@@ -1,19 +1,15 @@
-package testing.sqa.tasks;
+package testing.page.tasks;
 
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.*;
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import testing.sqa.interactions.HoldOnFor;
-import testing.sqa.interactions.SelectUnit;
-import testing.sqa.userinterfaces.ClientesPage;
+import testing.page.interactions.HoldOnFor;
+import testing.page.interactions.SelectUnit;
+import testing.page.userinterfaces.ClientesPage;
 
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static testing.sqa.userinterfaces.ClientesPage.TXT_COUNTRY;
+import static testing.page.userinterfaces.ClientesPage.TXT_COUNTRY;
 
 public class SelectCountry implements Task {
 

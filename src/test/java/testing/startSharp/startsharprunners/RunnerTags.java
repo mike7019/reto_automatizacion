@@ -10,8 +10,8 @@ import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 
 import cucumber.api.SnippetType;
-import testing.sqa.utils.BeforeSuite;
-import testing.sqa.utils.DataToFeature;
+import testing.page.utils.BeforeSuite;
+import testing.page.utils.DataToFeature;
 
 
 @CucumberOptions (

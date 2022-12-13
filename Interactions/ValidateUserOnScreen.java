@@ -1,9 +1,9 @@
-package testing.sqa.questions;
+package testing.page.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static testing.sqa.userinterfaces.AdvantageMainPage.*;
+import static testing.page.userinterfaces.AdvantageMainPage.*;
 
 public class ValidateUserOnScreen implements Question<String> {
 

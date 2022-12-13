@@ -1,4 +1,4 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static testing.sqa.userinterfaces.NewMeetingPage.*;
+import static testing.page.userinterfaces.NewMeetingPage.*;
 
 public class ChooseReporter implements Interaction {
 

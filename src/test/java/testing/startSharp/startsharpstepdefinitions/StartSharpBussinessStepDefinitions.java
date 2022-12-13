@@ -8,10 +8,7 @@ import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import testing.sqa.questions.ValidateTheMeetingName;
-import testing.sqa.tasks.CreateANewBussinessUnit;
-import testing.sqa.tasks.CreateANewMeeting;
-import testing.sqa.tasks.SelectCountry;
+import testing.page.tasks.SelectCountry;
 
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;

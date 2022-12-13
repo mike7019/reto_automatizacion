@@ -1,9 +1,9 @@
-package testing.sqa.questions;
+package testing.page.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
-import testing.sqa.userinterfaces.AdvantageMainPage;
+import testing.page.userinterfaces.AdvantageMainPage;
 
 
 

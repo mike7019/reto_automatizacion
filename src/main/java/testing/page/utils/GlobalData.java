@@ -1,4 +1,4 @@
-package testing.sqa.utils;
+package testing.page.utils;
 
 public class GlobalData {
 

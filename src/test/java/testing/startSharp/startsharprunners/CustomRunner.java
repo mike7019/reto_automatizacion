@@ -6,7 +6,7 @@ import org.junit.runner.Description;
 import org.junit.runner.Runner;
 import org.junit.runner.notification.RunNotifier;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
-import testing.sqa.utils.BeforeSuite;
+import testing.page.utils.BeforeSuite;
 /**
  * Personalización del Runner con el cual se puede determinar que busque y modifique los .feature antes de ser ejecutados
  * @since 27/11/2017

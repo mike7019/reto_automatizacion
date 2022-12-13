@@ -1,9 +1,9 @@
-package testing.sqa.questions;
+package testing.page.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static testing.sqa.userinterfaces.LoginPage.LBL_VALIDATION;
+import static testing.page.userinterfaces.LoginPage.LBL_VALIDATION;
 
 public class ValidateTheMessage implements Question<String> {
 

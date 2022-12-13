@@ -1,10 +1,10 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Open;
-import testing.sqa.utils.ExcelDataTable;
+import testing.page.utils.ExcelDataTable;
 
 import java.io.IOException;
 

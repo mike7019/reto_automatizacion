@@ -1,4 +1,4 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.steps.Instrumented;
@@ -9,8 +9,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 
-import static testing.sqa.drivers.DriverRemoteBrowser.driver;
-import static testing.sqa.userinterfaces.MovistarPortabilidadPospagoPage.TXT_PLAN_VALIDACION;
+import static testing.page.drivers.DriverRemoteBrowser.driver;
+import static testing.page.userinterfaces.MovistarPortabilidadPospagoPage.TXT_PLAN_VALIDACION;
 
 public class ScrollTo implements Interaction {
     @Override

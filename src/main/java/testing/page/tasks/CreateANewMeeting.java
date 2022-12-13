@@ -1,4 +1,4 @@
-package testing.sqa.tasks;
+package testing.page.tasks;
 
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
@@ -6,17 +6,17 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import testing.sqa.interactions.*;
-import testing.sqa.utils.ExcelDataTable;
+import testing.page.interactions.*;
+import testing.page.utils.ExcelDataTable;
 
 import java.util.ArrayList;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
-import static testing.sqa.userinterfaces.DashBoardPage.*;
-import static testing.sqa.userinterfaces.MeetingsPage.*;
-import static testing.sqa.userinterfaces.NewMeetingPage.*;
-import static testing.sqa.userinterfaces.NewMeetingPage.TXT_MEETING_NAME;
+import static testing.page.userinterfaces.DashBoardPage.*;
+import static testing.page.userinterfaces.MeetingsPage.*;
+import static testing.page.userinterfaces.NewMeetingPage.*;
+import static testing.page.userinterfaces.NewMeetingPage.TXT_MEETING_NAME;
 
 public class CreateANewMeeting implements Task {
 

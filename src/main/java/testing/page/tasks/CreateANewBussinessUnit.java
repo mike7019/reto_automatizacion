@@ -1,24 +1,23 @@
-package testing.sqa.tasks;
+package testing.page.tasks;
 
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.*;
 
-import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import testing.sqa.interactions.ChooseFromList;
-import testing.sqa.utils.ExcelDataTable;
+import testing.page.interactions.ChooseFromList;
+import testing.page.utils.ExcelDataTable;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static testing.sqa.userinterfaces.BussinessUnitPage.*;
-import static testing.sqa.userinterfaces.DashBoardPage.*;
-import static testing.sqa.userinterfaces.NewBussinessUnitPage.*;
+import static testing.page.userinterfaces.BussinessUnitPage.*;
+import static testing.page.userinterfaces.DashBoardPage.*;
+import static testing.page.userinterfaces.NewBussinessUnitPage.*;
 
 
 public class CreateANewBussinessUnit implements Task {

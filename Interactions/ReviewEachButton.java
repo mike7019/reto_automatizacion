@@ -1,4 +1,4 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.steps.Instrumented;
@@ -6,13 +6,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actions.Click;
-import testing.sqa.userinterfaces.MiMovistarPage;
-import testing.sqa.userinterfaces.MovistarEquiposRenovarPage;
-import testing.sqa.userinterfaces.MovistarMainPage;
+import testing.page.userinterfaces.MiMovistarPage;
+import testing.page.userinterfaces.MovistarEquiposRenovarPage;
+import testing.page.userinterfaces.MovistarMainPage;
 
 import java.util.List;
 
-import static testing.sqa.userinterfaces.MovistarMainPage.BTN_DROPDOWN;
+import static testing.page.userinterfaces.MovistarMainPage.BTN_DROPDOWN;
 
 public class ReviewEachButton implements Interaction {
     @Override

@@ -1,4 +1,4 @@
-package testing.sqa.utils;
+package testing.page.utils;
 
 
 import java.lang.annotation.ElementType;

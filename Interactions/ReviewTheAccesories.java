@@ -1,11 +1,11 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 
-import testing.sqa.utils.ReadExcelData;
+import testing.page.utils.ReadExcelData;
 import java.util.ArrayList;
 
 import java.util.Map;

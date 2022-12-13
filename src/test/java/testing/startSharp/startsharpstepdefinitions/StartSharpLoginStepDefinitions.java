@@ -6,15 +6,15 @@ import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import testing.sqa.drivers.DriverRemoteBrowser;
-import testing.sqa.models.LoginData;
-import testing.sqa.questions.ValidateTheMessage;
-import testing.sqa.tasks.DoTheLogin;
+import testing.page.drivers.DriverRemoteBrowser;
+import testing.page.models.LoginData;
+import testing.page.questions.ValidateTheMessage;
+import testing.page.tasks.DoTheLogin;
 
 import java.util.List;
 
 import static org.hamcrest.core.IsEqual.*;
-import static testing.sqa.utils.GlobalData.URL;
+import static testing.page.utils.GlobalData.URL;
 
 public class StartSharpLoginStepDefinitions {
 

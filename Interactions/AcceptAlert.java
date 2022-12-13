@@ -1,10 +1,10 @@
-package testing.sqa.interactions;
+package testing.page.interactions;
 
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import org.openqa.selenium.Alert;
-import testing.sqa.drivers.DriverRemoteBrowser;
+import testing.page.drivers.DriverRemoteBrowser;
 
 public class AcceptAlert implements Interaction {
 
