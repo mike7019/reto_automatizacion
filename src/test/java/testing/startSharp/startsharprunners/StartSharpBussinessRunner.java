@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/start_sharp_bussiness.feature",
         glue = "testing.startSharp.startsharpstepdefinitions",
-        snippets = SnippetType.CAMELCASE)
+        snippets = SnippetType.CAMELCASE
+)
+
 public class StartSharpBussinessRunner {
+
 }

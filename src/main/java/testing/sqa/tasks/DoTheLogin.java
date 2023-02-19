@@ -15,14 +15,11 @@ import static testing.sqa.userinterfaces.LoginPage.*;
 
 public class DoTheLogin implements Task {
 
-
     private String user;
     private String password;
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-
         actor.attemptsTo(
                 WaitUntil.the(TXT_USER, isVisible()).forNoMoreThan(10).seconds(),
                 Enter.theValue(user).into(TXT_USER),

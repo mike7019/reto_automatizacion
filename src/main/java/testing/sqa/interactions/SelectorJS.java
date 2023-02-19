@@ -5,14 +5,14 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import testing.sqa.drivers.DriverRemoteBrowser;
+import testing.sqa.drivers.WebDriversSetup;
 
 
 public class SelectorJS implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        JavascriptExecutor js = (JavascriptExecutor) DriverRemoteBrowser.driver;
+        JavascriptExecutor js = (JavascriptExecutor) WebDriversSetup.driver;
         WebElement button = (WebElement) js.executeScript("document.querySelector('#StartSharp_Membership_LoginPanel0_Username')");
         button.click();
 

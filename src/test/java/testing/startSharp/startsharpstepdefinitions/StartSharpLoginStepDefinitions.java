@@ -5,7 +5,7 @@ import cucumber.api.java.en.*;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import testing.sqa.drivers.DriverRemoteBrowser;
+import testing.sqa.drivers.WebDriversSetup;
 import testing.sqa.models.LoginData;
 import testing.sqa.questions.ValidateTheMessage;
 import testing.sqa.tasks.DoTheLogin;
@@ -26,15 +26,12 @@ public class StartSharpLoginStepDefinitions {
     @Given("^That Mike opens the url to see the login page$")
     public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
 
-        DriverRemoteBrowser.withTheseOptions();
-        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on(URL)));
+        WebDriversSetup.withChromeOptions();
+        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(WebDriversSetup.on(URL)));
 
     }
-
     @When("^Mike types the following data$")
     public void MikeTypesTheFollowingData(List<LoginData> loginDataList) {
-
-
         OnStage.theActorInTheSpotlight().attemptsTo(
                 DoTheLogin.onTheSite()
                         .withThisUser(loginDataList.get(0).getUser())
