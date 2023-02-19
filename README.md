@@ -6,6 +6,23 @@ Executes automation on the site
  following the login procces, creating a new bussiness unit followed by the appointment schedule creation.
 [Gradle](https://gradle.org/), [Java](https://www.java.com/es/), [SerenityBDD](https://serenity-bdd.github.io/theserenitybook/latest/index.html), [Cucumber](https://cucumber.io/) and Screenplay.
 
+## tools used on the project
+
+<table>
+<tr>
+  <th>Java 11</th>
+  <td>
+    <h6>requires Java 11 to run properly, if the JDK is higher it needs to be refactored</h6>
+  </td>
+</tr>
+<tr>
+  <th>Gradle 7.4.2</th>
+  <td>
+    <h6>Gradle is used to manage all dependencies</h6>
+  </td>
+</tr>
+
+
 ## Code Structure
 
 the code was developed using screenplay pattern as below:
