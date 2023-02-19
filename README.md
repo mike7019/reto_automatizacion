@@ -588,7 +588,7 @@ public class ValidateTheMessage implements Question<String> {
 
 ### drivers
 
-#### DriverRemoteBrowser
+#### WebDriversSetup
 
 these class contains all the options and methods to build each browser with the options given and a method to open the url
 
@@ -906,6 +906,9 @@ Feature: testing login on the serenity demo page
       | user  | password |  text      |
       | admin | serenity |  Dashboard |
 ```
+
+
+#### buildGradle
 
 ```groovy
 buildscript {
