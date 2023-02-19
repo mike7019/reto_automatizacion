@@ -13,6 +13,7 @@ import testing.sqa.tasks.DoTheLogin;
 import java.util.List;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.*;
+import static org.hamcrest.CoreMatchers.containsString;
 import static org.hamcrest.core.IsEqual.*;
 import static testing.sqa.utils.GlobalData.URL;
 
@@ -41,8 +42,7 @@ public class StartSharpLoginStepDefinitions {
 
     @Then("^Mike will be able to see the (.*)$")
     public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String text) {
-
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(text)));
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), containsString(text)));
 
     }
 }

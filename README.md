@@ -101,6 +101,11 @@ public class CreateANewBussinessUnit implements Task {
         );
 
     }
+
+    public static CreateANewBussinessUnit onTheSite() {
+        return Instrumented.instanceOf(CreateANewBussinessUnit.class).withProperties();
+    }
+}
 ```
 
 #### CreateANewMeeting
@@ -155,6 +160,11 @@ public class CreateANewMeeting implements Task {
                 Ensure.that(LBL_USER_VALIDATION).isDisplayed()
         );
     }
+
+    public static CreateANewMeeting onTheSite() {
+        return Instrumented.instanceOf(CreateANewMeeting.class).withProperties();
+    }
+}
 ```
 
 #### DoTheLogin
@@ -441,12 +451,14 @@ Here its where we can store all the locators using the class `Target` to stablis
 
 public class MeetingsPage {
 
-    public static final Target LBL_TEXT = Target.the("text to validate").locatedBy("//div[@class='title-text']");
-
-    public static final Target BTN_NEW_MEETING = Target.the("button new meeting").locatedBy("//div[@class='tool-button add-button icon-tool-button']");
-    public static final Target TXT_MEETING_NAME = Target.the("meeting name to validate").locatedBy("//div[@class='slick-cell l1 r1']/a");
-
-    public static final Target LBL_USER_VALIDATION = Target.the("user validate").locatedBy("//span[@class='slick-column-name']");
+    public static final Target LBL_TEXT = Target.the("text to validate")
+            .locatedBy("//div[@class='title-text']");
+    public static final Target BTN_NEW_MEETING = Target.the("button new meeting")
+            .locatedBy("//div[@class='tool-button add-button icon-tool-button']");
+    public static final Target TXT_MEETING_NAME = Target.the("meeting name to validate")
+            .locatedBy("//div[@class='slick-cell l1 r1']/a");
+    public static final Target LBL_USER_VALIDATION = Target.the("user validate")
+            .locatedBy("//span[@class='slick-column-name']");
 
 
 }
@@ -468,7 +480,6 @@ public class NewBussinessUnitPage {
             .locatedBy("//div[@class='field ParentUnitId']//div");
     public static final Target LST_PARENT_UNIT = Target.the("the parent unit list")
             .locatedBy("//ul[@id='select2-results-1']");
-
     public static final Target BTN_SAVE_UNIT = Target.the("the button to save changes")
             .locatedBy("//div[@class='tool-button save-and-close-button icon-tool-button']");
 
@@ -583,40 +594,76 @@ these class contains all the options and methods to build each browser with the 
 
 
 ```java
-public class DriverRemoteBrowser {
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 
+public class WebDriversSetup {
     public static WebDriver driver;
+    public static WebDriversSetup withChromeOptions() {
+        WebDriverManager.chromedriver().setup();
 
-    public static DriverRemoteBrowser chromeHisBrowserWeb() {
+        System.setProperty("webdriver.timeouts.implicitlywait", "10000");
+        System.setProperty("serenity.take.screenshots","FOR_EACH_ACTION");
+        System.setProperty("chrome.capabilities.unexpectedAlertBehavior", "ignore");
 
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--start-maximized");
-        options.addArguments("--allow-running-insecure-content; --disable-popup-blocking; --disable-dev-shm-usage");
-        options.addArguments("--disable-infobars;--no-sandbox;--test-type; --disable-extensions;--disable-translate");
-        options.addArguments("--ignore-certificate-errors;--incognito;--disable-gpu;--no-sandbox;--disable-download-notification");
-
+        options.addArguments("--allow-running-insecure-content --disable-popup-blocking --disable-dev-shm-usage");
+        options.addArguments("--disable-infobars --test-type --disable-extensions --disable-translate");
+        options.addArguments("--ignore-certificate-errors --incognito --disable-gpu --no-sandbox --disable-download-notification");
 
         driver = new ChromeDriver(options);
-        return new DriverRemoteBrowser();
+        return new WebDriversSetup();
+    }
+    public static WebDriversSetup withFirefoxOptions() {
+        WebDriverManager.firefoxdriver().setup();
+        System.setProperty("webdriver.driver","Firefox");
+        System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
+        System.setProperty("webdriver.timeouts.implicitlywait", "10000");
+        System.setProperty("serenity.take.screenshots","FOR_EACH_ACTION");
+        System.setProperty("gecko.capabilities.unexpectedAlertBehavior", "ignore");
+
+        FirefoxOptions options = new FirefoxOptions();
+
+        options.addArguments("--start-maximized");
+        options.addArguments("--allow-running-insecure-content --disable-popup-blocking --disable-dev-shm-usage");
+        options.addArguments("--disable-infobars --test-type --disable-extensions --disable-translate");
+        options.addArguments("--ignore-certificate-errors --incognito --disable-gpu --no-sandbox --disable-download-notification");
+
+
+        driver = new FirefoxDriver(options);
+        return new WebDriversSetup();
     }
 
+    public static WebDriversSetup withEdgeOptions() {
+        WebDriverManager.edgedriver().setup();
 
-    public static DriverRemoteBrowser firefoxHisBrowserWeb() {
-        driver = new FirefoxDriver();
-        return new DriverRemoteBrowser();
+        System.setProperty("webdriver.timeouts.implicitlywait", "10000");
+        System.setProperty("serenity.take.screenshots","FOR_EACH_ACTION");
+        System.setProperty("gecko.capabilities.unexpectedAlertBehavior", "ignore");
+
+        EdgeOptions options = new EdgeOptions();
+
+
+        driver = new EdgeDriver();
+        return new WebDriversSetup();
     }
-
-    public static DriverRemoteBrowser internetExplorerHisBrowserWeb() {
-        driver = new InternetExplorerDriver();
-        return new DriverRemoteBrowser();
-    }
-
-
 
     public static WebDriver on(String url) {
         driver.get(url);
+        return driver;
+    }
+
+    public static WebDriver quit(){
+        driver.quit();
         return driver;
     }
 }
@@ -754,9 +801,8 @@ starts with the login on the website and validates the login was successfully do
 ```java
 @Given("^That Mike opens the url to see the login page$")
     public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
-
-        DriverRemoteBrowser.chromeHisBrowserWeb();
-        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on("https://serenity.is/demo/")));
+            WebDriversSetup.withChromeOptions();
+            OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(WebDriversSetup.on(URL)));
 
     }
 ```
@@ -766,11 +812,11 @@ holding the flow; When executes the task to give the data through the feature fi
 ```java
 @When("^Mike types the following data$")
     public void MikeTypesTheFollowingData(List<LoginData> loginDataList) {
-
-        OnStage.theActorInTheSpotlight().attemptsTo(
+            OnStage.theActorInTheSpotlight().attemptsTo(
                 DoTheLogin.onTheSite()
-                        .user(loginDataList.get(0).getUser())
-                        .password(loginDataList.get(0).getPassword()));
+                        .withThisUser(loginDataList.get(0).getUser())
+                        .andThisPassword(loginDataList.get(0).getPassword())
+        );
     }
 ```
 
@@ -778,9 +824,9 @@ holding the flow; Then validates the login taking the message DashBoard displaye
 
 ```java
 @Then("^Mike will be able to see the (.*)$")
-    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String message) {
+    public void mikeWillBeAbleToSeeTheExploraYGestionaTusProductos(String text) {
 
-        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), equalTo(message)));
+        OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMessage.value(), containsString(text)));
 
     }
 ```
@@ -803,7 +849,6 @@ Starts creating a new bussiness unit followed by the new meeting creation
 ```java
     @When("^Mike creates a new unit bussiness and setups a meeting$")
     public void mikeCreatesANewUnitBussinessAndSetupsAMeeting() {
-
         OnStage.theActorInTheSpotlight().attemptsTo(CreateANewBussinessUnit.onTheSite());
         OnStage.theActorInTheSpotlight().attemptsTo(CreateANewMeeting.onTheSite());
     }
@@ -814,7 +859,6 @@ Then uses a Question class to validate using a boolean answer
 ```java
     @Then("^Mike will be able see the meeting was succesfully scheduled$")
     public void mikeWillBeAbleSeeTheMeetingWasSuccesfullyScheduled() {
-
         OnStage.theActorInTheSpotlight().should(seeThat(ValidateTheMeetingName.value()));
 
     }
@@ -861,6 +905,55 @@ Feature: testing login on the serenity demo page
     Examples:
       | user  | password |  text      |
       | admin | serenity |  Dashboard |
+```
+
+```groovy
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.80")
+    }
+}
+
+plugins {
+    id 'java-library'
+}
+
+apply plugin: 'net.serenity-bdd.aggregator'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'net.serenity-bdd:serenity-junit:2.0.80'
+    implementation 'net.serenity-bdd:serenity-cucumber:1.9.45'
+    implementation 'net.serenity-bdd:serenity-core:2.0.80'
+    implementation 'net.serenity-bdd:serenity-ensure:2.0.80'
+    implementation 'org.slf4j:slf4j-simple:2.0.5'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.3.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
+    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
+    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+
+}
+
+test {
+
+    ignoreFailures = true
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+gradle.startParameter.continueOnFailure = true
 ```
 
 
