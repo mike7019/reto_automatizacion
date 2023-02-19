@@ -8,7 +8,6 @@ Executes automation on the site
 
 ## tools used on the project
 
-<table>
 <tr>
   <th>Java 11</th>
   <td>
