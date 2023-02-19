@@ -20,7 +20,23 @@ Executes automation on the site
     <h6>Gradle is used to manage all dependencies</h6>
   </td>
 </tr>
+<tr>
+  <th>Cucumber 1.9.45</th>
+  <td>
+    <h6>the automation tool to handle the .feature files with the Gherkin sintax</h6>
+  </td>
+</tr>
+<tr>
+  <th>WebDriverManager 5.3.1</th>
+  <td>
+    <h6>the WebDriverManager for handling the appropiated WebDriver and may be set up on buildGradle file</h6>
+  </td>
+</tr>
+
+
 </table>
+
+
 
 
 ## Code Structure
