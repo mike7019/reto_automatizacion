@@ -7,7 +7,7 @@ Executes automation on the site
 [Gradle](https://gradle.org/), [Java](https://www.java.com/es/), [SerenityBDD](https://serenity-bdd.github.io/theserenitybook/latest/index.html), [Cucumber](https://cucumber.io/) and Screenplay.
 
 ## tools used on the project
-
+<table>
 <tr>
   <th>Java 11</th>
   <td>
@@ -20,6 +20,7 @@ Executes automation on the site
     <h6>Gradle is used to manage all dependencies</h6>
   </td>
 </tr>
+</table>
 
 
 ## Code Structure
