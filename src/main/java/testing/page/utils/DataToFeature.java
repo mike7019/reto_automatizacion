@@ -1,13 +1,14 @@
 package testing.page.utils;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
-import utils.Excel;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+
+import static org.apache.commons.csv.CSVFormat.Predefined.Excel;
 
 public class DataToFeature {
     public DataToFeature() {

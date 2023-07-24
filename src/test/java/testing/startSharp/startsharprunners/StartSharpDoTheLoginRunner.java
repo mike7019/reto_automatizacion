@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
 
 public class StartSharpDoTheLoginRunner {
     @BeforeClass
-    public void setStage() {
+    public static void setStage() {
         OnStage.setTheStage(new OnlineCast());
     }
 

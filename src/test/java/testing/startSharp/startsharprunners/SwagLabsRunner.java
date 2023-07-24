@@ -6,19 +6,23 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.BeforeClass;
+import org.junit.jupiter.api.AfterAll;
 import org.junit.runner.RunWith;
-import utils.BeforeSuite;
-import utils.DataToFeature;
-import utils.RunnerPersonalizado;
+import testing.page.utils.BeforeSuite;
+import testing.page.utils.DataToFeature;
+import testing.page.utils.RunnerPersonalizado;
+
 
 import java.io.IOException;
+
+import static testing.page.drivers.WebDriversSetup.driver;
 
 
 @RunWith(RunnerPersonalizado.class)
 @CucumberOptions(
-        features = {"src/test/resources/features/SwagLabs.feature"},
+        features = "src/test/resources/features/SwagLabs.feature",
         tags = "@Regresion",
-        glue = "com.co.choucair.stepdefinitions",
+        glue = "testing.startSharp.startsharpstepdefinitions",
         plugin = {"pretty", "json:target/cucumber-reports/cucumber.json"},
         snippets = CucumberOptions.SnippetType.CAMELCASE)
 public class SwagLabsRunner {
@@ -33,5 +37,10 @@ public class SwagLabsRunner {
     @BeforeClass
     public static void setup() {
         OnStage.setTheStage(new OnlineCast());
+    }
+
+    @AfterAll
+    public static void close(){
+        driver.quit();
     }
 }

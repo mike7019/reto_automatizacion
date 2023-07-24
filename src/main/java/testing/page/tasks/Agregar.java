@@ -1,6 +1,5 @@
 package testing.page.tasks;
 
-import models.setdata.AgregarAlCarritoLoombokData;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,11 +7,12 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
+import testing.page.models.setdata.AgregarAlCarritoLoombokData;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static userinterfaces.CarritoPage.*;
-import static userinterfaces.CheckoutPage.*;
-import static userinterfaces.MenuPage.*;
+import static testing.page.userinterfaces.CarritoPage.*;
+import static testing.page.userinterfaces.CheckoutPage.*;
+import static testing.page.userinterfaces.MenuPage.*;
 
 
 public class Agregar implements Task {

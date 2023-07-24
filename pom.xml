@@ -17,13 +17,6 @@
         <tags></tags>
         <webdriver.base.url></webdriver.base.url>
     </properties>
-    <repositories>
-        <repository>
-            <id>AzureArtifactCH</id>
-            <name>lbrerias choucair</name>
-            <url>https://pkgs.dev.azure.com/DEV-FormacionCH/f11a2ddb-f565-44a3-8710-e9e1472d29ee/_packaging/Choucair/maven/v1</url>
-        </repository>
-    </repositories>
     <dependencies>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -115,11 +108,6 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.choucair</groupId>
-            <artifactId>libreria</artifactId>
-            <version>1.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>

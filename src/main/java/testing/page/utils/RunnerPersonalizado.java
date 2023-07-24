@@ -4,7 +4,6 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.Description;
 import org.junit.runner.Runner;
 import org.junit.runner.notification.RunNotifier;
-import utils.BeforeSuite;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

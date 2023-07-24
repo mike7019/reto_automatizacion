@@ -89,7 +89,7 @@ pipeline {
                                 reportDir: "${WORKSPACE}//serenity_${timestamp}",
                                 reportFiles: 'index.html',
                                 reportName: 'Evidencias Automatizacion WEB Screenplay',
-                                reportTitles: 'Proyecto Mobiletec Screenplay'
+                                reportTitles: 'Proyecto Screenplay'
                           ])
                                 echo 'Reporte Serenity realizado con exito'
                                 archiveArtifacts "**/cucumber.json"
@@ -211,7 +211,7 @@ pipeline {
 
         post {
                 always {
-                    publishTestResults serverAddress: 'https://jessidcordoba.atlassian.net/',
+                    publishTestResults serverAddress: 'https://michaelgarzon.atlassian.net/',
                     projectKey: 'TES',
                     format: 'Cucumber',
                     filePath: 'target/cucumber-reports/*.json',

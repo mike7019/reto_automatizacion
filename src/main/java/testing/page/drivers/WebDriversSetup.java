@@ -1,6 +1,5 @@
 package testing.page.drivers;
 
-import com.epam.healenium.SelfHealingDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class WebDriversSetup {
 
-    public static SelfHealingDriver driver;
+    public static WebDriver driver;
     public static WebDriversSetup withChromeOptions() {
         WebDriverManager.chromedriver().setup();
 
@@ -27,8 +26,9 @@ public class WebDriversSetup {
         options.addArguments("use-fake-ui-for-media-stream");
         // options.addArguments("--remote-allow-origins=*");
         //options.addArguments("use-fake-device-for-media-stream");
-        WebDriver delegate = new ChromeDriver(options);
-        driver = SelfHealingDriver.create(delegate);
+        driver = new ChromeDriver(options);
+       // WebDriver delegate = new ChromeDriver(options);
+       // driver = SelfHealingDriver.create(delegate);
         return new WebDriversSetup();
     }
         public static WebDriver on(String url) {

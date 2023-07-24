@@ -1,12 +1,12 @@
 package testing.page.tasks;
 
-import models.setdata.AutenticarseLoombokData;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import userinterfaces.*;
+import testing.page.models.setdata.AutenticarseLoombokData;
+import testing.page.userinterfaces.LoginPage;
 
 public class Autenticarse implements Task {
 
