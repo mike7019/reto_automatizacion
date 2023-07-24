@@ -4,10 +4,8 @@ import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.targets.Target;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 
 
 public class ChooseListSelect implements Interaction {
@@ -24,7 +22,6 @@ public class ChooseListSelect implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
         WebElement hour = element.resolveFor(actor);
         hour.click();
         Select listSelect = new Select(hour);

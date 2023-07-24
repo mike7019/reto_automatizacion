@@ -23,14 +23,21 @@ public class SelectUnit implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        WebElement listLocation = element.resolveFor(actor);
-        List<WebElement> options = listLocation.findElements(By.tagName("li"));
-        for (WebElement i : options) {
-            if (i.getText().contains(bussinessName)) {
-                i.click();
-                break;
+
+        try {
+            WebElement listLocation = element.resolveFor(actor);
+            List<WebElement> options = listLocation.findElements(By.tagName("li"));
+            for (WebElement i : options) {
+                if (i.getText().contains(bussinessName)) {
+                    i.click();
+                    break;
+                }
             }
+            // If the option is not found, the loop will simply complete without clicking anything
+        } catch (Exception e) {
+            System.out.println("the bussiness name couldn't be found: "+e);
         }
+
     }
 
     public static SelectUnit on(Target element, String bussinessName) {

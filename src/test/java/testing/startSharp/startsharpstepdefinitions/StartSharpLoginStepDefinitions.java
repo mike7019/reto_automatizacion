@@ -1,40 +1,35 @@
 package testing.startSharp.startsharpstepdefinitions;
 
+
 import cucumber.api.java.Before;
-import cucumber.api.java.en.*;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.GivenWhenThen;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
+import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import testing.page.drivers.DriverRemoteBrowser;
+import testing.page.drivers.WebDriversSetup;
 import testing.page.models.LoginData;
 import testing.page.questions.ValidateTheMessage;
 import testing.page.tasks.DoTheLogin;
 
 import java.util.List;
 
-import static org.hamcrest.core.IsEqual.*;
+import static org.hamcrest.Matchers.containsString;
 import static testing.page.utils.GlobalData.URL;
 
 public class StartSharpLoginStepDefinitions {
 
-    @Before
-    public void setStage() {
-        OnStage.setTheStage(new OnlineCast());
-    }
-
     @Given("^That Mike opens the url to see the login page$")
     public void thatMikeOpensTheHttpsSerenityIsDemoToSeeTheLoginPage() {
-
-        DriverRemoteBrowser.withTheseOptions();
-        OnStage.theActorCalled("Mike").can(BrowseTheWeb.with(DriverRemoteBrowser.on(URL)));
+        WebDriversSetup.withChromeOptions();
+        OnStage.theActorCalled("Mike").wasAbleTo(Open.url(URL));
 
     }
 
     @When("^Mike types the following data$")
     public void MikeTypesTheFollowingData(List<LoginData> loginDataList) {
-
-
         OnStage.theActorInTheSpotlight().attemptsTo(
                 DoTheLogin.onTheSite()
                         .withThisUser(loginDataList.get(0).getUser())
@@ -44,8 +39,7 @@ public class StartSharpLoginStepDefinitions {
 
     @Then("^Mike will be able to see the (.*)$")
     public void mikeWillBeAbleToSeeTheDashBoard(String text) {
-
-        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateTheMessage.value(), equalTo(text)));
+        OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidateTheMessage.value(), containsString(text)));
 
     }
 }

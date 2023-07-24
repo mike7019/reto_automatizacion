@@ -1,21 +1,7 @@
 package testing.page.utils;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
-import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.xssf.usermodel.XSSFSheet;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-
 public class ExcelDataTable {
-
+/*
     private XSSFWorkbook book;
     private FileInputStream file;
 
@@ -64,5 +50,5 @@ public class ExcelDataTable {
             projectInformation = new HashMap<String, String>();
         }
         return arrayListWorkPlanData;
-    }
+    }*/
 }

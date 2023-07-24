@@ -3,20 +3,26 @@ package testing.page.tasks;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.*;
+import net.serenitybdd.screenplay.actions.Clear;
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-import testing.page.interactions.*;
-import testing.page.utils.ExcelDataTable;
+import testing.page.interactions.ChooseFromList;
+import testing.page.interactions.ChooseListSelect;
+import testing.page.interactions.ExplicitWait;
+import testing.page.interactions.SelectUnit;
 
 import java.util.ArrayList;
 import java.util.Map;
 
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
-import static testing.page.userinterfaces.DashBoardPage.*;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
+import static testing.page.userinterfaces.DashBoardPage.BTN_MEETING;
+import static testing.page.userinterfaces.DashBoardPage.BTN_MEETINGS;
 import static testing.page.userinterfaces.MeetingsPage.*;
-import static testing.page.userinterfaces.NewMeetingPage.*;
 import static testing.page.userinterfaces.NewMeetingPage.TXT_MEETING_NAME;
+import static testing.page.userinterfaces.NewMeetingPage.*;
 
 public class CreateANewMeeting implements Task {
 
@@ -25,13 +31,14 @@ public class CreateANewMeeting implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        try {
+//        try {
+//
+//            dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
+//
+//        } catch (Exception e) {
 
-            dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
-
-        } catch (Exception e) {
-
-        }
+//        }
+//
         actor.attemptsTo(
                 WaitUntil.the(BTN_MEETING, isVisible()).forNoMoreThan(10).seconds(),
                 JavaScriptClick.on(BTN_MEETING),

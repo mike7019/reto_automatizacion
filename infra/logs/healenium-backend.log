@@ -1,0 +1,33 @@
+2023-07-22 03:24:08.562  WARN 1 - [housekeeper] c.z.hikari.pool.HikariPool       : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6h19s438ms691µs362ns). 
+2023-07-22 03:24:14.207  INFO 1 - [7878-exec-1] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring DispatcherServlet 'dispatcherServlet' 
+2023-07-22 03:24:14.208  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Initializing Servlet 'dispatcherServlet' 
+2023-07-22 03:24:14.355  INFO 1 - [7878-exec-1] o.s.w.s.DispatcherServlet        : Completed initialization in 139 ms 
+2023-07-22 22:29:59.523  INFO 1 - [       main] com.epam.healenium.Application   : Starting Application using Java 1.8.0_212 on 9f0dbd56d3ae with PID 1 (/healenium-backend.jar started by root in /) 
+2023-07-22 22:29:59.532  INFO 1 - [       main] com.epam.healenium.Application   : No active profile set, falling back to 1 default profile: "default" 
+2023-07-22 22:30:02.755  INFO 1 - [       main] .RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode. 
+2023-07-22 22:30:03.144  INFO 1 - [       main] .RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 369 ms. Found 4 JPA repository interfaces. 
+2023-07-22 22:30:04.935  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat initialized with port(s): 7878 (http) 
+2023-07-22 22:30:04.965  INFO 1 - [       main] o.a.c.core.StandardService       : Starting service [Tomcat] 
+2023-07-22 22:30:04.966  INFO 1 - [       main] o.a.c.core.StandardEngine        : Starting Servlet engine: [Apache Tomcat/9.0.64] 
+2023-07-22 22:30:05.156  INFO 1 - [       main] o.a.c.c.C.[.[localhost].[/]      : Initializing Spring embedded WebApplicationContext 
+2023-07-22 22:30:05.157  INFO 1 - [       main] rvletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5517 ms 
+2023-07-22 22:30:05.710  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Starting... 
+2023-07-22 22:30:05.905  INFO 1 - [       main] c.z.hikari.HikariDataSource      : HikariPool-1 - Start completed. 
+2023-07-22 22:30:06.152  INFO 1 - [       main] liquibase.database               : Set default schema name to healenium 
+2023-07-22 22:30:06.279  INFO 1 - [       main] liquibase.lockservice            : Successfully acquired change log lock 
+2023-07-22 22:30:07.264  INFO 1 - [       main] liquibase.changelog              : Reading from healenium.databasechangelog 
+2023-07-22 22:30:07.380  INFO 1 - [       main] liquibase.lockservice            : Successfully released change log lock 
+2023-07-22 22:30:07.856  INFO 1 - [       main] o.h.j.internal.util.LogHelper    : HHH000204: Processing PersistenceUnitInfo [name: default] 
+2023-07-22 22:30:08.268  INFO 1 - [       main] org.hibernate.Version            : HHH000412: Hibernate ORM core version 5.6.9.Final 
+2023-07-22 22:30:09.185  INFO 1 - [       main] o.h.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final} 
+2023-07-22 22:30:09.652  INFO 1 - [       main] org.hibernate.dialect.Dialect    : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect 
+2023-07-22 22:30:11.317  WARN 1 - [       main] o.h.m.internal.MetadataContext   : HHH015011: Unable to locate static metamodel field : com.epam.healenium.model.domain.Selector_#nodePathWrapper; this may or may not indicate a problem with the static metamodel 
+2023-07-22 22:30:11.332  INFO 1 - [       main] h.e.t.j.p.i.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform] 
+2023-07-22 22:30:11.347  INFO 1 - [       main] ontainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default' 
+2023-07-22 22:30:13.456  INFO 1 - [       main] .a.w.s.WelcomePageHandlerMapping : Adding welcome page template: index 
+2023-07-22 22:30:14.520  INFO 1 - [       main] .s.b.a.e.w.EndpointLinksResolver : Exposing 1 endpoint(s) beneath base path '/actuator' 
+2023-07-22 22:30:14.627  INFO 1 - [       main] o.s.b.w.e.t.TomcatWebServer      : Tomcat started on port(s): 7878 (http) with context path '' 
+2023-07-22 22:30:14.775  INFO 1 - [       main] com.epam.healenium.Application   : Started Application in 17.413 seconds (JVM running for 19.864) 
+2023-07-22 22:30:30.034  INFO 1 - [hutdownHook] ontainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default' 
+2023-07-22 22:30:30.041  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown initiated... 
+2023-07-22 22:30:30.047  INFO 1 - [hutdownHook] c.z.hikari.HikariDataSource      : HikariPool-1 - Shutdown completed. 

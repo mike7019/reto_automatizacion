@@ -3,24 +3,24 @@ package testing.page.tasks;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import net.serenitybdd.screenplay.actions.*;
-
+import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.actions.JavaScriptClick;
 import net.serenitybdd.screenplay.waits.WaitUntil;
-
 import testing.page.interactions.ChooseFromList;
-import testing.page.utils.ExcelDataTable;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Map;
 
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import static testing.page.userinterfaces.BussinessUnitPage.*;
-import static testing.page.userinterfaces.DashBoardPage.*;
+import static testing.page.userinterfaces.BussinessUnitPage.BTN_BUSSINESS;
+import static testing.page.userinterfaces.BussinessUnitPage.BTN_NEW_BUSSINESS_UNIT;
+import static testing.page.userinterfaces.DashBoardPage.BTN_BUSSINESS_UNIT;
+import static testing.page.userinterfaces.DashBoardPage.BTN_ORGANIZATION;
 import static testing.page.userinterfaces.NewBussinessUnitPage.*;
 
 
-public class CreateANewBussinessUnit implements Task {
+public class CreateANewBusinessUnit implements Task {
 
 
 
@@ -29,11 +29,11 @@ public class CreateANewBussinessUnit implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-            try {
-                dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                dataExcel = ExcelDataTable.ReadData("data.xlsx", "Sheet1");
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
             actor.attemptsTo(
                 WaitUntil.the(BTN_ORGANIZATION, isVisible()).forNoMoreThan(10).seconds(),
@@ -50,7 +50,7 @@ public class CreateANewBussinessUnit implements Task {
 
     }
 
-    public static CreateANewBussinessUnit onTheSite() {
-        return Instrumented.instanceOf(CreateANewBussinessUnit.class).withProperties();
+    public static CreateANewBusinessUnit onTheSite() {
+        return Instrumented.instanceOf(CreateANewBusinessUnit.class).withProperties();
     }
 }

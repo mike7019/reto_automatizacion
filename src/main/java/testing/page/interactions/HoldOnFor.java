@@ -4,8 +4,8 @@ import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Performable;
+import testing.page.drivers.WebDriversSetup;
 
-import testing.page.drivers.DriverRemoteBrowser;
 
 import java.util.concurrent.TimeUnit;
 
@@ -21,7 +21,7 @@ public class HoldOnFor implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        DriverRemoteBrowser.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+        WebDriversSetup.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 
     }
 

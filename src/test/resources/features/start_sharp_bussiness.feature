@@ -8,9 +8,9 @@ Feature: testing the serenity demo page
       | user  | password |
       | admin | serenity |
 
-  Scenario: Mike wants to create an unit bussiness
+  Scenario: Mike wants to create an unit business
 
-    When Mike creates a new unit bussiness and setups a meeting
+    When Mike creates a new unit business and setups a meeting
 
-    Then Mike will be able see the meeting was succesfully scheduled
+    Then Mike will be able see the meeting was successfully scheduled
 

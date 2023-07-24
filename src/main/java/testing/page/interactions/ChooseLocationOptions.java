@@ -12,21 +12,21 @@ import static testing.page.userinterfaces.NewMeetingPage.LST_LOCATION_OPTIONS;
 
 public class ChooseLocationOptions implements Interaction {
 
-    private final int index;
+        private final int index;
 
-    public ChooseLocationOptions(int index) {
-        this.index = index;
-    }
+            public ChooseLocationOptions(int index) {
+                this.index = index;
+            }
 
-    @Override
-    public <T extends Actor> void performAs(T actor) {
+                @Override
+        public <T extends Actor> void performAs(T actor) {
 
-        WebElement listLocation = LST_LOCATION_OPTIONS.resolveFor(actor);
-        List<WebElement> options = listLocation.findElements(By.tagName("li"));
-        options.get(index).click();
-    }
+                    WebElement listLocation = LST_LOCATION_OPTIONS.resolveFor(actor);
+                    List<WebElement> options = listLocation.findElements(By.tagName("li"));
+                    options.get(index).click();
+                }
 
-    public static ChooseLocationOptions index(int index) {
-        return Instrumented.instanceOf(ChooseLocationOptions.class).withProperties(index);
-    }
+                    public static ChooseLocationOptions index(int index) {
+                        return Instrumented.instanceOf(ChooseLocationOptions.class).withProperties(index);
+            }
 }
