@@ -1,28 +1,27 @@
 package testing.sqa.models;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import io.cucumber.datatable.DataTable;
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+@Data
 public class LoginData {
 
     String user;
-    String password;
+    String pass;
 
-    public LoginData(String user, String password) {
-        this.user = user;
-        this.password = password;
+    public static List<LoginData> setData(DataTable dataTable) {
+        List<LoginData> dates = new ArrayList<>();
+        List<Map<String, String>> mapInfo = dataTable.asMaps();
+        for (Map<String, String> map : mapInfo) {
+            dates.add(new ObjectMapper().convertValue(map, LoginData.class));
+        }
+        return dates;
     }
 
-    public String getUser() {
-        return user;
-    }
 
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 }

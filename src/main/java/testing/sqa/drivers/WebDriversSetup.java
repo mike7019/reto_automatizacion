@@ -29,7 +29,7 @@ public class WebDriversSetup {
         driver = new ChromeDriver(options);
         return new WebDriversSetup();
     }
-    public static WebDriversSetup withFirefoxOptions() {
+    public static void withFirefoxOptions() {
         WebDriverManager.firefoxdriver().setup();
         System.setProperty("webdriver.driver","Firefox");
         System.setProperty("webdriver.gecko.driver", "geckodriver.exe");
@@ -46,21 +46,19 @@ public class WebDriversSetup {
 
 
         driver = new FirefoxDriver(options);
-        return new WebDriversSetup();
     }
 
-    public static WebDriversSetup withEdgeOptions() {
+    public static void withEdgeOptions() {
         WebDriverManager.edgedriver().setup();
 
         System.setProperty("webdriver.timeouts.implicitlywait", "10000");
-        System.setProperty("serenity.take.screenshots","FOR_EACH_ACTION");
+        System.setProperty("serenity.take.screenshots", "FOR_EACH_ACTION");
         System.setProperty("gecko.capabilities.unexpectedAlertBehavior", "ignore");
 
         EdgeOptions options = new EdgeOptions();
+        options.setCapability("--start-maximized",true);
 
-
-        driver = new EdgeDriver();
-        return new WebDriversSetup();
+        driver = new EdgeDriver(options);;
     }
 
     public static WebDriver on(String url) {

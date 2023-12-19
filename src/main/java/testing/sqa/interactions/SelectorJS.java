@@ -11,10 +11,10 @@ import testing.sqa.drivers.WebDriversSetup;
 public class SelectorJS implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-        JavascriptExecutor js = (JavascriptExecutor) WebDriversSetup.driver;
-        WebElement button = (WebElement) js.executeScript("document.querySelector('#StartSharp_Membership_LoginPanel0_Username')");
-        button.click();
+//
+//        JavascriptExecutor js = (JavascriptExecutor) WebDriversSetup.driver;
+//        WebElement button = (WebElement) js.executeScript("document.querySelector('#StartSharp_Membership_LoginPanel0_Username')");
+//        button.click();
 
     }
 

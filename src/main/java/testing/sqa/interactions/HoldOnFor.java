@@ -21,7 +21,7 @@ public class HoldOnFor implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
 
-        WebDriversSetup.driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
+        //WebDriversSetup.getDriver().manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 
     }
 

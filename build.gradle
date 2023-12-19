@@ -1,46 +1,71 @@
-buildscript {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:2.0.80")
-    }
-}
+group 'BaseWebSP'
+version '1.0'
+apply plugin: 'java-library'
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
 
-plugins {
-    id 'java-library'
-}
 
-apply plugin: 'net.serenity-bdd.aggregator'
+sourceCompatibility = '11'
+targetCompatibility = '11'
+def versionSerenity='3.9.8'
+def versionCucumber='3.9.8'
+def versionApachePoi='5.2.2'
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
 
 repositories {
-    mavenLocal()
     mavenCentral()
-    jcenter()
 }
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.9.2"
+    }
+}
+
 
 dependencies {
-    implementation 'net.serenity-bdd:serenity-junit:2.0.80'
-    implementation 'net.serenity-bdd:serenity-cucumber:1.9.45'
-    implementation 'net.serenity-bdd:serenity-core:2.0.80'
-    implementation 'net.serenity-bdd:serenity-ensure:2.0.80'
-    implementation 'org.slf4j:slf4j-simple:2.0.5'
-    implementation 'io.github.bonigarcia:webdrivermanager:5.3.1'
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
-    implementation group: 'org.apache.poi', name: 'poi', version: '3.17'
-    implementation group: 'org.apache.poi', name: 'poi-ooxml', version: '3.17'
+
+    //Serenity-BDD Web
+    implementation "net.serenity-bdd:serenity-core:${versionSerenity}"
+    implementation "net.serenity-bdd:serenity-junit:${versionSerenity}"
+    implementation "net.serenity-bdd:serenity-ensure:${versionSerenity}"
+    implementation "net.serenity-bdd:serenity-cucumber:${versionCucumber}"
+    implementation "net.serenity-bdd:serenity-screenplay:${versionSerenity}"
+    implementation "net.serenity-bdd:serenity-report-resources:${versionSerenity}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${versionSerenity}"
+
+    //Utilities
+    implementation "org.apache.poi:poi:${versionApachePoi}"
+    implementation "io.cucumber:datatable:${versionCucumber}"
+    implementation "org.apache.poi:poi-ooxml:${versionApachePoi}"
+    testImplementation "io.cucumber:cucumber-junit:${versionCucumber}"
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    implementation group: 'org.apache.commons', name: 'commons-collections4', version: '4.4'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.0-alpha5'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.0-alpha5'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.18.0'
+    testImplementation 'junit:junit:4.13.1'
+    compileOnly 'org.projectlombok:lombok:1.18.24'
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+    implementation 'io.github.bonigarcia:webdrivermanager:5.4.1'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
 
 }
-
 test {
-
-    ignoreFailures = true
+    useJUnit {
+        include "**/*";
+        gradle.startParameter.continueOnFailure = true
+        testLogging.showStandardStreams = true
+        systemProperties System.getProperties()
+        systemProperty "cucumber.filter.tags", System.getProperty("cucumber.filter.tags")
+    }
 }
-
-tasks.withType(JavaCompile) {
-    options.encoding = 'UTF-8'
-}
-
-gradle.startParameter.continueOnFailure = true

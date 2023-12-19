@@ -17,6 +17,4 @@ public class ValidateTheMessage implements Question<String> {
         return new ValidateTheMessage();
     }
 
-
-
 }

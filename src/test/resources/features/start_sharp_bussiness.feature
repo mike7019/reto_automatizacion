@@ -5,12 +5,15 @@ Feature: testing the serenity demo page
     Given That Mike opens the url to see the login page
 
     When Mike types the following data
-      | user  | password |
+      | user  | pass     |
       | admin | serenity |
 
-  Scenario: Mike wants to create an unit bussiness
+  Scenario Outline: Mike wants to create an unit bussiness
 
-    When Mike creates a new unit bussiness and setups a meeting
+    When Mike creates a new unit <bussiness> and setups a meeting
 
     Then Mike will be able see the meeting was succesfully scheduled
+    Examples:
+      | bussiness      |
+      | Administration |
 
